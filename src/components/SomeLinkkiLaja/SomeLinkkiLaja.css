@@ -1,0 +1,21 @@
+.Somelinkkilaja {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top:1vh;
+    height:7vh;
+    padding-bottom:1vh;
+  }
+
+.SomeLink{
+    opacity:70%;
+    width: 3vw;
+    padding-left:0.2vw;
+    padding-right:0.2vw;
+    padding-top:0.2vh;
+    cursor:pointer;
+}
+
+.SomeLink:hover{
+    opacity:80%;
+}

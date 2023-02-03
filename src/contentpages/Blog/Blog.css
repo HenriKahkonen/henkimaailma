@@ -1,0 +1,39 @@
+.blogListItem {
+    padding-bottom: 20px;
+}
+
+.blogItemContainer {
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+}
+
+.blogTitleContainer {
+    max-width:45vw;
+}
+
+.blogTitle {
+    font-size:medium;
+    font-weight:1000;
+    line-height: 0.4;
+}
+
+.blogListDateContainer {
+    justify-content:right;
+}
+
+.blogListDate {
+    float:right;
+}
+  
+.postTag {
+    font-size: small;
+    margin-top:10px;
+    padding-right:4px;
+}
+
+.postDate {
+    font-size: medium;
+    padding-right: 5px;
+}

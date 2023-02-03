@@ -1,0 +1,161 @@
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
+
+.projectListContainer {
+  width:fit-content;
+  margin-left:2vw;
+  margin-right:auto;
+  margin-top:4vh;
+  margin-bottom:4vh;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  gap: 20px;
+
+  /*border: 1px #27b160;
+  border-style: solid solid solid solid;
+  */
+}
+
+.projectItemContainer {
+
+  width:260px;
+  height:390px;
+  display:flex;
+  flex-flow: column;
+  gap:10px;
+  /*
+  border: 1px #000000;
+  border-style: solid solid solid solid;*/
+  
+}
+  .projectItemImageContainer {
+    margin:auto;
+    max-width:90%;
+    min-height:70%;
+    display:flex;
+    align-items:center;
+    /*
+    border: 1px #000000;
+    border-style: solid solid solid solid;
+    */
+  }
+    .projectItemImage {
+      width:100%;
+      height:auto;
+      object-fit: contain;
+      transition: .2s ease;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+    .projectItemImage:hover{
+      opacity: 0.9;
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+
+    }
+
+  .projectItemTextContainer {
+      min-height:130px;
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      margin-bottom:20px;
+    }
+    .projectItemTitle{
+      text-align: center;
+    }
+    .projectItemDate{
+      margin-top:5px;
+      text-align: center;
+      font-size:small;
+    }
+    .projectItemTags{
+      text-align: center;
+      font-size: smaller;
+    }
+
+
+  
+  .postTag {
+    font-size: small;
+    margin-top:10px;
+    padding-right:4px;
+  }
+  .postDate {
+    font-size: medium;
+    padding-right: 5px;
+  }
+  
+  .postInfoBox {
+    margin-bottom:50px;
+  }
+
+#peliarvioContainer {
+  margin-top:4vh;
+  width:100%;
+  display: flex;
+  flex-flow: row wrap;
+  gap:10px;
+  margin-bottom:4vh;
+}
+.peliarvioListItemContainer{
+  max-width:49%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.peliarvioThumbnailContainer {
+  max-width: 50%;
+}
+.peliarvioThumbnail {
+  max-width: 90%;
+}
+
+.peliarvioTextBox {
+  width: 100%;
+  /*
+  border: 1px #000000;
+  border-style: solid solid solid solid;*/
+}
+.peliarvioTitle {
+  font-size: larger;
+  font-weight: bold;
+}
+.videoContainer {
+  margin-top:4vh;
+  margin-bottom:4vh;
+  width:60vw;
+  height:33vw;
+}
+.videoContainer iframe {
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}
+.videoPlayer {
+  width: 100;
+  height: 100;
+}
+#videoInfoBox {
+  margin-top:4vh;
+
+}
+#postNavigationContainer {
+  margin-top:4vh;
+  padding-bottom:4vh;
+  width:100;
+  /*
+  border: 1px #000000;
+  border-style: solid solid solid solid;*/
+}
+#lastItem{
+  float: left
+}
+#nextItem{
+  float:right;
+  text-align:right;
+  
+}

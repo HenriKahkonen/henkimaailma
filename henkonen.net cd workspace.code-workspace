@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"name": "henkonen.net",
+			"path": "."
+		},
+		{
+			"name": "react-router-tutorial",
+			"path": "../react-router-tutorial"
+		},
+		{
+			"path": "../Jives-bot"
+		}
+	],
+	"settings": {}
+}

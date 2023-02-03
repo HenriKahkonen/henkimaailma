@@ -1,0 +1,141 @@
+#arviolista {
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+    display:flex;
+    flex-flow: column nowrap;
+    gap: 40px;
+}
+
+.arvioItem {
+    height:max-content;
+    width:auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    /*border-color:blueviolet;
+    border-style:solid;*/
+}
+.arvioImgContainer {
+    height:auto;
+    width:20%;
+    min-width:20%;
+    display: flex;
+    /*
+    border-color:black;
+    border-style: solid;*/
+    justify-content:center;
+}
+.arvioImgSpacer {
+    width: 80%;
+    min-height:80%;
+    margin:auto;
+    /*
+    border-color:red;
+    border-style:dotted;*/
+    object-fit: contain;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.arvioImgSpacer img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.arvioDataContainer {
+    /*
+    border-color:green;
+    border-style: dotted;*/
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+}
+.arvioDataContainer a {
+    font-weight: bold;
+    font-size: normal;
+    line-height: 0;
+}
+.arvioListGenre {
+    font-size: small;
+}
+
+
+.arviolistDate {
+    font-size:small;
+    justify-self:flex-end;
+}
+
+.arvioListRatingContainer {
+    width:100%;
+    margin-top:10px;
+    height:auto;
+    display:flex;
+    flex-direction: column;
+
+}
+.ratingImg img {
+    max-width:10%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.arvioMasterContainer {
+    margin-top:4vh;
+    display:flex;
+    flex-flow: column;
+    width:60%;
+    /*
+    border-color:greenyellow;
+    border-style: dotted;*/
+}
+.arvioTextBox {
+    margin:auto;
+    width:90%;
+    font-size: large;
+}
+.arvioAlbumArtLarge {
+    max-width:85%;
+    min-width:50%;
+    margin-right:auto;
+    margin-left:auto;
+    display:flex;
+}
+.arvioAlbumArtLarge img {
+    width:100%;
+}
+.arvioPageDataBox {
+    align-self:center;
+    width:90%;
+    margin-top:6vh;
+    display: flex;
+    flex-flow:row nowrap;
+    justify-content:space-between;
+    margin-bottom:4vh;
+}
+.arvioPageDataBox-text {
+    line-height:1;
+    font-size: large;
+}
+.arvioPageTitle {
+    margin-bottom:1vh;
+    font-size: x-large;
+    font-weight: bold;
+}
+.arvioPageDataBox-ratingContainer {
+    width:25%;
+    float:right;
+}
+.arvioPageDataBox-ratingContainer img {
+    width:50%;
+    float:right;
+}
