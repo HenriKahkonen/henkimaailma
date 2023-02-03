@@ -1,18 +1,18 @@
-import { HenkimaailmaPage } from "../../components";
 import './Etusivu.css'
 import axios from "axios";
-import { TwToken } from "../../auth";
-import { TwAppID } from "../../auth";
-import { useLoaderData } from "react-router-dom"
+import { auth } from "../../auth";
 import { KontsaArray } from "..";
-import { Link, NavLink } from "react-router-dom";
+import { 
+    NavLink,
+    useLoaderData, 
+} from "react-router-dom";
 
 async function isSkriimOnline() {
     let url = "https://api.twitch.tv/helix/streams?user_id=55464815"
     let API_HEADERS = {
         headers: {
-        'Authorization' : TwToken,
-        'Client-ID': TwAppID,
+        'Authorization' : auth.TwitchToken,
+        'Client-ID': auth.TwitchAppID,
         }
     }
     let status = axios
