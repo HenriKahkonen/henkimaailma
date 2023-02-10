@@ -34,6 +34,8 @@ import {
   arviotLoader,
   ArvioItem,
   arvioItemLoader,
+  DiscordLevyRaati,
+  discordLevyRaatiLoader
 } from "./contentpages"
 
 import reportWebVitals from './reportWebVitals';
@@ -60,6 +62,22 @@ import reportWebVitals from './reportWebVitals';
                   path: ":projectUrl",
                   element: <Projekti/>,
                   loader: projektiLoader,
+                },
+                {
+                  path: "discordlevyraati",
+                  loader: discordLevyRaatiLoader,
+                  children: [
+                    {
+                      index:true,
+                      element: <DiscordLevyRaati/>
+                    },
+                    {
+                      path:"dokumentaatio"
+                    },
+                    {
+                      path:"leaderboard"
+                    }
+                  ],
                 },
                 /*{
                   path: "music-misc",

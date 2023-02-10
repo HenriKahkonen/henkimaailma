@@ -21,6 +21,3 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-#tietoturva, viimeksi repossa lukee sana11
-/src/auth.js

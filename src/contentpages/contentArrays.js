@@ -10,6 +10,7 @@ import { IdeoitaNayttamolla } from "./Blog/BlogPosts/IdeoitaNayttamolla.jsx";
 import  DDLKCNTBI  from "./Arviot/ArvioPages/DDLKCNTBI.jsx";
 import  NDFETO  from "./Arviot/ArvioPages/NDFETO.jsx";
 import { AnnanHeviOpinnot } from "./Projektit/Projektialasivut/AnnanHeviOpinnot.jsx";
+import { DiscordLevyRaati } from "./Projektit/Projektialasivut/Discordlevyraati/Discordlevyraati.jsx";
 
 export const ContentArrays = [
     
@@ -186,7 +187,7 @@ export const ContentArrays = [
         },
         {
             "id": 9,
-            "title": "Annan Hevi Opinnot (Turun Wappuradio 24.4.2022",
+            "title": "Annan Hevi Opinnot (Turun Wappuradio 24.4.2022)",
             "url": "annan-hevi-opinnot",
             "imgurl": "https://i.imgur.com/81yV534.jpg",
             "date": new Date("2022-04-24T16:00:00Z"),
@@ -195,6 +196,17 @@ export const ContentArrays = [
             "sl": false,
             "element": <AnnanHeviOpinnot/>
         },
+        {
+            "id": 10,
+            "title": "Discord-levyraati",
+            "url" : "discordlevyraati",
+            //"imgurl" :
+            "date" : new Date("2023-02-08T16:00:00Z"),
+            "tags": ["Ohjelmointi"],
+            "ftags" : ["Muut"],
+            "sl" : false,
+            "element" : <DiscordLevyRaati/>
+        }
     ]},
 
     {list:"arviot",

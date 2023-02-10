@@ -44,6 +44,10 @@ import {
     ArvioItem,
     loader as arvioItemLoader,
 } from "./Arviot/ArvioItem.jsx";
+import {
+    DiscordLevyRaati,
+    loader as discordLevyRaatiLoader,
+} from "./Projektit/Projektialasivut/Discordlevyraati/Discordlevyraati.jsx";
 
 import {ContentArrays} from './contentArrays';
 
@@ -80,6 +84,9 @@ export {
 
     CV,
     Meta,
+
+    DiscordLevyRaati,
+    discordLevyRaatiLoader,
 }
 
 const filterSpotLighteds=(fullArray)=> {
