@@ -1,41 +1,13 @@
 import './Etusivu.css'
 import axios from "axios";
-import { auth } from "../../auth";
 import { KontsaArray } from "..";
 import { 
     NavLink,
     useLoaderData, 
 } from "react-router-dom";
 
-async function isSkriimOnline() {
-    let url = "https://api.twitch.tv/helix/streams?user_id=55464815"
-    let API_HEADERS = {
-        headers: {
-        'Authorization' : auth.TwitchToken,
-        'Client-ID': auth.TwitchAppID,
-        }
-    }
-    let status = axios
-        .get(url,API_HEADERS)
-        .then(res => {
-                console.log(res.data)
-                if (res.data.data.length > 0) {
-                    console.log("LIVE")
-                    return true
-                } else {
-                console.log("Not live")
-                    return false}
-        }).catch(function (error) {
-            console.log(error.response)
-            if (error.response.data.error.status===401) {
-                console.log("Twitch api palautti 401, whatup");
-            }
-        })
-    return status;
-}
-
 export async function loader() {
-    let liveStatus = await isSkriimOnline()
+    let liveStatus = false // TODO: CHECK STATUS FROM BACKEND
     console.log("loader, live: ",liveStatus)
     const SkriimThings = await SkriimBuilder(liveStatus)
     return {liveStatus, SkriimThings}

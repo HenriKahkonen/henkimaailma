@@ -1,4 +1,3 @@
-import { auth } from "../auth";
 import graphql from "graphql";
 import axios from "axios";
 
