@@ -1,11 +1,10 @@
 import graphql from "graphql";
 import axios from "axios";
-import { LocalDataHolder } from "../contentpages/Root/LocalData";
 //import { levyRaatiDataLocal } from "..";
 
-export async function FetchLevyRaatiData(localdata) {
+export async function FetchLevyRaatiData() {
     //console.log(localdata.getLevyRaatiData())
-    //if (levyRaatiDataLocal[0]===undefined) {
+    //if (localdata[0]===undefined) {
         let lrSorted;
         await axios.get("https://jives-bot.fly.dev/levyraatidata")
         .then(res => lrSorted = res.data)
@@ -13,15 +12,18 @@ export async function FetchLevyRaatiData(localdata) {
         lrSorted = lrSorted.sort((a,b) => {return b[5] - a[5]})
         //levyRaatiDataLocal=lrSorted
         return lrSorted
-    /*} else {
-        console.log("Levyraatidata haettu lokaalisti")
-        return levyRaatiDataLocal
-    }
-    */
+    //} else {
+    //    console.log("Levyraatidata haettu lokaalisti")
+    //    return localdata
+    //}
 }
 
 export async function isSkriimOnline() {
-    return axios.get("https://jives-bot.fly.dev/isSkriimOnline")
+    let status;
+    await axios.get("https://jives-bot.fly.dev/isSkriimOnline")
+        .then(res => status = res.data)
+    console.log("Skriim status haettu serveriltä")
+    return status
 }
 
 export const CurrentTab = () => {
@@ -33,7 +35,7 @@ export const CurrentTab = () => {
 }
 
 const convertRatingString = (rating) => {
-    console.log("muunnetaan stringistä")
+    //console.log("muunnetaan stringistä")
     let numRating;
     let stringRatingJustNum = rating.replace(" 1/2","").replace("++","").replace("-","").replace("+",'');
     numRating = Number(stringRatingJustNum)*10;
@@ -54,7 +56,7 @@ export const getRatingPngFromRating = (rating) => {
 
      //KOKONAISLUKU 0-1000
     kuvapiste = Math.floor(rating/25)*25;
-    console.log("Muunnetaan pisteet:",rating,"->",kuvapiste)
+    //console.log("Muunnetaan pisteet:",rating,"->",kuvapiste)
     return process.env.PUBLIC_URL+"/img/arvosanat/"+kuvapiste+".png"
 }
 
@@ -75,7 +77,7 @@ export const getRatingPng = (post) => {
         kuvapiste = Math.floor(rating/2.5)*25;
     }
     //KOULUARVOSANAKSI: Math.floor(rating/4)*25+375
-    console.log("Muunnetaan pisteet:",post.title,post.rating,"->",kuvapiste)
+    //console.log("Muunnetaan pisteet:",post.title,post.rating,"->",kuvapiste)
     return process.env.PUBLIC_URL+"/img/arvosanat/"+kuvapiste+".png"
 }
 

@@ -5,7 +5,8 @@ import ErrorRoot from './Sivu404/ErrorRoot.js'
 
 import {
     Etusivu,
-    loader as etusivuLoader} from './Etusivu/Etusivu.js';
+    //loader as etusivuLoader,
+} from './Etusivu/Etusivu.js';
 
 import CV from './CV/CV.js';
 import Meta from './Meta/Meta.js';
@@ -56,7 +57,7 @@ export {
     Sivu404,
 
     Etusivu,
-    etusivuLoader,
+    //etusivuLoader,
 
     Projekti,
     ProjektiLista,

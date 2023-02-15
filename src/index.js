@@ -2,18 +2,21 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {
   createBrowserRouter,
-  RouterProvider
+  RouterProvider,
+  Route
 } from "react-router-dom";
 
 //SIVUIMPORTIT
 import './index.css';
-import Root from "./contentpages/Root/Root.jsx"
+import {Root,
+  //loader as rootloader
+} from "./contentpages/Root/Root.jsx"
 
 import {
   Sivu404,
   ErrorRoot,
   Etusivu,
-  etusivuLoader,
+  //etusivuLoader,
   ProjektiLista,
   Projekti,
   projektiLoader,
@@ -37,7 +40,11 @@ import {
   DiscordLevyRaati,
   discordLevyRaatiLoader
 } from "./contentpages"
+import { 
+  LevyRaatiLeaderboard,
+  SkriimBuilder } from './contentpages/Etusivu/Etusivu';
 import reportWebVitals from './reportWebVitals';
+import { FetchLevyRaatiData, isSkriimOnline } from './components/functions';
 
 /*
   export let levyRaatiDataLocal = [];
@@ -50,23 +57,38 @@ import reportWebVitals from './reportWebVitals';
     skriimLiveStatus = status
   }
 */
-  const renderRouter = () => {
-    const router = createBrowserRouter([
+  const renderRouter = (lrData,liveStatus) => {
+    //console.log(lrData, liveStatus)
+    const router = createBrowserRouter(
+      [
       {
-        path: "/",
+        
+        path: "*",
         element: <Root />,
+        //loader: rootloader,
         errorElement: <ErrorRoot />,
         children: [
           {
           errorElement: <Sivu404 />,
           children: [
-            {index:true, loader: etusivuLoader, element:<Etusivu/>},
+            {index:true, 
+              loader: () => {
+                console.log("lrData :",lrData)
+                console.log("livestatus: ", liveStatus);
+                const levyRaatiLeaderBoard = LevyRaatiLeaderboard(lrData)
+                const skriimThings = SkriimBuilder(liveStatus)
+                return {levyRaatiLeaderBoard, skriimThings}
+              },
+              element:<Etusivu/>
+            },
             {
               path: "projektit",
               children : [
                 {
+                  
                   index:true, 
-                  element: <ProjektiLista/>, 
+                  element:<ProjektiLista/>
+                 
                 },
                 {
                   path: ":projectUrl",
@@ -201,7 +223,15 @@ import reportWebVitals from './reportWebVitals';
 
 //Nettisivun suoritus alkaa
 //render();
-renderRouter();
+
+
+async function StartSite() {
+  const lrData = await FetchLevyRaatiData()
+  const livestatus = await isSkriimOnline()
+  console.log("Sivu käynnistyy, lrdata: "+lrData+" livestatus: "+livestatus)
+  return renderRouter(lrData,livestatus);
+}
+StartSite();
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

@@ -2,8 +2,11 @@ import '../../App.css'
 
 import 
     {
-        Outlet, 
+        Outlet,
+        useNavigation,
+        useLoaderData,
     } from "react-router-dom";
+import { Component } from 'react';
 
 import 
     {
@@ -12,35 +15,38 @@ import
       SomeLinkkiLaja,
       FinalFooter,
     } from "../../components";
+import { FetchLevyRaatiData, isSkriimOnline } from '../../components/functions';
 
-/*
-  export async function action() {
-        const contact = await createContact();
-        return redirect(`/contacts/${contact.id}/edit`);
+
+
+/*export async function loader({request}) {
+  const livestatus = await isSkriimOnline()
+  const lrData = await FetchLevyRaatiData();
+  console.log("Root loader, live: ",livestatus," lrData: "+lrData)
+  return {livestatus, lrData}
+}*/
+
+
+export function Root() {
+    /*
+    constructor(props) {
+      super(props)
+      this.state = {
+        levyraatidata: [],
+        livestatus: false,
+      }
     }
-*/
-/*
-export async function loader({request}) {
-  const url = new URL(request.url);
-  const q = url.searchParams.get("q");
-  return {q};
-}
-*/
-
-export default function Root() {
-  /*
-    const { contacts, q } = useLoaderData();
-    const navigation = useNavigation();
-    //const submit = useSubmit();
-    const searching = navigation.location &&
-    new URLSearchParams(navigation.location.search).has(
-        "q"
-        );
-
-    useEffect(() => {
-        document.getElementById("q").value = q;
-    }, [q]);
-*/
+    
+    async componentDidMount() {
+      console.log("root mounttaa")
+      const live = await isSkriimOnline();
+      const lrdata = await FetchLevyRaatiData()
+      this.setState({levyraatidata:lrdata,livestatus:live})
+    }
+    */
+    //const {livestatus,lrData} = useLoaderData();
+    //const lrData=this.state.levyraatidata;
+    //const livestatus=this.state.livestatus;
     return (
         <div className="App">
           <div className="Master-container">
@@ -50,6 +56,7 @@ export default function Root() {
               <div className="MainContainer">
                   <div className="Kontsa">
                     <Outlet/>
+                    {/*<Outlet context={[lrData,livestatus]}/>*/}
                   </div>
               <SomeLinkkiLaja/>
               </div>
@@ -59,3 +66,4 @@ export default function Root() {
         </div>
     );
 }
+//}
