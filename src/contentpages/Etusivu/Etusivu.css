@@ -84,12 +84,77 @@
 #levyArvioBotTopList {
     min-width:35%;
     margin-top:4vh;
-    max-width:45%;
+    max-width:38%;
     min-height: 30vh;
     display:flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap:1vh;
     text-align: center;
     box-shadow:2px 2px 10px #cac6c3;
-    background-color:rgba(255, 255, 255, 0.507);
+    background-color:rgba(18, 40, 236, 0.062);
 }
+.levyRaatiLeaderboardHeader {
+    font-weight: bold;
+    font-size:large;
+    padding-top:10px;
+    padding-bottom:10px;
+    box-shadow:2px 2px 10px #cac6c3;
+    background-color:rgb(248, 244, 244);
+}
+
+.levyraatiLeaderboardItem {
+    display:flex;
+    padding:5px;
+    gap:0.5vh;
+    height:80px;
+    font-size: small;
+    text-align:left;
+    margin-left:10px;
+    margin-right:10px;
+    box-shadow:2px 2px 10px #cac6c3;
+    background-color:rgb(248, 244, 244);
+}
+.levyraatiLeaderboardItem img {
+    display:block;
+    width:20%;
+    object-fit:contain;
+}
+.levyraatiLeaderboardDataBox {
+    width:50%;
+    display:flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    line-height: 1;
+    gap:0.25vh;
+}
+.lrlbCopyright {
+    font-size:x-small;
+    margin-top:auto;
+}
+
+.levyraatiLeaderboardRatingBox {
+    width:25%;
+    max-height:100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-self: flex-end;
+    margin-top:auto;
+    margin-bottom:auto;
+    justify-content: flex-end;
+    font-size:normal;
+
+}
+.levyraatiLeaderboardRatingBox img {
+    width:50%;
+    display:block;
+    max-height:100%;
+    margin-top: auto;
+    margin-bottom:auto;
+}
+.lrlbrn {
+    margin-left: 0.5vw;
+    margin-top:auto;
+    margin-bottom:auto;
+}
+

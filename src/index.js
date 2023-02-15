@@ -37,9 +37,19 @@ import {
   DiscordLevyRaati,
   discordLevyRaatiLoader
 } from "./contentpages"
-
 import reportWebVitals from './reportWebVitals';
 
+/*
+  export let levyRaatiDataLocal = [];
+  export function updateLevyraatiDataLocal(data) {
+    levyRaatiDataLocal = data
+  }
+  export let skriimLiveStatus;
+  export function updateSkriimLiveStatus(status) {
+    //JOTAKIN JOTAKIN JOTAKIN
+    skriimLiveStatus = status
+  }
+*/
   const renderRouter = () => {
     const router = createBrowserRouter([
       {

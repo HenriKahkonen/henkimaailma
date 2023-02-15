@@ -1,7 +1,28 @@
 import graphql from "graphql";
 import axios from "axios";
+import { LocalDataHolder } from "../contentpages/Root/LocalData";
+//import { levyRaatiDataLocal } from "..";
 
+export async function FetchLevyRaatiData(localdata) {
+    //console.log(localdata.getLevyRaatiData())
+    //if (levyRaatiDataLocal[0]===undefined) {
+        let lrSorted;
+        await axios.get("https://jives-bot.fly.dev/levyraatidata")
+        .then(res => lrSorted = res.data)
+        console.log("Levyraatidata haettu serveriltä")
+        lrSorted = lrSorted.sort((a,b) => {return b[5] - a[5]})
+        //levyRaatiDataLocal=lrSorted
+        return lrSorted
+    /*} else {
+        console.log("Levyraatidata haettu lokaalisti")
+        return levyRaatiDataLocal
+    }
+    */
+}
 
+export async function isSkriimOnline() {
+    return axios.get("https://jives-bot.fly.dev/isSkriimOnline")
+}
 
 export const CurrentTab = () => {
     let a = window.location.pathname;
@@ -23,6 +44,18 @@ const convertRatingString = (rating) => {
     else if (rating.includes("-")) {
         numRating = numRating-2.5}
     return numRating
+}
+
+export const getRatingPngFromRating = (rating) => {
+    let kuvapiste;
+    if (!rating && rating!==0) {
+        return null
+    }
+
+     //KOKONAISLUKU 0-1000
+    kuvapiste = Math.floor(rating/25)*25;
+    console.log("Muunnetaan pisteet:",rating,"->",kuvapiste)
+    return process.env.PUBLIC_URL+"/img/arvosanat/"+kuvapiste+".png"
 }
 
 export const getRatingPng = (post) => {

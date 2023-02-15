@@ -1,3 +1,4 @@
+/*
 import React from 'react';
 import './App.css';
 //TEST
@@ -26,7 +27,8 @@ class App extends React.Component {
           "Musiikkitiede",
           "Teatteri",
           "Koulu"
-        ]
+        ],
+        levyRaatiData: [],
       }
     
     console.log('App constructaa')
@@ -91,4 +93,4 @@ class App extends React.Component {
 
 export default App;
 
-
+*/

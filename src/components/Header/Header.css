@@ -27,3 +27,22 @@
     background-image: url('../../img/logoanim2.gif');
     background-repeat: no-repeat;
 }
+
+.App-header-new {
+  height:16vh;
+  /*color:white;
+  background-image: url(https://i.imgur.com/zcTKp0l.png);
+  background-repeat: repeat;*/
+  display: flex;
+  flex-direction: row;
+}
+
+.Header-new-textcontainer {
+  font-family:'Courier New', Courier, monospace;
+  margin-left:21%;
+  margin-right:auto;
+  width:77%;
+  border:1px;
+  border-style: none none solid none;
+  margin-bottom:2vh;
+}
