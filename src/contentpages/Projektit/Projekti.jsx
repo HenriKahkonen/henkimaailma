@@ -1,18 +1,9 @@
 import "./Projektit.css"
-import {
-    parseDate,
-    listTags
-} from '../../components/functions.js'
-import { KontsaArray } from "..";
-import {
-    HenkimaailmaPage,
-} from "../../components";
+import { KontsaArray } from "../../contentArrays.js";
 import {
     useLoaderData,
 } from "react-router-dom";
 import { NavLink } from "react-router-dom";
-
-
 
 export async function loader({ params }) {
     const projects = KontsaArray.projektit
@@ -27,6 +18,7 @@ export async function loader({ params }) {
     return project;
 }
 
+// Toimintalogiikka sama kuin blogin puolella, täällä alasivujen tyyli vaan vaihtelee enemmän
 export function Projekti() {
     const project = useLoaderData();
     if (!project) {
@@ -37,28 +29,9 @@ export function Projekti() {
     }
     return (
     <>
-    <h1><NavLink to="/projektit">Proggikset</NavLink> / {project.title}</h1>
-    {project.element}
+        <h1><NavLink to="/projektit">Proggikset</NavLink> / {project.title}</h1>
+        {project.element}
     </>
     )
 }
 
-//TODO MAKE THIS BETTER
-class ProjectPage extends HenkimaailmaPage {
-    constructor(props) {
-        super(props) 
-        this.state = props.state
-        }
-
-    arrayItem = this.props.item
-
-
-    render() {
-    
-    return (
-        <div>
-            {this.generatePostHeader()}
-        </div>
-    )
-    }
-}

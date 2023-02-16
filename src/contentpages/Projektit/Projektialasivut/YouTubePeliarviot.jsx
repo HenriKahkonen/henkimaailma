@@ -1,7 +1,7 @@
 // JOS PITÄÄ TEHDÄ UUTTA SIVUA NIIN TÄSTÄ COPYPASTEA
 
 // 1. MUISTA IMPORTTAA SIVU
-import { KontsaArray } from "../..";
+import { KontsaArray } from "../../../contentArrays.js";
 import React from "react";
 import { parseDate } from "../../../components/functions";
 import { listTags } from "../../../components/functions";

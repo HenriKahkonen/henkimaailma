@@ -1,6 +1,5 @@
-import { HenkimaailmaPage } from "../../components"
 import { useLoaderData } from "react-router-dom";
-import { KontsaArray } from "..";
+import { KontsaArray } from "../../contentArrays.js";
 import { useSubmit } from "react-router-dom";
 import { useEffect } from "react";
 import { Form } from "react-router-dom";

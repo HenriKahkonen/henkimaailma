@@ -1,4 +1,4 @@
-import { KontsaArray } from "../.."
+import { KontsaArray } from "../../../contentArrays.js"
 import { useLoaderData } from "react-router-dom"
 import { parseDate } from "../../../components/functions"
 import { listTags } from "../../../components/functions"

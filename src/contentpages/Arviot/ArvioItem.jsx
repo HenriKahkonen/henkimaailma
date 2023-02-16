@@ -1,4 +1,4 @@
-import { KontsaArray } from "..";
+import { KontsaArray } from "../../contentArrays.js";
 import { useLoaderData } from "react-router-dom";
 import { listArtists } from "../../components/functions";
 import { getRatingPng } from "../../components/functions";

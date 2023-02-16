@@ -1,18 +1,15 @@
-import {HenkimaailmaPage} from "../../components";
 import './Blog.css'
-import axios from "axios";
 import {parseDate} from '../../components/functions'
 
 import React, { useEffect } from "react";
-import {KontsaArray} from '../'
+import {KontsaArray} from '../../contentArrays.js'
 import { listTags } from "../../components/functions";
 import { 
     useLoaderData,
-    useNavigation,
     Form,
     useSubmit,
     Link,
-     } from "react-router-dom";
+    } from "react-router-dom";
 
 const generateBlogList = (blogArray, searchParam) => {
     let blogArrayFiltered 
@@ -42,8 +39,7 @@ const generateBlogList = (blogArray, searchParam) => {
     )
 }
 
-
-
+//Loader ajaa blogin filtteröinnin: palautettavaa q:ta käytetään sivun renderöinnissä rajaamaan blogilistaa
 export async function loader({request}) {
     const url = new URL(request.url);
     const q = url.searchParams.get("q");
@@ -83,37 +79,4 @@ export function Blog() {
         )
 }
 
-class BlogPage extends HenkimaailmaPage {
-    constructor(props) {
-        super(props)
-    }
-    q=this.props.q
-    blogArray = KontsaArray.blog
-
-    /*
-    filterBlogList = () => {
-        return "a"
-        //this.setState({state})
-    }
-    */
-
-    /*
-    displayStatus(blogitem) {
-        let tagsApproved = true
-        let titleApproved = true //TODO
-        console.log('tämän postauksen tagit on ',blogitem['tags'])
-        return 
-
-    }
-    */
-
-    
-
-    render() {
-        return (
-            <div>{generateBlogList(this.blogArray, this.q)}</div>
-        )
-    }
-}
-
-    export default Blog;
+export default Blog;

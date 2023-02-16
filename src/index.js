@@ -1,17 +1,14 @@
+//import reportWebVitals from './reportWebVitals';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {
   createBrowserRouter,
   RouterProvider,
-  Route
 } from "react-router-dom";
 
 //SIVUIMPORTIT
 import './index.css';
-import {Root,
-  //loader as rootloader
-} from "./contentpages/Root/Root.jsx"
-
+import {Root} from "./contentpages/Root/Root.jsx"
 import {
   Sivu404,
   ErrorRoot,
@@ -23,10 +20,6 @@ import {
   Blog,
   Meta,
   CV,
-  /*
-  miscMusiikkiLoader,
-  MiscMusiikkiPage,
-  MiscMusiikki,*/
   YouTubePeliarviot,
   YouTubePeliarviosivu,
   youTubePeliarvioLoader,
@@ -38,193 +31,73 @@ import {
   ArvioItem,
   arvioItemLoader,
   DiscordLevyRaati,
-  discordLevyRaatiLoader
+  //discordLevyRaatiLoader
 } from "./contentpages"
+
 import { 
   LevyRaatiLeaderboard,
   SkriimBuilder } from './contentpages/Etusivu/Etusivu';
-import reportWebVitals from './reportWebVitals';
-import { FetchLevyRaatiData, isSkriimOnline } from './components/functions';
+import { 
+  FetchLevyRaatiData, 
+  isSkriimOnline } from './components/functions';
 
-/*
-  export let levyRaatiDataLocal = [];
-  export function updateLevyraatiDataLocal(data) {
-    levyRaatiDataLocal = data
-  }
-  export let skriimLiveStatus;
-  export function updateSkriimLiveStatus(status) {
-    //JOTAKIN JOTAKIN JOTAKIN
-    skriimLiveStatus = status
-  }
-*/
-  const renderRouter = (lrData,liveStatus) => {
-    //console.log(lrData, liveStatus)
-    const router = createBrowserRouter(
-      [
-      {
-        
-        path: "*",
-        element: <Root />,
-        //loader: rootloader,
-        errorElement: <ErrorRoot />,
+const renderRouter = (lrData,liveStatus) => {
+  const router = createBrowserRouter([
+    { path: "*", element: <Root />, errorElement: <ErrorRoot />, 
+      children: [{
+        errorElement: <Sivu404 />,
         children: [
-          {
-          errorElement: <Sivu404 />,
-          children: [
-            {index:true, 
-              loader: () => {
-                console.log("lrData :",lrData)
-                console.log("livestatus: ", liveStatus);
-                const levyRaatiLeaderBoard = LevyRaatiLeaderboard(lrData)
-                const skriimThings = SkriimBuilder(liveStatus)
-                return {levyRaatiLeaderBoard, skriimThings}
-              },
-              element:<Etusivu/>
+          { index:true, 
+            // Loadereiden määrittely täällä näin on paras keksimäni ratkaisu siihen 
+            // ettei stream statusta ja lr dataa tarvi fetchata niin paljoa
+            // ympäri sivustoa
+            loader: () => {
+              const levyRaatiLeaderBoard = LevyRaatiLeaderboard(lrData)
+              const skriimThings = SkriimBuilder(liveStatus)
+              return {levyRaatiLeaderBoard, skriimThings}
             },
-            {
-              path: "projektit",
-              children : [
-                {
-                  
-                  index:true, 
-                  element:<ProjektiLista/>
-                 
-                },
-                {
-                  path: ":projectUrl",
-                  element: <Projekti/>,
-                  loader: projektiLoader,
-                },
-                {
-                  path: "discordlevyraati",
-                  loader: discordLevyRaatiLoader,
-                  children: [
-                    {
-                      index:true,
-                      element: <DiscordLevyRaati/>
-                    },
-                    {
-                      path:"dokumentaatio"
-                    },
-                    {
-                      path:"leaderboard"
-                    }
-                  ],
-                },
-                /*{
-                  path: "music-misc",
-                  children : [
-                    {
-                      index:true,
-                      element:<MiscMusiikki/>,
-                    },
-                    {
-                      path:":miscMusicItem",
-                      loader:miscMusiikkiLoader,
-                      element: <MiscMusiikkiPage/>
-                    },
-                  ],
-                },*/
-                {
-                  path: "peliarviot",
-                  children : [
-                    {
-                      index:true,
-                      element:<YouTubePeliarviot/>,
-                    },
-                    {
-                      path:":peliarvioTitle",
-                      loader: youTubePeliarvioLoader,
-                      element: <YouTubePeliarviosivu/>,
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              path: "blog",
-              children: [
-                {
-                  index:true, loader: blogLoader, element:<Blog/>
-                },
-                {
-                  path: ":blogPost",
-                  loader: blogItemLoader,
-                  element: <BlogItem/>
-              }
-
-              ]
-            },
-            {
-              path: "arviot",
-              children: [
-                {
-                  index:true, loader: arviotLoader, element: <Arviot/>
-                },
-                {
-                  path: ":arvio",
-                  loader: arvioItemLoader,
-                  element: <ArvioItem/> 
-                }
-              ]
-            },
-            {
-              path: "meta",
-              element: <Meta/>
-            },
-            {
-              path: "cv",
-              element: <CV/>
-            },
-          ]
-          }
-        ]
-        /*children: [
-          {
-            errorElement: <ErrorPage />,
+            element:<Etusivu/> },
+          { path: "projektit",
+            children : [
+              { index:true, element:<ProjektiLista/> },
+              { path: ":projectUrl", element: <Projekti/>, loader: projektiLoader, },
+              // TODO Discordlevyraati
+              { path: "discordlevyraati",
+                children: [
+                  { index:true, element: <DiscordLevyRaati/>},
+                  { path:":discLevyRaatiSubPage" /*TODO: SUBPAGE-ELEMENT?*/ },],},
+              { path: "peliarviot",
+                children : [
+                  { index:true, element:<YouTubePeliarviot/>},
+                  { path:":peliarvioTitle", 
+                    loader: youTubePeliarvioLoader,
+                    element: <YouTubePeliarviosivu/>,},
+                  ],},
+              ],},
+          { path: "blog",
             children: [
-              {index:true, element:<Index/>},
-              {
-                path: "contacts/:contactId",
-                element: <Contact />,
-                loader: contactLoader,
-                action: contactAction,
-              },
-              {
-                path: "contacts/:contactId/edit",
-                element: <EditContact />,
-                loader: contactLoader,
-                action: editAction,
-              },
-              {
-                path: "contacts/:contactId/destroy",
-                action: destroyAction,
-                errorElement: <div>Oops! There was an error.</div>,
-              },
-            ],
-          },
-        ],*/
-      },
-    ]);
-    ReactDOM.createRoot(document.getElementById('avtal')).render( 
+              { index:true, loader: blogLoader, element:<Blog/>},
+              { path: ":blogPost", loader: blogItemLoader, element: <BlogItem/>},
+            ],},
+          { path: "arviot",
+            children: [
+              { index:true, loader: arviotLoader, element: <Arviot/> },
+              { path: ":arvio", loader: arvioItemLoader, element: <ArvioItem/> },
+            ],},
+          { path: "meta", element: <Meta/> },
+          { path: "cv", element: <CV/> },
+        ],
+      }]
+    },
+  ]);
+  ReactDOM.createRoot(document.getElementById('avtal')).render( 
     <React.StrictMode>
       <RouterProvider router={router} />
     </React.StrictMode>
-    )}
-/*
-  const render = () => {
-      const root = ReactDOM.createRoot(document.getElementById('avtal'));
-      root.render( 
-      <React.StrictMode>
-        <App currentPage={window.location.pathname}/>
-      </React.StrictMode>
-      )}
-*/
+  )
+}
 
-//Nettisivun suoritus alkaa
-//render();
-
-
+// React-reititin (nettisivu) käynnistyy
 async function StartSite() {
   const lrData = await FetchLevyRaatiData()
   const livestatus = await isSkriimOnline()
@@ -236,4 +109,7 @@ StartSite();
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+// En halua, kiitos kysymästä
+//reportWebVitals();
+

@@ -1,66 +1,27 @@
 
 import React from "react";
 import {
-
     NavLink,
 } from "react-router-dom"
-
 import './Projektit.css'
 import {
     HenkimaailmaPage,
 } from "../../components";
-
-
-import { KontsaArray } from "..";
-
+import { KontsaArray } from "../../contentArrays.js";
 import {
     parseDate,
     filterListByTag,
     listTags
 } from '../../components/functions.js'
 
-/*
-export async function loader({ params }) {
-    const projects = projektiArray
-    let project = projects.find(p => p.url === params.projectUrl)
-    console.log("ProjectListaus, Loaderiin tulee projecttitle:", params.projectUrl)
-    if (!project) {
-        return null
-    }
-    return project ?? null;
-}
-*/
-
+//Projektisivujen juuressa palautetaan vain staattinen lista projekteja.
+//Listan on päivitettävä omaa stateaan (proggisten filtteröinti), ja
+//funktio palauttaa siksi React-elementin
 export function ProjektiLista() {
-    /*const project = useLoaderData();*/
     return <ProjektiListaus/>
 }
 
-class ProjectListItem extends React.Component {
-
-    render() {
-        let item = this.props.item
-        let imgurl = "https://i.imgur.com/fHHgmrq.png" // 720x720px, placeholderlautanen
-        if (item.imgurl!==undefined) {imgurl=item.imgurl}        
-
-        return (
-            <div className="projectItemContainer" key={item['id']}>
-                <div className="projectItemImageContainer">
-                <NavLink to={item.url}>
-                    <img className="projectItemImage" src={imgurl} alt={item.title}></img>
-                </NavLink>
-                </div>
-                <div className="projectItemTextContainer">
-                    <div className='projectItemTitle'><NavLink to={item.url}>{item.title}</NavLink></div>
-                    <div className='projectItemDate'>{parseDate(item['date'])}</div>
-                    <div className='projectItemTags'>{listTags(item,true)}</div>
-                </div>
-            </div>
-        )
-    }
-
-}
-
+// Kaikkien projektien listaaminen ja listan filtteröinti
 class ProjektiListaus extends HenkimaailmaPage {
     constructor(props) {
         super(props)
@@ -127,3 +88,29 @@ class ProjektiListaus extends HenkimaailmaPage {
         )
     }
 }
+
+// Yhden projektin elementti listassa
+class ProjectListItem extends React.Component {
+    render() {
+        let item = this.props.item
+        let imgurl = "https://i.imgur.com/fHHgmrq.png" // 720x720px, placeholderlautanen
+        if (item.imgurl!==undefined) {imgurl=item.imgurl}        
+
+        return (
+            <div className="projectItemContainer" key={item['id']}>
+                <div className="projectItemImageContainer">
+                <NavLink to={item.url}>
+                    <img className="projectItemImage" src={imgurl} alt={item.title}></img>
+                </NavLink>
+                </div>
+                <div className="projectItemTextContainer">
+                    <div className='projectItemTitle'><NavLink to={item.url}>{item.title}</NavLink></div>
+                    <div className='projectItemDate'>{parseDate(item['date'])}</div>
+                    <div className='projectItemTags'>{listTags(item,true)}</div>
+                </div>
+            </div>
+        )
+    }
+
+}
+

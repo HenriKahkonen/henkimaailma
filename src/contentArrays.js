@@ -1,16 +1,20 @@
-import {TYTWabuKaba2021} from "./Projektit/Projektialasivut/TYT-Wappukabaree2021.jsx";
-import {EnsimmainenPsykoosiEP} from './Projektit/Projektialasivut/Ensimmainen Psykoosi EP.jsx';
-import {Ympyrat} from './Projektit/Projektialasivut/Ympyrat.jsx';
-import {YouTubePeliarviot} from './Projektit/Projektialasivut/YouTubePeliarviot.jsx'
-import {DJKEFMTP} from './Projektit/Projektialasivut/MiscMusiikki/DJ-Kalustoelukka&FMashina-Tyydyttava-Pikanen.jsx';
-import {HTMItalwaysForgets} from './Projektit/Projektialasivut/MiscMusiikki/HTM-It-Always-Forgets';
-import {HTMTheSpaceRace} from "./Projektit/Projektialasivut/MiscMusiikki/HTM-The-Space-Race.jsx";
-import { MitaHemmettia } from "./Blog/BlogPosts/MitaHemmettia.jsx";
-import { IdeoitaNayttamolla } from "./Blog/BlogPosts/IdeoitaNayttamolla.jsx";
-import  DDLKCNTBI  from "./Arviot/ArvioPages/DDLKCNTBI.jsx";
-import  NDFETO  from "./Arviot/ArvioPages/NDFETO.jsx";
-import { AnnanHeviOpinnot } from "./Projektit/Projektialasivut/AnnanHeviOpinnot.jsx";
-import { DiscordLevyRaati } from "./Projektit/Projektialasivut/Discordlevyraati/Discordlevyraati.jsx";
+// HERRA MUN VERENI
+
+// Tämä tiedosto on yksi frontin tärkeimmistä tietokasoista. Tähän viitataan melkein kaikkialla --> tätä päivittämällä suuri osa sivusta päivittyy ehjästi
+import { sortByDate } from "./components/functions.js";
+import {TYTWabuKaba2021} from "./contentpages/Projektit/Projektialasivut/TYT-Wappukabaree2021.jsx";
+import {EnsimmainenPsykoosiEP} from './contentpages/Projektit/Projektialasivut/Ensimmainen Psykoosi EP.jsx';
+import {Ympyrat} from './contentpages/Projektit/Projektialasivut/Ympyrat.jsx';
+import {YouTubePeliarviot} from './contentpages/Projektit/Projektialasivut/YouTubePeliarviot.jsx'
+import {DJKEFMTP} from './contentpages/Projektit/Projektialasivut/MiscMusiikki/DJ-Kalustoelukka&FMashina-Tyydyttava-Pikanen.jsx';
+import {HTMItalwaysForgets} from './contentpages/Projektit/Projektialasivut/MiscMusiikki/HTM-It-Always-Forgets';
+import {HTMTheSpaceRace} from "./contentpages/Projektit/Projektialasivut/MiscMusiikki/HTM-The-Space-Race.jsx";
+import { MitaHemmettia } from "./contentpages/Blog/BlogPosts/MitaHemmettia.jsx";
+import { IdeoitaNayttamolla } from "./contentpages/Blog/BlogPosts/IdeoitaNayttamolla.jsx";
+import  DDLKCNTBI  from "./contentpages/Arviot/ArvioPages/DDLKCNTBI.jsx";
+import  NDFETO  from "./contentpages/Arviot/ArvioPages/NDFETO.jsx";
+import { AnnanHeviOpinnot } from "./contentpages/Projektit/Projektialasivut/AnnanHeviOpinnot.jsx";
+import { DiscordLevyRaati } from "./contentpages/Projektit/Projektialasivut/Discordlevyraati/Discordlevyraati.jsx";
 
 export const ContentArrays = [
     
@@ -97,17 +101,8 @@ export const ContentArrays = [
 
     {list:"projektit",
     content: [
-        /*{
-            "id": 1,
-            "title": "Misc musahommat",
-            "url": "music-misc",
-            "imgurl": "https://i.imgur.com/M7VXshm.png",
-            "date": new Date("2022-06-09T16:00:00Z"),
-            "tags": ["Musiikki", "Soundcloud"],
-            "sl": false,
-        },*/
         {
-            "id": 2,
+            "id": 1,
             "title": "Ensimmäinen Psykoosi - Ensimmäinen Psykoosi EP",
             "url": "ensimmainen-psykoosi-ep",
             "imgurl": "https://i.imgur.com/yIwK34x.jpg",
@@ -118,7 +113,7 @@ export const ContentArrays = [
             element: <EnsimmainenPsykoosiEP/>
         },
         {
-            "id": 3,
+            "id": 2,
             "title": "Ympyrät",
             "url": "ympyrat",
             "imgurl": "https://i.imgur.com/KNi8URi.png",
@@ -129,7 +124,7 @@ export const ContentArrays = [
             "element": <Ympyrat/>,
         },
         {
-            "id": 4,
+            "id": 3,
             "title": "Turun Ylioppilasteatteri - Wappukabaree 2021",
             "url": "tyt-wappukabaree2021",
             "imgurl": "https://i.imgur.com/ovxyCTi.jpg",
@@ -141,7 +136,7 @@ export const ContentArrays = [
             
         },
         {
-            "id": 5,
+            "id": 4,
             "title": "Peliarviot Youtubessa",
             "url": "peliarviot",
             "imgurl": "https://i.imgur.com/TO8XN4w.png",
@@ -152,7 +147,7 @@ export const ContentArrays = [
             "element": <YouTubePeliarviot/>,
         },
         {
-            "id": 6,
+            "id": 5,
             "title": "Hank The Machine - The Space Race",
             "url": "htm-the-space-race",
             "imgurl": "https://i.imgur.com/pepjlCF.png",
@@ -164,7 +159,7 @@ export const ContentArrays = [
             "element": <HTMTheSpaceRace/>
         },
         {
-            "id": 7,
+            "id": 6,
             "title": "Hank The Machine - It Always Forgets",
             "url": "htm-it-always-forgets",
             "imgurl": "https://i.imgur.com/IJdHa94.png",
@@ -175,7 +170,7 @@ export const ContentArrays = [
             "element": <HTMItalwaysForgets/>
         },
         {
-            "id": 8,
+            "id": 7,
             "title": "DJ KALUSTOELUKKA & F-MASHINA - TYYDYTTÄVÄ PIKAINEN",
             "url": "dj-kalustoelukka-f-mashina-tyydyttava-pikainen",
             "imgurl": "https://i.imgur.com/AK6fHpq.png",
@@ -186,7 +181,7 @@ export const ContentArrays = [
             "element": <DJKEFMTP/>
         },
         {
-            "id": 9,
+            "id": 8,
             "title": "Annan Hevi Opinnot (Turun Wappuradio 24.4.2022)",
             "url": "annan-hevi-opinnot",
             "imgurl": "https://i.imgur.com/81yV534.jpg",
@@ -197,7 +192,7 @@ export const ContentArrays = [
             "element": <AnnanHeviOpinnot/>
         },
         {
-            "id": 10,
+            "id": 9,
             "title": "Discord-levyraati",
             "url" : "discordlevyraati",
             //"imgurl" :
@@ -226,7 +221,7 @@ export const ContentArrays = [
                     "label": "Earache Records",
             },
             "ftags": "Musiikki",
-            "rating": 68/100,
+            "rating": "8",
             "sl": false,
             "element": <NDFETO/>
         },
@@ -246,7 +241,7 @@ export const ContentArrays = [
             },
             "ftags": "Musiikki",
             "sl": false,
-            "rating": 80/100,
+            "rating": "8+",
             "element": <DDLKCNTBI/>
         }
     ]},
@@ -275,38 +270,22 @@ export const ContentArrays = [
     ]},
 ]
 
+const filterSpotLighteds=(fullArray)=> {
+    let spotlighteds=[]
+    for (let i=0;i < fullArray.length; i++) {
+        for (let y=0; y < fullArray[i]["content"].length; y++) {
+            if (fullArray[i]["content"][y]["sl"]===true) {
+                spotlighteds = spotlighteds.concat(fullArray[i]["content"][y])
+            }
+        }
+    }
+    return spotlighteds}
 
-    /*{list:"miscMusic",
-    content: [
-        {
-            "id": 1,
-            "title": "Hank The Machine - The Space Race",
-            "url": "htm-the-space-race",
-            "imgurl": "https://i.imgur.com/BXQBspf.jpg",
-            "date": new Date("2021-11-01T16:00:00Z"),
-            "tags": ["Musiikki", "Soundcloud"],
-            "ytid" : "7EBasiMtlDc",
-            "sl": false,
-            "element": <HTMTheSpaceRace/>
-        },
-        {
-            "id": 2,
-            "title": "Hank The Machine - It Always Forgets",
-            "url": "htm-it-always-forgets",
-            "imgurl": "https://i.imgur.com/6zotfzA.jpg",
-            "date": new Date("2022-06-09T16:00:00Z"),
-            "tags": ["Musiikki","Soundcloud","YouTube"],
-            "sl": false,
-            "element": <HTMItalwaysForgets/>
-        },
-        {
-            "id": 3,
-            "title": "DJ KALUSTOELUKKA & F-MASHINA - TYYDYTTÄVÄ PIKAINEN",
-            "url": "dj-kalustoelukka-f-mashina-tyydyttava-pikainen",
-            "imgurl": "https://i.imgur.com/r9Kaslf.jpg",
-            "date": new Date("2020-05-01T16:00:00Z"),
-            "tags": ["Musiikki","Soundcloud"],
-            "sl": false,
-            "element": <DJKEFMTP/>
-        },
-    ]}*/
+export const KontsaArray = {
+        kaikki : sortByDate(ContentArrays),
+        peliarviot : sortByDate(ContentArrays[0].content),
+        blog : sortByDate(ContentArrays[1].content),
+        projektit : sortByDate(ContentArrays[2].content),
+        arviot : sortByDate(ContentArrays[3].content),
+        spotlightArray : filterSpotLighteds(sortByDate(ContentArrays))
+}
