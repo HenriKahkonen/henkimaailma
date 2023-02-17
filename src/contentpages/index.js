@@ -42,9 +42,10 @@ import {
 
 import {
     DiscordLevyRaati,
-    loader as discordLevyRaatiLoader,
+    LevyRaatiBigLeaderboardBuilder,
 } from "./Projektit/Projektialasivut/Discordlevyraati/Discordlevyraati.jsx";
-
+import {DiscordLevyRaatiDocs} from "./Projektit/Projektialasivut/Discordlevyraati/DiscordLevyraatiDocs.jsx"
+import {DiscordLevyRaatiTietosuoja} from "./Projektit/Projektialasivut/Discordlevyraati/DiscordLevyraatiTietosuoja.jsx"
 export {
     ErrorRoot,
     Sivu404,
@@ -73,6 +74,7 @@ export {
     Meta,
 
     DiscordLevyRaati,
-    discordLevyRaatiLoader,
+    DiscordLevyRaatiDocs,
+    DiscordLevyRaatiTietosuoja
 }
 

@@ -28,7 +28,20 @@
 }
 .App a:hover {
   color: #641410;
-}  
+}
+
+.prose {
+  max-width:920px;
+}
+.prose a {
+  color:blue;
+}
+.prose a:hover {
+  color: #641410;
+}
+.prose img {
+  text-align:center;
+}      
 
 .Master-container {
   /*background-color: white;*/

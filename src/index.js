@@ -13,7 +13,6 @@ import {
   Sivu404,
   ErrorRoot,
   Etusivu,
-  //etusivuLoader,
   ProjektiLista,
   Projekti,
   projektiLoader,
@@ -31,7 +30,8 @@ import {
   ArvioItem,
   arvioItemLoader,
   DiscordLevyRaati,
-  //discordLevyRaatiLoader
+  DiscordLevyRaatiDocs,
+  DiscordLevyRaatiTietosuoja,
 } from "./contentpages"
 
 import { 
@@ -61,11 +61,19 @@ const renderRouter = (lrData,liveStatus) => {
             children : [
               { index:true, element:<ProjektiLista/> },
               { path: ":projectUrl", element: <Projekti/>, loader: projektiLoader, },
-              // TODO Discordlevyraati
               { path: "discordlevyraati",
                 children: [
-                  { index:true, element: <DiscordLevyRaati/>},
-                  { path:":discLevyRaatiSubPage" /*TODO: SUBPAGE-ELEMENT?*/ },],},
+                  { index:true, 
+                    //Selittämättömästä syystä yllä oleva systeemi ei toimi tässä
+                    //Levyraadin voi kuitenkin buildata lähettämällä datan loaderiin
+                    loader: () => { 
+                      return {lrData}
+                    },
+                    element: <DiscordLevyRaati/>},
+                  { path:"docs", element:<DiscordLevyRaatiDocs/> },
+                  { path:"tietosuoja", element:<DiscordLevyRaatiTietosuoja/> },
+                ],
+                },
               { path: "peliarviot",
                 children : [
                   { index:true, element:<YouTubePeliarviot/>},

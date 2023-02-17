@@ -1,0 +1,151 @@
+.discordLevyraatiTopNav {
+    display:flex;
+    flex-direction:row wrap;
+    gap:4vw;
+    line-height:1;
+}
+.lrNavActive {
+    color: #641410;
+    text-decoration: underline;
+}
+.lrNav {
+    color: #1b0807;
+}
+.sidePic {
+    margin:4vh;;
+    width:20%;
+    float:right;
+    text-align:center;
+}
+.sidePic img {
+    width:100%;
+}
+.sidePic i {
+    font-size: small;
+}
+.codeSnippet {
+    width:90%;
+    padding:10px;
+    margin:auto;
+    color:white;
+    margin-top:40px;
+    margin-bottom:40px;
+    box-shadow:2px 2px 10px #cac6c3;
+    background-color:rgba(54,57,62, 1);
+}
+.codeSnippetalert{
+    color:rgb(247, 105, 105);
+    font-weight: 800;
+}
+#levyArvioLeaderboard {
+    width:100%;
+    margin-top:4vh;
+    min-height: 30vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap:20px;
+    text-align: center;
+    box-shadow:2px 2px 10px #cac6c3;
+    background-color:rgba(18, 40, 236, 0.062);
+    padding-bottom:20px;
+    margin-bottom:4vh;
+}
+#blrlbHeader {
+    font-weight: bold;
+    font-size:large;
+    padding-top:10px;
+    padding-bottom:10px;
+    box-shadow:2px 2px 10px #cac6c3;
+    background-color:rgba(252, 252, 252, 0.801);
+}
+#leaderboardNavigation {
+    margin-top:1vh;
+    margin-left:5%;
+    margin-right:5%;
+    width:90%;
+    display:flex;
+    justify-content: flex-start;
+    height:4vh;
+}
+.lastbuttonlr {
+    width:15%;
+}
+.navTexts {
+    width:70%;
+    font-weight: 100;
+    font-size: medium;
+    line-height: 1;
+}
+.nextbuttonlr {
+    width:15;
+}
+
+
+.blrlb-Item {
+    display:flex;
+    padding-bottom:15px;
+    padding-top:15px;
+    gap:1vh;
+    min-height:60px;
+    font-size: small;
+    text-align:left;
+    margin-left:10px;
+    margin-right:10px;
+    box-shadow:2px 2px 10px #cac6c3;
+    background-color:rgba(252, 252, 252, 0.801);
+}
+
+.blrlb-ranking {
+    min-width:5%;
+    font-size: x-large;
+    text-align:center;
+    margin-top:auto;
+    margin-bottom:auto;
+}
+
+.blrlb-Item img {
+    display:block;
+    width:10%;
+    object-fit:contain;
+}
+
+.blrlb-item-databox {
+    width:85%;
+    display:flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    font-size:large;
+    line-height: 1;
+    border: 1px;
+    border-style: none solid none none;
+    gap:0.25vh;
+}
+.blrlbCopyright {
+    font-size:small;
+    margin-top:auto;
+}
+
+.blrlbRatingBox {
+    width:15%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-self: flex-end;
+    justify-content: flex-end;
+    font-size:normal;
+}
+
+.blrlbRatingBox img {
+    width:40%;
+    display:block;
+    margin:auto;
+    margin-bottom:20px;
+}
+.blrlbrn {
+    line-height: 1;
+    text-align:center;
+    margin: auto;
+    margin-top:0px;
+    font-size:normal;
+}
+

@@ -193,9 +193,9 @@ export const ContentArrays = [
         },
         {
             "id": 9,
-            "title": "Discord-levyraati",
+            "title": "Discord-levyraati (Jives)",
             "url" : "discordlevyraati",
-            //"imgurl" :
+            "imgurl" : "https://i.imgur.com/VZylab0.png",
             "date" : new Date("2023-02-08T16:00:00Z"),
             "tags": ["Ohjelmointi"],
             "ftags" : ["Muut"],
