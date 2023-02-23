@@ -66,7 +66,7 @@ export function DiscordLevyRaatiDocs() {
                 <p>
                     Jotkut Jivesin komennoista toimivat riippumatta siitä, missä niitä kutsutaan. <b>Joitakin komentoja, kuten albumin arvioimiskomentoa, taas on käytettävä albumia vastaavan ketjun alla.</b>
                 </p>
-                <img src="https://i.imgur.com/bCrW04l.gif"></img>
+                <img className="docsImg"src="https://i.imgur.com/bCrW04l.gif"></img>
                 <p>
                     Botti nojaa vahvasti Discordin thread-ominaisuuteen rajaamalla albumien arviointitoiminnot ja keskustelun niitä vastaaviin ketjuihin <a href="https://discord.com/channels/1031479962005409802/1070620790816510003">#levyraati</a> -kanavan alla. Itse #levyraati-kanavalle ei voi kirjoittaa, jotta albumeiden ketjut eivät katoa muun keskustelun lomaan.
                 </p>
@@ -165,13 +165,7 @@ export function DiscordLevyRaatiDocs() {
                     Albumien arvosteluja vastaanottaessaan Jives luo arvostelusta taulukon, jossa säilötään arvostelijan tiedot ja arvosana. Jives myös päivittää arvostelukomennon yhteydessä albumiobjektien juuressa olevia arvioiden määrää ja keskiarvoa kuvaavia lukuarvoja. Kun nämä tiedot tallennetaan albumitietueen juureen arvion vastaanottamisen yhteydessä, ei albumien pistekeskiarvojen selvittämiseksi tarvitse erikseen laskea keskiarvoa kaikista arvosteluobjekteista.
                 </p>
                 <p>
-                    Vaikka pisteet syötetään Jivesille asteikolla 0-100, arviot tallennetaan tietokantaan lukuvälille 0-1000 jotta pisteiden keskiarvojen laskennassa voidaan käyttää kokonaislukuja.
-                </p>
-                <p>
-                    Arvio-objektia (alla) tarkastellessa voidaan myös havaita Jivesin ohjelmoinnissa harjoitetun ns. "perse edellä" -metodia: Arvioihin tallennetaan myös arvostelun tyyppi, joka on aina <i>comment</i>. Varhaisessa suunnitteluvaiheessa ajattelin olevan tarpeellista erotella reaktioin vastaanotetut arvostelut tekstikomennoin vastaanotetuista. Todellisuudessa arvostelun päivittäminen ei tarvitse tietoa arvostelun lähettämistavasta.
-                </p>
-                <p>
-                    Arvostelua viestireaktioin ei myöskään ole vielä implementoitu ¯\_(ツ)_/¯
+                    Vaikka pisteet syötetään Jivesille asteikolla 0-100, arviot tallennetaan tietokantaan lukuvälille 0-1000, jotta kokonaisluvuiksi pyöristettävät keskiarvot olisivat hieman tarkemmat.
                 </p>
                 <img src="https://i.imgur.com/AoROrrl.png"></img>
 

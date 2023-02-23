@@ -107,6 +107,7 @@ const renderRouter = (lrData,liveStatus) => {
 
 // React-reititin (nettisivu) käynnistyy
 async function StartSite() {
+  console.log("yritetään hakea dataa")
   const lrData = await FetchLevyRaatiData()
   const livestatus = await isSkriimOnline()
   console.log("Sivu käynnistyy, lrdata: "+lrData+" livestatus: "+livestatus)

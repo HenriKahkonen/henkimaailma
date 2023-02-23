@@ -1,5 +1,7 @@
 import graphql from "graphql";
 import axios from "axios";
+import { Component } from "react";
+import HTMLReactParser from "react";
 //import { levyRaatiDataLocal } from "..";
 
 export async function FetchLevyRaatiData() {
@@ -173,4 +175,24 @@ export const listGenreTags = (item, divider) => {
 export const sortByDate = (array) => {
     return array.sort(function(a,b){
         return b.date - a.date})
+}
+
+export class LyricQuote extends Component {
+    artist = this.props.artist
+    source = this.props.source
+    content = HTMLReactParser(this.props.content)
+    render() {
+        return(
+            <div>
+                <div>
+                    {this.content}
+                </div>
+            <div>
+                <span><b>{this.artist} </b></span>
+                <span>{this.source}</span>
+            </div>
+            </div>
+        
+            )
+    }
 }

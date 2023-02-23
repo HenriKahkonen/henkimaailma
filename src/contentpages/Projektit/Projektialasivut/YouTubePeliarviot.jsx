@@ -5,7 +5,7 @@ import { KontsaArray } from "../../../contentArrays.js";
 import React from "react";
 import { parseDate } from "../../../components/functions";
 import { listTags } from "../../../components/functions";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 
 
@@ -23,16 +23,16 @@ class PeliarvioListItem extends React.Component {
         return (
             <div className="peliarvioListItemContainer">
                 <div className="peliarvioThumbnailContainer">
-                    <a href={url}>
+                    <Link to={url}>
                         <div className="peliarvioThumbnail">
                             <img className="peliarvioThumbnail"src={thumbnailsrc}></img>
                         </div>
-                    </a>
+                    </Link>
                 </div>
                 <div className="peliarvioTextBox">
-                    <a href={url}>
+                    <Link to={url}>
                     <div className="peliarvioTitle">{shortName}</div>
-                    </a>
+                    </Link>
                     <div>{date}</div>
                     <div>{tags}</div>
                 </div>

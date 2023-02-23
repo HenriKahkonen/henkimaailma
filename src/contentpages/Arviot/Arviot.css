@@ -77,8 +77,23 @@
     max-width:10%;
 }
 
-
-
+.lyricQuote {
+    font-family:monospace;
+    line-height: 1;
+    font-size:normal;
+    color:#7c6c6c;
+    margin-left:2vw;
+    margin-right:4vw;
+    margin-top:3vh;
+    margin-bottom:3vh;
+  }
+  .quoteInfoBox {
+    text-align:right;
+    font-size:normal;
+    margin-top:1vh;
+    color:#1b0807;
+  }
+  
 
 
 
@@ -101,7 +116,15 @@
 .arvioTextBox {
     margin:auto;
     width:90%;
-    font-size: large;
+    font-size: normal;
+}
+
+
+.arvioTextBox iframe {
+    display:block;
+    margin:auto;
+    margin-top:3vh;
+    margin-bottom: 3vh;
 }
 .arvioAlbumArtLarge {
     max-width:85%;
@@ -138,4 +161,22 @@
 .arvioPageDataBox-ratingContainer img {
     width:50%;
     float:right;
+}
+.arvioMidLine {
+    width:90%;
+    margin:auto;
+    border:1px;
+    border-color:rgba(0, 0, 0, 0.315);
+    min-height:1vh;
+    border-style: none none solid none;
+}
+
+.arvioTextBox a {
+    color: #1b0807;
+
+}
+.arvioTextBox a:hover {
+    color: #641410;
+    text-decoration:underline;
+    text-decoration-line:underline;
 }

@@ -38,7 +38,7 @@ function BlogBox() {
         <>
         <div className="etusivuContentBox">
                 <div className="contentBoxHeader">Blogi:</div>
-                    <div className="contentBoxImageContainer">
+                    <div className="contentBoxImageContainerYT">
                         <NavLink to={"blog/"+item.url}><img src={imgurl} width="100%" alt={item.title}></img></NavLink>
                     </div>
                 <div className="contentBoxFooter"><NavLink to={"blog/"+item.url}>{item.title}</NavLink></div>
@@ -71,7 +71,7 @@ export function LevyRaatiLeaderboard(leaderb) {
     let leaderboard = [...leaderb].splice(0,10); 
     return (
         <div id="levyArvioBotTopList">
-            <div className="levyRaatiLeaderboardHeader">Discord-levyraati leaderboard</div>
+            <div className="levyRaatiLeaderboardHeader"><NavLink to="/projektit/discordlevyraati">Discord-levyraati leaderboard</NavLink></div>
             {leaderboard.map(item => 
                 <div className="levyraatiLeaderboardItem" key={item[2]}>
                     <img src={item[2]} alt=""></img>

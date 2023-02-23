@@ -29,6 +29,9 @@
 .App a:hover {
   color: #641410;
 }
+.App img {
+  object-fit: contain;
+}
 
 .prose {
   max-width:920px;
@@ -122,7 +125,6 @@
 .postInfoBox {
   margin-bottom:50px;
 }
-
 
 
 

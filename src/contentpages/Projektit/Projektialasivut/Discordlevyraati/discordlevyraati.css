@@ -23,7 +23,12 @@
 .sidePic i {
     font-size: small;
 }
+.docsImg {
+    width:90%;
+    
+}
 .codeSnippet {
+    font-weight: 100;
     width:90%;
     padding:10px;
     margin:auto;

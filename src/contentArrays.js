@@ -74,6 +74,17 @@ export const ContentArrays = [
             "ftags": ["YouTube"],
             "ytid" :"n5oSsyv8T-U",
             "sl": true
+        },
+        {
+            "id": 6,
+            "title": "Wolfenstein: The New Order (Peliarvio)",
+            "url": "wolfenstein-the-new-order",
+            "fullUrl": "projektit/peliarviot/wolfenstein-the-new-order",
+            "date": new Date("2023-02-23T17:00:00Z"),
+            "tags": ["Räiskintä", "Vaihtoehtohistoria"],
+            "ftags": ["YouTube"],
+            "ytid" :"hmIVHQpGvhg",
+            "sl": true
         }
     ]},
 
@@ -83,7 +94,8 @@ export const ContentArrays = [
         "id": "blog1",
         "title": "Mitä hemmettiä nyt taas Henkka",
         "url": "mita-hemmettia-nyt-taas-henkka",
-        "date": new Date('2022-12-12T20:00:00Z'),
+        "date": new Date('2023-02-22T20:00:00Z'),
+        "imgurl": "https://i.imgur.com/diayd7A.png",
         "tags": ["Meta", "Ohjelmointi"],
         "sl": false,
         "element": <MitaHemmettia/>
@@ -92,7 +104,8 @@ export const ContentArrays = [
         "id": "blog2",
         "title": "Ideoita näyttämöllä - Merkitysten konstruointi näyttämömusiikin tuotantoprosessissa",
         "url": "ideoita-nayttamolla",
-        "date": new Date('2022-12-13T16:00:00Z'),
+        "date": new Date('2023-02-23T16:00:00Z'),
+        "imgurl": "https://i.imgur.com/Y1IUose.png",
         "tags": ["Musiikkitiede", "Teatteri", "Koulu"],
         "sl": false,
         "element": <IdeoitaNayttamolla/> 
@@ -140,7 +153,7 @@ export const ContentArrays = [
             "title": "Peliarviot Youtubessa",
             "url": "peliarviot",
             "imgurl": "https://i.imgur.com/TO8XN4w.png",
-            "date": new Date("2022-07-12T17:00:00Z"),
+            "date": new Date("2023-02-22T17:00:00Z"),
             "tags": ["YouTube", "Peliarviot"],
             "ftags": ["YouTube"],
             "sl": false,
@@ -211,7 +224,7 @@ export const ContentArrays = [
             "type": "Album",
             "title": "Napalm Death - From Enslavement To Obliteration",
             "url": "napalm-death-from-enslavement-to-obliteration",
-            "date": new Date("2023-01-01T16:00:00Z"),
+            "date": new Date("2023-02-21T16:00:00Z"),
             "genre": ["Grindcore"],
             "coverArt": "https://i.discogs.com/g-CnSpZefboKTRrLwhqITDyK_o7aOxMWn_ofzRS9s3s/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM2NzM1/Ny0xNDAwNjY3NjA2/LTM5NDcuanBlZw.jpeg",
             "data": {
@@ -221,7 +234,7 @@ export const ContentArrays = [
                     "label": "Earache Records",
             },
             "ftags": "Musiikki",
-            "rating": "8",
+            "rating": "8+",
             "sl": false,
             "element": <NDFETO/>
         },
@@ -230,13 +243,14 @@ export const ContentArrays = [
             "type": "Album",
             "title": "Dxxxa D & Hzzzt - Low Key Cue New Tan Bloss It",
             "url": "dxxxa-d-hzzzt-low-key-cue-new-tan-bloss-it",
-            "date": new Date("2023-01-01T16:00:00Z"),
+            "date": new Date("2023-02-20T16:00:00Z"),
             "genre": ["Hip hop", "Spoken word"],
             "coverArt": "https://i.discogs.com/lMtOVApOVAEg6zVhSFml1Q9uqHk6jAyz59j9wdPwhkY/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTU2MjA1/ODItMTM5ODE4NzQ1/My02NDQ4LmpwZWc.jpeg",
             "data": {
                     "artist": ["Dxxxa D", "Hzzzt"],
                     "albumtitle": "Low Key Cue New Tan Bloss It",
-                    "year": "1988",
+                    "year": "2014",
+                    "label": "Helmi Levyt"
 
             },
             "ftags": "Musiikki",
@@ -254,21 +268,12 @@ export const ContentArrays = [
             "title": "Henkimaailma 1.0 on täällä",
             "date": new Date("2023-02-01T16:00:00Z"),
             "bp": [
-                "Lisätty asioita",
-                "Tehty juttuja",
+                "Tervetuloa maailmaan, Henkimaailma",
             ],
-        },
-        {
-            "id": 2,
-            "major": false,
-            "title": "Testiupdate",
-            "date": new Date("2023-02-01T13:00:00Z"),
-            "bp": [
-                "Testaan asiaa",
-            ],
-        },
+        }
     ]},
 ]
+
 
 const filterSpotLighteds=(fullArray)=> {
     let spotlighteds=[]
@@ -287,5 +292,6 @@ export const KontsaArray = {
         blog : sortByDate(ContentArrays[1].content),
         projektit : sortByDate(ContentArrays[2].content),
         arviot : sortByDate(ContentArrays[3].content),
+        changeLog : sortByDate(ContentArrays[4].content),
         spotlightArray : filterSpotLighteds(sortByDate(ContentArrays))
 }

@@ -1,0 +1,47 @@
+.cv {
+    /*font-family:'Times New Roman', Times, serif;*/ 
+    margin-left:auto;
+    margin-right:auto;
+    width:90%;
+    background-color:rgba(18, 40, 236, 0.02);
+    padding:40px;
+    padding-left:40px;
+    margin-bottom:4vh;
+    box-shadow:2px 2px 10px #cac6c3;
+    font-size:normal;
+    padding-bottom:40px;
+}
+.cvSection {
+    margin-left:10px;
+
+}
+.KouluItem {
+    display:flex;
+    flex-direction: row;
+}
+.kouluyr {
+    min-width:15%;
+}
+.cv b {
+    font-weight: bold;
+}
+.kielitaitobox {
+    display: flex;
+    flex-flow: row wrap;
+    margin-right:50%;
+}
+.kielitaitoItem {
+    min-width:50%;
+}
+.skillsSection {
+    display: flex;
+    flex-flow: row nowrap;
+}
+.skillCat {
+    min-width:25%;
+    font-weight:bold;
+}
+
+.cv h4 {
+    margin-top:4vh;
+}

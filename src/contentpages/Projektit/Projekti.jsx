@@ -28,10 +28,12 @@ export function Projekti() {
         })
     }
     return (
-    <>
+    <div>
         <h1><NavLink to="/projektit">Proggikset</NavLink> / {project.title}</h1>
-        {project.element}
-    </>
+        <div className="projektisivu">
+            {project.element}
+        </div>
+    </div>
     )
 }
 

@@ -3,7 +3,7 @@ import { useLoaderData } from "react-router-dom"
 import { parseDate } from "../../../components/functions"
 import { listTags } from "../../../components/functions"
 import axios from "axios"
-import { NavLink } from "react-router-dom"
+import { NavLink, Link } from "react-router-dom"
 
 export async function loader({ params }) {
     if (!params.peliarvioTitle) {
@@ -29,10 +29,10 @@ const relNavigationNext= (item) => {
     const name= item.title.replace(' (Peliarvio)','')
     return (
             <div id="nextItem">
-                <a href={url}>
+                <NavLink to={"../"+url}>
                 {String.fromCharCode(62,62,62,62,62)}<br/>
                 {name}
-                </a>
+                </NavLink>
             </div>
         )
 }
@@ -47,10 +47,10 @@ const relNavigationLast= (item) => {
     const name= item.title.replace(' (Peliarvio)','')
     return (
             <div id="lastItem">
-                <a href={url}>
+                <NavLink to={"../"+url}>
                 {String.fromCharCode(60,60,60,60,60)}<br/>
                 {name}
-                </a>
+                </NavLink>
             </div>
         )
 }
@@ -68,9 +68,10 @@ export function YouTubePeliarviosivu() {
     const videosrc = "https://www.youtube.com/embed/"+arvio.ytid
     return (
         <div>
-            <h1>Peliarvio: {arvio.title.replace(' (Peliarvio)','')}</h1>
-            <div className="videoContainer">
-                <iframe className="videoPlayer"
+            <h1><NavLink to="../../">Proggikset</NavLink> / <NavLink to="../">Peliarvostelut</NavLink> / {arvio.title.replace(' (Peliarvio)','')}</h1>
+            <div className="peliarviopage">
+            <div className="videoContainerYTpelit">
+                <iframe className="videoPlayerYTpelit"
                 /*</div>width="1020" height="630"*/
                 src={videosrc} 
                 title="YouTube video player" 
@@ -86,6 +87,7 @@ export function YouTubePeliarviosivu() {
             <div id="postNavigationContainer">
                 {relNavigationLast(last)}
                 {relNavigationNext(next)}
+            </div>
             </div>
         </div>
     ) 

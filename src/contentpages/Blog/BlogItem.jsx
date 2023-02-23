@@ -30,10 +30,9 @@ export function BlogItem() {
         Generoidaan sivun ylälaitaan blogin otsikko ja linkki takaisin
         */}
         <h1><NavLink to="/blog/">Blog</NavLink> / {blogpost.title}</h1>
-        {/* 
-        TODO: BLOGIEN OTSIKKOKUVA
-        */}
-        {/*<img className="blogiotsikkokuva" src={blogpost.img} alt={blogpost.title} /> */}
+        
+        {<div className="blogiotsikkokuva"><img src={blogpost.imgurl} alt={blogpost.title} /></div> }
+        <div className="blogpost">
             {/*
             Renderöidään blogipostauksessa määritelty elementti l. sivun sisältö.
             Tämä on ehkä vähän tökerö tapa rakentaa blogipostaukset ja ehkä tässä joskus
@@ -43,6 +42,7 @@ export function BlogItem() {
             Sama renderöintilogiikka pätee myös arvioiden puolella.
             */}
             {blogpost.element}
+        </div>
         </>
     )
 }
