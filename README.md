@@ -2,6 +2,9 @@
 
 Henkan kotisivut - frontend.
 
+## v. 1.0.0. - en tiedä miten versionumerointi toimii.
+
+Sisällöt kirjoitettu, sormet ristiin ja deployhousut jalkaan
 
 ## 0.5.3 17.2.2023
 
