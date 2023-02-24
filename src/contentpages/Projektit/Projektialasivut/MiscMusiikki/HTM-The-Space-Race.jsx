@@ -6,6 +6,7 @@ export class HTMTheSpaceRace extends HenkimaailmaPage {
         return (
             <div>
                 <iframe
+                title="Soundcloud The Space Race"
                 width="50%"
                 height="300"
                 frameborder="no" 

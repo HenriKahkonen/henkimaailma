@@ -507,7 +507,7 @@ liike toistuu myös säkeistöjen loppupään soinnuissa Cmaj9, F#m7(b5) ja B7(#
 kertosäkeeseen johtavassa kadenssissa Bb(#11) - E7(#9).
 </p>
 <div className="blogImgContainer">
-    <img src="https://i.imgur.com/NsX9q4n.png"></img>
+    <img src="https://i.imgur.com/NsX9q4n.png" alt="Harmonianäyte"></img>
     <div>Kuva 1. Ote kappaleen "ylistyslaulu pariisille säkeistön harmoniasta.</div>
 </div>
 <p>
@@ -712,7 +712,7 @@ luominen on harvoin käsikirjoituksen tai esituotannollisen suunnitelman seuraam
 useammin itseään tarkentava iteratiivinen prosessi. (<a href="#S-Warner2009">Warner 2009, 142–147</a>.)
 </p>
 <div className="blogImgContainerNoZoom">
-    <img src="https://i.imgur.com/phrOXO8.png"></img>
+    <img src="https://i.imgur.com/phrOXO8.png" alt="Warner, geneettinen luovuusmalli"></img>
     <div>Kuva 2. Timothy Warnerin geneettinen luovuusmalli.</div>
 </div>
 <p>
@@ -743,7 +743,7 @@ välittyi myös tämän lauluilmaisuun kihelmöivänä ja osin kärsimättömän
 nähdä viestivän palatsin houkuttelevuutta nähtävyyksien paljouden keskellä (A4; V1).
 </p>
 <div className="blogImgContainer">
-    <img src="https://i.imgur.com/8hmaI6q.png"></img>
+    <img src="https://i.imgur.com/8hmaI6q.png" alt="Lauluharjoitukset 12.9.2022 (ote videonauhoitteesta 1)."></img>
     <div>Kuva 3. Lauluharjoitukset 12.9.2022 (ote videonauhoitteesta 1). Näyttelijät Thomas Dellinger (vas.), Joonatan Perälä ja Elviira Kujala harjoittelevat kappaletta "Bonjour". (V1)</div>
 </div>
 <p>
@@ -1237,7 +1237,7 @@ esimerkiksi maskeeraukselliset valinnat eivät välttämättä vuorovaikuta suor
 tulkintaan ja merkitysten kehittymiseen tuotannon tässä vaiheessa.
 </p>
 <div className="blogImgContainer">
-    <img src="https://i.imgur.com/ZrNQSuq.png"></img>
+    <img src="https://i.imgur.com/ZrNQSuq.png" alt="Qui-revyyn merkityksenannon osapuolien vuorovaikutus ja merkitysten kronologinen kerrostuminen."></img>
     <div>Kuva 4. Qui-revyyn merkityksenannon osapuolien vuorovaikutus ja merkitysten kronologinen kerrostuminen.</div>
 </div>
 <p>
@@ -1501,6 +1501,7 @@ Publishing Ltd. Toim. Scott, Derek B. 131 –146.</li>
 
 <br/><h3 id="liitteet">Liitteet</h3>
     <div className="blogPDF"><iframe
+        title="Ideoita näyttämöllä liitteet"
         src={process.env.PUBLIC_URL+"/pdf/ideoitanayttamollaliitteet.pdf"}
         width="1080"
         height="1080">

@@ -4,7 +4,7 @@ export class TYTWabuKaba2021 extends HenkimaailmaPage {
     render() {
         return (
             <div id="wapukaba">
-                <img src="https://i.imgur.com/ovxyCTi.jpg"></img>
+                <img src="https://i.imgur.com/ovxyCTi.jpg" alt="TYT Wappukabaree 2021 kuvitus"></img>
                 <h2>Wappukabaree</h2>
                 <p>Yksi suuria ilojani Turkuun muuttamisessa on ollut löytää teatteritaiteen maailma. Kohtasin teatterihippejä ensimmäistä kertaa <b>Turkulaisen Humanistispeksin</b> muusikkona etsittyäni produktion kautta soittoihmisiä uudesta kaupungista. Speksit veivät sittemmin vakavamman teatteritaiteen pariin ja lopulta töihin alalle.
                 </p>

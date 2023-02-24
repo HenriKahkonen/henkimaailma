@@ -6,6 +6,7 @@ export class Ympyrat extends HenkimaailmaPage {
         return (
         <div id="ympyratProject">
             <iframe
+                title="Internet Web Archive Ympyrat.net"
                 src="https://web.archive.org/web/20210519083405/https://ympyrat.net/"
                 width="1020px"
                 height="1020px">

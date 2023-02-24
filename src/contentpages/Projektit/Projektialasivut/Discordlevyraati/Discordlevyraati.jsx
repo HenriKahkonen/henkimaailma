@@ -7,7 +7,7 @@ export function LevyRaatiBigLeaderboardBuilder(leaderb,page) {
     if(leaderb[0]===undefined) {
         return }
     //Kopio juuren listasta
-    const totalAlbumsCount = leaderb.length
+    //const totalAlbumsCount = leaderb.length
     let leaderboard = [...leaderb].splice((page-1)*20,20)
     return (       
         <div id="levyArvioLeaderboard">        
@@ -82,7 +82,7 @@ class DiscordLevyRaatiPage extends HenkimaailmaPage {
     lrNavThing =(buttonName, buttonText)=> {
         const idScript = "lrnav-"+buttonName;
         const totalAlbumsCount = this.state.lrData.length
-        const totalPages = (Math.ceil(totalAlbumsCount/20))-1
+        //const totalPages = (Math.ceil(totalAlbumsCount/20))-1
         if (buttonName==="last") {
             if (!(this.state.levyraatiPage===1)) {
                 return (
@@ -111,8 +111,8 @@ class DiscordLevyRaatiPage extends HenkimaailmaPage {
 
     render() {
         const levyraatiData = [...this.state.lrData]
-        const totalAlbumsCount = levyraatiData.length
-        const totalPages = Math.ceil(totalAlbumsCount/20)
+        //const totalAlbumsCount = levyraatiData.length
+        //const totalPages = Math.ceil(totalAlbumsCount/20)
         let leaderboard = [...levyraatiData].splice((this.state.levyraatiPage-1)*20,20)
         return (
             <div>

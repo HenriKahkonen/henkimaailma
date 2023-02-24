@@ -1,6 +1,5 @@
-import { NavLink, Link} from "react-router-dom";
+import { NavLink, } from "react-router-dom";
 import "./discordlevyraati.css";
-import { CurrentTab } from "../../../../components/functions";
 
 export function DiscordLevyRaatiDocs() {
     return (
@@ -33,7 +32,7 @@ export function DiscordLevyRaatiDocs() {
                 
                 <br/><h2 id="about">Discord-levyraati?</h2>
                 <div className="sidePic">
-                    <img src="https://i.imgur.com/YbKjnh4.png"></img>
+                    <img src="https://i.imgur.com/YbKjnh4.png" alt="Jives"></img>
                     <div><i>Henkimaailman Discord-palvelimen botti Jives.</i></div>
                 </div>
                 <p>
@@ -66,7 +65,7 @@ export function DiscordLevyRaatiDocs() {
                 <p>
                     Jotkut Jivesin komennoista toimivat riippumatta siitä, missä niitä kutsutaan. <b>Joitakin komentoja, kuten albumin arvioimiskomentoa, taas on käytettävä albumia vastaavan ketjun alla.</b>
                 </p>
-                <img className="docsImg"src="https://i.imgur.com/bCrW04l.gif"></img>
+                <img className="docsImg"src="https://i.imgur.com/bCrW04l.gif" alt=""></img>
                 <p>
                     Botti nojaa vahvasti Discordin thread-ominaisuuteen rajaamalla albumien arviointitoiminnot ja keskustelun niitä vastaaviin ketjuihin <a href="https://discord.com/channels/1031479962005409802/1070620790816510003">#levyraati</a> -kanavan alla. Itse #levyraati-kanavalle ei voi kirjoittaa, jotta albumeiden ketjut eivät katoa muun keskustelun lomaan.
                 </p>
@@ -156,18 +155,18 @@ export function DiscordLevyRaatiDocs() {
                 <p>
                     Kun Jivesille lähettää uuden albumin, se parsii viestistä Spotifyn sisäisen albumin ID:n ja pyytää Spotifyn API:sta levyn täydelliset tiedot. Tästä, suurehkosta JSONista yksinkertaistetaan botin tarpeisiin yksinkertaisempi tietue, joka sisältää levyn metadataa (Artistit, albumin nimi, julkaisuajankohta, kansitaide, tekijänoikeustiedot...) sekä listan johon albumia koskevat arviot tallentuvat.
                 </p>
-                <img src="https://i.imgur.com/VCv7HHY.png"></img>
+                <img src="https://i.imgur.com/VCv7HHY.png" alt=""></img>
                 <p>
                     Kaikissa komennoissa ei luonnollisesti tarvitse hakea uutta dataa Spotifyn tietokannasta. Esimerkiksi jo tietokannassa (ja Discordissa) valmiiksi olevaa levyä arvioidessa botti vertaa vastaanotetun arvion tietoja lokaaliin tietokantaansa ja päivittää vain komennon kannalta olennaiset tiedot Mongoon.
                 </p>
-                <img src="https://i.imgur.com/c5NqMZG.png"></img>
+                <img src="https://i.imgur.com/c5NqMZG.png" alt=""></img>
                 <p>
                     Albumien arvosteluja vastaanottaessaan Jives luo arvostelusta taulukon, jossa säilötään arvostelijan tiedot ja arvosana. Jives myös päivittää arvostelukomennon yhteydessä albumiobjektien juuressa olevia arvioiden määrää ja keskiarvoa kuvaavia lukuarvoja. Kun nämä tiedot tallennetaan albumitietueen juureen arvion vastaanottamisen yhteydessä, ei albumien pistekeskiarvojen selvittämiseksi tarvitse erikseen laskea keskiarvoa kaikista arvosteluobjekteista.
                 </p>
                 <p>
                     Vaikka pisteet syötetään Jivesille asteikolla 0-100, arviot tallennetaan tietokantaan lukuvälille 0-1000, jotta kokonaisluvuiksi pyöristettävät keskiarvot olisivat hieman tarkemmat.
                 </p>
-                <img src="https://i.imgur.com/AoROrrl.png"></img>
+                <img src="https://i.imgur.com/AoROrrl.png" alt=""></img>
 
                 <br/><h2 id="lahdekoodi">Lähdekoodi</h2>
                 <p>

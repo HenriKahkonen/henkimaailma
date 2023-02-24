@@ -15,7 +15,7 @@ class PeliarvioListItem extends React.Component {
     render() {
         let shortName = this.props.item.title.replace(' (Peliarvio)','')
         let thumbnailsrc = "http://img.youtube.com/vi/"+this.props.item.ytid+"/maxresdefault.jpg"
-        let autoplaysrc = "https://i.ytimg.com/an_webp/"+this.props.item.ytid+"/mqdefault_6s.webp?du=3000&sqp=COyg3p4G&rs=AOn4CLCnwkDLx1ggmhs7gZLgfcvjMr84Cw"
+        //let autoplaysrc = "https://i.ytimg.com/an_webp/"+this.props.item.ytid+"/mqdefault_6s.webp?du=3000&sqp=COyg3p4G&rs=AOn4CLCnwkDLx1ggmhs7gZLgfcvjMr84Cw"
         let date = parseDate(this.props.item.date)
         let tags = listTags(this.props.item, true)
         let url = "/projektit/peliarviot/"+this.props.item.url
@@ -25,7 +25,7 @@ class PeliarvioListItem extends React.Component {
                 <div className="peliarvioThumbnailContainer">
                     <Link to={url}>
                         <div className="peliarvioThumbnail">
-                            <img className="peliarvioThumbnail"src={thumbnailsrc}></img>
+                            <img className="peliarvioThumbnail"src={thumbnailsrc} alt="Thumbnail"></img>
                         </div>
                     </Link>
                 </div>

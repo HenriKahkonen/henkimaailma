@@ -2,8 +2,7 @@ import { KontsaArray } from "../../../contentArrays.js"
 import { useLoaderData } from "react-router-dom"
 import { parseDate } from "../../../components/functions"
 import { listTags } from "../../../components/functions"
-import axios from "axios"
-import { NavLink, Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 export async function loader({ params }) {
     if (!params.peliarvioTitle) {

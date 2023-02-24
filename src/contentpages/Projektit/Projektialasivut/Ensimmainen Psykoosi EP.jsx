@@ -1,20 +1,6 @@
 import { HenkimaailmaPage } from "../../../components";
 import { parseDate } from "../../../components/functions";
 
-function hideBlock(id) {
-    var x = document.getElementById(id)
-    if (x===null) {
-        console.log("null")
-        return
-    }
-    console.log("klik")
-    if (x.style.display === "none") {
-        x.style.display ="block";
-    } else {
-        x.style.display = "none";
-    }
-}
-
 export class EnsimmainenPsykoosiEP extends HenkimaailmaPage {
     componentDidMount(){
         window.scrollTo(0,0);
@@ -23,6 +9,7 @@ export class EnsimmainenPsykoosiEP extends HenkimaailmaPage {
         return (
             <div>
                 <iframe 
+                    title="Soundcloud EP"
                     width = "350px"
                     height = "470px" 
                     src="https://bandcamp.com/EmbeddedPlayer/album=3350533764/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" 
@@ -49,7 +36,7 @@ export class EnsimmainenPsykoosiEP extends HenkimaailmaPage {
                 </p>
                 <br/>
                 <h2>Lyriikat</h2>
-                <a><h3 onClick={function() {
+                <button className="SongLyricHider" onClick={function() {
                     var x= document.getElementById("s1")
                     if (x.style.display !== "block") {
                         x.style.display = "block";
@@ -57,7 +44,7 @@ export class EnsimmainenPsykoosiEP extends HenkimaailmaPage {
                         x.style.display = "none";
                       }
                     }
-                }>Psykoosi voi tappaa</h3></a>
+                }><h3 >Psykoosi voi tappaa</h3></button><br/>
                 <div id="s1">
                     Hei appelsiini / <br/>
                     Älä tuijota sormiin / <br/>
@@ -86,7 +73,7 @@ export class EnsimmainenPsykoosiEP extends HenkimaailmaPage {
                     Jo ensimmäinen psykoosi / <br/>
                     Jo ensimmäinen psykoosi voi tappaa / <br/>
                 </div>
-                <a><h3 onClick={function() {
+                <button className="SongLyricHider" onClick={function() {
                     var x= document.getElementById("s2")
                     if (x.style.display !== "block") {
                         x.style.display = "block";
@@ -94,7 +81,7 @@ export class EnsimmainenPsykoosiEP extends HenkimaailmaPage {
                         x.style.display = "none";
                       }
                     }
-                }>Koiran Sydän</h3></a>
+                }><h3 >Koiran Sydän</h3></button><br/>
                 <div id="s2">
                     Mä voisin jäädä vaan nukkumaan /<br/>
                     Katsoa peiton alta kun tunnit vaihtuu ja on taas ilta /<br/>
@@ -116,15 +103,15 @@ export class EnsimmainenPsykoosiEP extends HenkimaailmaPage {
                     Pihalla kaulastaan kiinni kettingissä /<br/>
                     Sisällä koiran sydän /<br/>
                 </div>
-                <a><h3 onClick={function() {
+                <button className="SongLyricHider" onClick={function() {
                     var x= document.getElementById("s3")
-                    if (x.style.display != "block") {
+                    if (x.style.display !== "block") {
                         x.style.display = "block";
                       } else {
                         x.style.display = "none";
                       }
                     }
-                }>Eeva</h3></a>
+                }><h3 >Eeva</h3></button><br/>
                 <div id="s3">
                     Meille sanottiin  /<br/>
                     Että muita pitää kunnioittaa /<br/>
@@ -154,7 +141,7 @@ export class EnsimmainenPsykoosiEP extends HenkimaailmaPage {
                     No sopii katsoa /<br/>
                     Jos joku koittaa viedä Eevan minulta /<br/>
                 </div>
-                <a><h3 onClick={function() {
+                <button className="SongLyricHider" onClick={function() {
                     var x= document.getElementById("s4")
                     if (x.style.display !== "block") {
                         x.style.display = "block";
@@ -162,7 +149,7 @@ export class EnsimmainenPsykoosiEP extends HenkimaailmaPage {
                         x.style.display = "none";
                       }
                     }
-                }>Mulla menee hyvin</h3></a>
+                }><h3 >Mulla menee hyvin</h3></button><br/>
                 <div id="s4">
                     Soitellaan jos tuut kaupunkiin /<br/>
                     Ja jutellaan kaikki siitä mihin me jäätiin /<br/>

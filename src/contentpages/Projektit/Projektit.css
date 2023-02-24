@@ -246,3 +246,14 @@ a:active { text-decoration: none; }
   width:100%;
   height:100%;
 }
+
+.SongLyricHider {
+  font-family: 'Courier New', Courier, monospace;
+  cursor:pointer;
+  border:none;
+  background-color: #ffffff00;
+  padding:0;
+}
+.SongLyricHider :hover {
+  color:#0b64b8;
+}

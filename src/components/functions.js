@@ -1,4 +1,3 @@
-import graphql from "graphql";
 import axios from "axios";
 import { Component } from "react";
 import HTMLReactParser from "react";

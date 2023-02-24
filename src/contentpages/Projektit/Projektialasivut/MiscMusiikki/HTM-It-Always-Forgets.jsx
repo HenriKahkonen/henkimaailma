@@ -6,6 +6,7 @@ export class HTMItalwaysForgets extends HenkimaailmaPage {
         return (
             <div>
                 <iframe 
+                title="Soundcloud it always forgets"
                 width="50%" 
                 height="300" 
                 frameborder="no" 

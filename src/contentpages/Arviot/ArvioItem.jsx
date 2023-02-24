@@ -49,7 +49,7 @@ export function ArvioHeader(review) {
 return (
     <>
     <div className="arvioAlbumArtLarge">
-        <img src={imgsrc}/>
+        <img src={imgsrc} alt="Album art"/>
     </div>
     <div className="arvioPageDataBox">
         <div className="arvioPageDataBox-text">
@@ -60,7 +60,7 @@ return (
             </div>
         </div>
         <div className="arvioPageDataBox-ratingContainer">
-            <img src={rating}/>
+            <img src={rating} alt={"Arvosana: "+(review.rating/10)}/>
         </div>
     </div>
     </>

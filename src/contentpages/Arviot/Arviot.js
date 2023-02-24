@@ -24,7 +24,7 @@ const generateArvioList = (arvioArray, searchParam) => {
                 <div className="arvioItem" key={post.id}>
                     <div className="arvioImgContainer">
                         <div className="arvioImgSpacer">
-                            <Link to={post.url}><img src={post.coverArt}/></Link>
+                            <Link to={post.url}><img src={post.coverArt} alt="Kansitaide"/></Link>
                         </div>
                     </div>
                     <div className="arvioDataContainer">
@@ -37,7 +37,7 @@ const generateArvioList = (arvioArray, searchParam) => {
                         </div>
                         <div className="arvioListRatingContainer">
                             <div className="ratingImg">
-                                <img src={getRatingPng(post)}></img>
+                                <img src={getRatingPng(post)} alt="Arvosana"></img>
                             </div>
                         </div>
 

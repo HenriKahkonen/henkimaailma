@@ -1,4 +1,3 @@
-import { sortByDate } from '../components/functions.js';
 import Sivu404 from './Sivu404/Sivu404.js';
 import ErrorRoot from './Sivu404/ErrorRoot.js'
 
@@ -42,7 +41,6 @@ import {
 
 import {
     DiscordLevyRaati,
-    LevyRaatiBigLeaderboardBuilder,
 } from "./Projektit/Projektialasivut/Discordlevyraati/Discordlevyraati.jsx";
 import {DiscordLevyRaatiDocs} from "./Projektit/Projektialasivut/Discordlevyraati/DiscordLevyraatiDocs.jsx"
 import {DiscordLevyRaatiTietosuoja} from "./Projektit/Projektialasivut/Discordlevyraati/DiscordLevyraatiTietosuoja.jsx"
