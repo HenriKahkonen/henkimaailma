@@ -128,6 +128,7 @@
 
 .prose {
   max-width:80%;
+  font-size:large;
 }
 .prose a {
   color:blue;
@@ -143,6 +144,10 @@
 @media screen and (max-width:930px) {
   .MainContainer {
     width:100%;
+  }
+  .prose {
+    max-width:95%;
+    font-size:medium;
   }
 }
 
