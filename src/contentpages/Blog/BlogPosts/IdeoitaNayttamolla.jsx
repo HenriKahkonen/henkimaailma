@@ -52,7 +52,7 @@ ristiriidassa vielä 1900-luvulla vallinneeseen säveltäjä- ja kaanonkeskeisee
 musiikkitieteeseen ja -analyysiin, jossa musiikkia tarkasteltiin ennemmin teos- ja
 säveltäjälähtöisesti <a href="#S-Cook2013">(Cook 2013, 8–32)</a>. Vuosituhannen taitteen jälkeisessä, ”uudeksi
 musiikkitieteeksi” nimitetyssä musiikkianalyyttisessa virtauksessa taas on painotettu
-enemmän etnomusikologista näkökulmaa painottaen kulttuurikontekstin vaikutuksia musiikin
+enemmän etnomusikologista näkökulmaa korostaen kulttuurikontekstin vaikutuksia musiikin
 tulkintaan ja merkityksenantoon. Joitain esimerkkejä uuden musiikkitieteen kulttuuri- ja
 subjektikeskeisestä musiikkianalyysistä ovat mm. skenetutkimus (<a href="#S-Bennett2004">Bennett & Anderson 2004</a>; 
 {" "}<a href="#S-Krims2009">Krims 2009</a>), musiikin merkitysten tarkastelu suhteessa arkielämään (<a href="#S-DeNora2004">DeNora 2004</a>;
