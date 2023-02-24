@@ -13,7 +13,7 @@ function SpotLightBox() {
     // Jos spotlightin juttu on Tubevideo, sen thumbnailin kuvasuhde on eri
     // --> vaihdetaan kuvan className
     if (item.ftags.includes("YouTube")) {
-        imgurl = "http://img.youtube.com/vi/"+item.ytid+"/maxresdefault.jpg"
+        imgurl = "https://img.youtube.com/vi/"+item.ytid+"/maxresdefault.jpg"
         imgClass = "contentBoxImageContainerYT"
     } else {
         imgClass = "contentBoxImageContainer"

@@ -14,7 +14,7 @@ import { HenkimaailmaPage } from "../../../components";
 class PeliarvioListItem extends React.Component {
     render() {
         let shortName = this.props.item.title.replace(' (Peliarvio)','')
-        let thumbnailsrc = "http://img.youtube.com/vi/"+this.props.item.ytid+"/maxresdefault.jpg"
+        let thumbnailsrc = "https://img.youtube.com/vi/"+this.props.item.ytid+"/maxresdefault.jpg"
         //let autoplaysrc = "https://i.ytimg.com/an_webp/"+this.props.item.ytid+"/mqdefault_6s.webp?du=3000&sqp=COyg3p4G&rs=AOn4CLCnwkDLx1ggmhs7gZLgfcvjMr84Cw"
         let date = parseDate(this.props.item.date)
         let tags = listTags(this.props.item, true)
