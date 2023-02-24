@@ -2,7 +2,7 @@
 
 Henkan kotisivut - frontend.
 
-## v. 1.0.0. - en tiedä miten versionumerointi toimii.
+## v. 1.0.0. - en tiedä miten versionumerointi toimii
 
 Sisällöt kirjoitettu, sormet ristiin ja deployhousut jalkaan
 

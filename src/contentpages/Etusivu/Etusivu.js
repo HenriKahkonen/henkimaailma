@@ -96,7 +96,7 @@ export function SkriimBuilder(status) {
             <>
             <div id="twitchStreamBox">
                 <div className="skriimiBanneri">
-                    <img src="https://i.imgur.com/eHZQF0k.png" alt="Banneri joka huomauttaa livestreamin olevan käynnissä"></img>
+                    <img src={process.env.PUBLIC_URL+"/img/skriimOnline.gif"} width="70" alt="Banneri joka huomauttaa livestreamin olevan käynnissä"></img>
                 </div>
                 <div className="skriimiIkkuna"><iframe 
                     title="LiveStream player"

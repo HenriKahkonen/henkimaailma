@@ -712,7 +712,7 @@ luominen on harvoin käsikirjoituksen tai esituotannollisen suunnitelman seuraam
 useammin itseään tarkentava iteratiivinen prosessi. (<a href="#S-Warner2009">Warner 2009, 142–147</a>.)
 </p>
 <div className="blogImgContainerNoZoom">
-    <img src="https://i.imgur.com/phrOXO8.png" width="40px"></img>
+    <img src="https://i.imgur.com/phrOXO8.png"></img>
     <div>Kuva 2. Timothy Warnerin geneettinen luovuusmalli.</div>
 </div>
 <p>

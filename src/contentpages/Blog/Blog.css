@@ -66,23 +66,7 @@
   .blogpost a {
     text-decoration: underline;
   }
-  .blogpost img {
-    display:block;
-    width:50%;
-    margin:auto;
-    margin-top:4vh;
-    margin-bottom:4vh;
-    cursor:pointer;
-    transition:0.3s;
-  }
-  
 
-.blogpost iframe {
-  display:block;
-  margin:auto;
-  margin-top:6vh;
-  margin-bottom:6vh;
-}
 .blogiotsikkokuva img {
     display:block;
     width:80%;
@@ -96,10 +80,25 @@
   margin-bottom:4vh;
   margin-top:4vh;
 }
-.blogpost img:hover {width:100%;}
-.blogImgContainerNoZoom img:hover {
-  width:50%;
+.blogImgContainer img,
+.blogImgContainerNoZoom img {
+  display:block;
+  width:35vw;
+  margin:auto;
+  transition:0.3s
 }
+.blogImgContainerNoZoom img:hover {
+  width:35vw;
+}
+.blogImgContainer img:hover {
+  width:50vw;
+}
+.blogImgContainer iframe {
+  width:50vw;
+  height:50vh;
+  margin:auto;
+}
+
 .esiSanat {
   width:80%;
   margin:auto;
@@ -131,5 +130,6 @@
 }
 .blogPDF iframe {
   display:block;
+  width:60vw;
   margin:0;
 }

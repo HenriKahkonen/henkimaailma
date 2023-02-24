@@ -180,3 +180,9 @@
     text-decoration:underline;
     text-decoration-line:underline;
 }
+
+@media screen and (max-width:930px) {
+    .arvioMasterContainer {
+      width:100%;
+    }
+  }

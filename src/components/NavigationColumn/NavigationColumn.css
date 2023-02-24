@@ -1,37 +1,64 @@
-#NavContainer {
-  margin-top:3vh;
-  width:20%;
-  height:100%;
-  justify-content:right;
-  padding-top:2vh;
-  padding-left: 2%;
+
+ .NavBarContainer {
+    display:none;
+  }
+  .NavColumnContainer {
+  margin-top:18vh;
+  width:10vw;
+  padding-left:2vw;
 }
 
-#NavList {
-  height:100%;
+.NavList {
   display:flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: right;
   background-color: transparent;
-  font-size: 10px;
-  color: rgb(0, 0, 0);
 }
-#NavList nav img {
+.NavList nav img {
   max-height: 48px;
   max-width:100%;
   max-height:100%;
-  margin-bottom: 4%;
+  gap:1vh;
   filter: grayscale(100%) contrast(2);
 }
-
-#NavList nav img:hover {
+.NavList nav img:hover {
   filter:grayscale(80%);
 }
 
-#NavList nav a.active img {
-  margin-bottom:2%;
+.NavList nav a.active img {
   max-width: 100%;
   max-height: 100%;
   filter: grayscale(50%) contrast(2);
+}
+
+@media screen and (max-width:930px) {
+  .NavColumnContainer {
+    display:none;
+  }
+  .NavBarContainer {
+    display:flex;
+    border:1px;
+    border-style: none none solid none;
+  }
+  .NavBarList {
+    margin-bottom:1vh;
+    display:flex;
+    flex-flow: row wrap;
+    background-color: transparent;
+  }
+  .NavBarList nav img {
+    width:20vw;
+    margin-bottom:0.7vh;
+    filter: grayscale(100%) contrast(2);
+  }
+  .NavBarList nav img:hover {
+    filter:grayscale(80%);
+  }
+  
+  .NavBarList nav a.active img {
+    max-width: 100%;
+    max-height: 100%;
+    filter: grayscale(50%) contrast(2);
+  }
+  
 }

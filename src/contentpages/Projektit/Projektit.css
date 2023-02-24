@@ -26,10 +26,6 @@ a:active { text-decoration: none; }
   display:flex;
   flex-flow: column;
   gap:10px;
-  /*
-  border: 1px #000000;
-  border-style: solid solid solid solid;*/
-  
 }
   .projectItemImageContainer {
     margin:auto;
@@ -101,13 +97,26 @@ a:active { text-decoration: none; }
   gap:10px;
   margin-bottom:4vh;
 }
+@media screen and (max-width:930px) {
+  #peliarvioContainer{
+    width:100%;
+  }
+  .projectItemContainer {
+    margin:auto;  
+  }
+}
 .peliarvioListItemContainer{
   max-width:49%;
   display: flex;
   flex-flow: row nowrap;
 }
+@media screen and (max-width:930px) {
+  .peliarvioListItemContainer{
+    max-width:100%;
+  }
+}
 .peliarvioThumbnailContainer {
-  max-width: 50%;
+  width: 50%;
 }
 .peliarvioThumbnail {
   max-width: 90%;

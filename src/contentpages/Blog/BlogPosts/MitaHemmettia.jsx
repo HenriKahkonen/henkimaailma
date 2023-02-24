@@ -43,9 +43,15 @@ export class MitaHemmettia extends HenkimaailmaPage {
                 <p>
                     Kaikkine vaikeuksineen suhtauduin sivun askartelemiseen haasteena ja luovana kanavana siinä missä sen sisällötkin. Esimerkiksi sivun taustakuvan ja blogiotsikkokuvien laatiminen tarjosi pitkästä aikaa syyn piirtää, ja sivun ulkonäköön liittyvien valintojen tekeminen oli innostavaa. Esimerkiksi Annalta joululahjaksi saamani DYMO-tarrakirjoitin pääsi hyvään käyttöön navigaatiopalkissa.
                 </p>
-                <img 
-                src="https://i.imgur.com/c3Qf6qz.jpg"
-                alt="Sivupalkin kuvat ovat skannattuja DYMO-tarrakirjoittimen tarroja."></img>
+
+                <div className="imageZoomer">
+                    <img 
+                    src="https://i.imgur.com/c3Qf6qz.jpg"
+                    width="300"
+                    alt="Sivupalkin kuvat ovat skannattuja DYMO-tarrakirjoittimen tarroja."></img>
+                    <p>Sivupalkin kuvat ovat skannattuja DYMO-tarrakirjoittimen tarroja.</p>
+                </div>
+
                 <p>
                     Kaikkinensa sivu tuntui tarjoavan jatkuvasti mahdollisuuksia päästä leikkimään kuvankäsittelyllä design-ratkaisuja pohtiessa - puhumattakaan siitä miten mukavaa on kirjoittaa huvikseen ja omilla ehdoillaan pitkittyneen yliopistovaiheen jälkeen.  
                 </p>

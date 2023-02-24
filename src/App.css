@@ -12,7 +12,6 @@
 */
 
 .App {
-  
   background-image: url(https://i.imgur.com/QjpYU3q.png);
   background-size:30%;
   background-repeat: repeat;
@@ -22,48 +21,29 @@
   flex-direction:column;
   width: auto;
   min-height:100vh;
+  font-size:16px;
 }
 .App a {
   color: #1b0807;
 }
 .App a:hover {
-  color: #641410;
+  color: #0b64b8;
 }
 .App img {
   object-fit: contain;
 }
-
-.prose {
-  max-width:920px;
-}
-.prose a {
-  color:blue;
-}
-.prose a:hover {
-  color: #641410;
-}
-.prose img {
-  text-align:center;
-}      
 
 .Master-container {
   /*background-color: white;*/
   box-shadow:4px 4px 100px #c3c1bf;
   background-color:rgba(255, 255, 255, 0.918);
   background-repeat: repeat;
-  width:80vw;
-  margin-left: 8vw;
-  margin-right: auto;
+  width:85vw;
+  margin:auto;
   margin-bottom: 2.5vh;
   margin-top: 2.5vh;
-}
-
-
-#Kontsabox-ja-navbar {
-  margin-left: auto;
-  margin-right: auto;
-  display:flex;
-  flex-direction: row;
+  display: flex;
+  flex-flow:row nowrap;
 }
 
 .MainContainer {
@@ -71,15 +51,13 @@
   flex-direction: column;
   padding-left:2%;
   padding-right:2%;
-  width:100%;
-  max-width:100%;
+  width:80%;
 
 }
 .Kontsa {
   font-family: courier; 
   text-align: left;
   line-height:1.4;
-
   padding-bottom: 1vh;
   margin-left: 1vw;
   min-height:70vh;
@@ -126,7 +104,47 @@
   margin-bottom:50px;
 }
 
+/*Yleiset luokat*/
+.imageZoomer {
+  display:block;
+  width:fit-content;
+  text-align:center;
+  font-size:medium;
+  color:#7c6c6c;
+  margin:auto;
+  margin-bottom:4vh;
+  margin-top:4vh;
+}
+.imageZoomer img {
+  display:block;
+  width:50%;
+  cursor:pointer;
+  transition:0.3s;
+  margin:auto;
+}
+.imageZoomer img:hover {
+  width:100%;
+}
 
+.prose {
+  max-width:80%;
+}
+.prose a {
+  color:blue;
+}
+.prose a:hover {
+  color: #641410;
+}
+.prose img {
+  text-align:center;
+}      
+
+
+@media screen and (max-width:930px) {
+  .MainContainer {
+    width:100%;
+  }
+}
 
 
 {/*

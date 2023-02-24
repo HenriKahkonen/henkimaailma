@@ -9,6 +9,7 @@ import
     {
       Header,
       NavigationColumn,
+      NavigationBar,
       SomeLinkkiLaja,
       FinalFooter,
     } from "../../components";
@@ -17,16 +18,15 @@ export function Root() {
     return (
         <div className="App">
           <div className="Master-container">
-            <Header/>
-            <div id="Kontsabox-ja-navbar">
-              <NavigationColumn/>
+              <NavigationColumn/> {/*Ei näytetä kännykällä&tabletilla*/}
               <div className="MainContainer">
+                <Header/>
+                <NavigationBar/> {/*Ei näytetä PC:llä*/}
                   <div className="Kontsa">
                     <Outlet/>
                   </div>
-              <SomeLinkkiLaja/>
+                <SomeLinkkiLaja/>
               </div>
-            </div> 
           </div>
         <FinalFooter/> 
         </div>

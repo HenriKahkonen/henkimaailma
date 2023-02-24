@@ -9,15 +9,5 @@ const Header = () => {
             </div>
         </header>
     )
-    //VANHA LOGOIMAGE
-    /*
-    return (
-        <header className="App-header">
-                <div className ="Logoimg-container">
-                    <div id='Logoimg'></div>
-                </div>
-        </header>
-    )
-    */
 }
 export default Header;

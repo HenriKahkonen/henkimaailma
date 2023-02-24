@@ -32,7 +32,7 @@ export function BlogItem() {
         <h1><NavLink to="/blog/">Blog</NavLink> / {blogpost.title}</h1>
         
         {<div className="blogiotsikkokuva"><img src={blogpost.imgurl} alt={blogpost.title} /></div> }
-        <div className="blogpost">
+        <div className="prose">
             {/*
             Renderöidään blogipostauksessa määritelty elementti l. sivun sisältö.
             Tämä on ehkä vähän tökerö tapa rakentaa blogipostaukset ja ehkä tässä joskus

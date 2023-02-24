@@ -24,8 +24,8 @@ const NavButton = (props) => {
 
 const NavigationColumn = () => {
     return (
-        <div id="NavContainer">
-            <div id="NavList">
+        <div className="NavColumnContainer">
+            <div className="NavList">
                 <nav>
                 <NavButton link="/" imgurl={process.env.PUBLIC_URL+'/img/home.png'}></NavButton>
                 <NavButton link="/blog" imgurl={process.env.PUBLIC_URL+'/img/blog.png'}></NavButton>

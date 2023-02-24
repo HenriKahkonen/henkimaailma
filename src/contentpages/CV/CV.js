@@ -5,9 +5,12 @@ class CV extends HenkimaailmaPage {
 
     render() {
         return (
+            <>
+               
             <div className="sisalto">
-                <img className="sidePic" src='https://i.imgur.com/e1054Ls.jpg' alt="Henri Kähkönen"></img>
                 <h1>Sivun kirjoittajasta</h1>
+                <img className="sidePic" src='https://i.imgur.com/e1054Ls.jpg' alt="Henri Kähkönen"></img>
+             
                 <p>
                     Minä olen <b>Henri Kähkönen</b>: musiikkitieteilijä, muusikko, ja yleinen taiteen ja viihteen ymmärtäjä.
                 </p>
@@ -15,7 +18,7 @@ class CV extends HenkimaailmaPage {
                     Kulttuurimaailma on ollut monilla tapaa osa minua koko aikuiselämäni ajan, mutta ajoittaisesta musiikkitouhuilusta huolimatta minulle ei koskaan ole kehittynyt varsinaista taiteilijaidentiteettiä. Minulla ei myöskään ole harhakuvitelmia omasta erityisyydestäni taiteen analysoijana tai asiantuntijana - sitä vastoin mitä enemmän aikaa vietän aihepiirin parissa sitä vähemmän tunnen tietäväni mistään mitään.
                 </p>
                 <p>
-                    Kulttuurin tuotanto tai analyysi ei lähtökohtaisesti vaadi ihmiseltä mitään erityisominaisuuksia. Suuri osa valtavirran kulttuurikeskustelusta tapahtuu kuitenkin pienen taideasiantuntijoiden joukon ehdoilla. Menemättä taideasiantuntijuuden tai taiteilijuuden mytologisointiin tämä kulttuurikeskustelun vallan keskittyminen ei ole täysin huono asia: on ehdottomasti hyvä, että osa ihmisistä voi omistaa itsensä sen kritiikille ja analyysille. Taidekritiikin ja analyysin oletetusta hyödyllisyydestä riippumatta se on ainoa asia, joka minuakin on aina vilpittömästi kiinnostanut, ja saatan itsekin positioitua osin tahtomattani tähän rajattuun taide-elitistien joukkoon. 
+                    Kulttuurin tuotanto tai analyysi ei lähtökohtaisesti vaadikaan ihmiseltä mitään erityisominaisuuksia. Suuri osa valtavirran kulttuurikeskustelusta tapahtuu kuitenkin pienen taideasiantuntijoiden joukon ehdoilla. Menemättä taideasiantuntijuuden tai taiteilijuuden mytologisointiin tämä kulttuurikeskustelun vallan keskittyminen ei ole täysin huono asia: on ehdottomasti hyvä, että osa ihmisistä voi omistaa itsensä sen kritiikille ja analyysille. Taidekritiikin ja analyysin oletetusta hyödyllisyydestä riippumatta se on ainoa asia, joka minuakin on aina vilpittömästi kiinnostanut, ja saatan itsekin positioitua osin tahtomattani tähän rajattuun taide-elitistien joukkoon. 
                 </p>
                 <p>
                     Taide ja viihde ovat kuitenkin siitä ambivalentteja kategorioita, että kuka tahansa voi kokea kulttuurituotteita ja arvottaa niitä mieltymystensä mukaan - samoin taidetta voi luoda kuka tahansa. Tämä sivusto on minun tilani olla <i>se kuka tahansa</i>.
@@ -30,6 +33,7 @@ class CV extends HenkimaailmaPage {
                         <div className="kouluyr">2023</div>
                         <div className="kouludat">
                             <b>Filosofian maisteri</b>, <i>Turun yliopisto, Musiikkitiede</i><br/>
+                            Pro Gradu: <a href="https://www.utupub.fi/handle/10024/153797">Musiikkisisällöntuottajat ja YouTuben affordanssit</a><br/>
                             Sivuaine: Tietojenkäsittelytiede
                         </div> 
                     </div>
@@ -165,6 +169,7 @@ class CV extends HenkimaailmaPage {
                 </div>
             </div>
             </div>
+            </>
         )
     }    
 }
