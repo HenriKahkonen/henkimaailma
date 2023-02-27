@@ -33,8 +33,8 @@ export class IdeoitaNayttamolla extends HenkimaailmaPage {
 
 <h2 id="ch1">Johdanto</h2>
 <p>Musiikkianalyyttisiä näkökulmia valitessa törmää usein kysymyksiin siitä, mitä musiikki tai
-taide ylipäätään on. Etnomusikologisista musiikin kattoselityksistä pidän itse eniten <a href="#S-Blacking2000">John
-Blackingin (2000)</a> dikotomisesta argumentista ”Musiikki on inhimillisesti järjestettyä ääntä /
+taide ylipäätään on. Etnomusikologisista musiikin kattoselityksistä pidän itse eniten <a href="#S-Blacking2000"><b>John
+Blackingin</b> (2000)</a> dikotomisesta argumentista ”Musiikki on inhimillisesti järjestettyä ääntä /
 Musiikki on äänellisesti järjestettyä ihmisyyttä” (<a href="#fn1">alaviite 1</a>). Blackingin tarjoama malli antaa
 mahdollisuuden lähestyä musiikkina sen, mitä kukin ihminen haluaa lähestyä musiikkina
 sijoittaen äänen ja ”musiikin” rajapinnan subjektiiviseen arviointiin. Esimerkiksi monien
@@ -62,11 +62,11 @@ subjektikeskeisestä musiikkianalyysistä ovat mm. skenetutkimus (<a href="#S-Be
 <p>
 Yksi uuden musiikkitieteen merkittävimpiä näkökulmallisia muutoksia on kuitenkin ollut
 musiikkiesitysten merkityksellisyyden painottaminen musiikkianalyysissa. Itävaltalaisen
-säveltäjä-teoreetikko Heinrich Schenkerin formalistinen eli musiikin rakenteeseen ja muotoon
+säveltäjä-teoreetikko <b>Heinrich Schenkerin</b> formalistinen eli musiikin rakenteeseen ja muotoon
 nojaava musiikkianalyysi muodostui erityisen vaikutusvaltaiseksi teoreettiseksi
 viitekehykseksi 1800–1900-luvun taitteessa, minkä vuoksi esityksen uniikki merkitystaso on
 jäänyt aiemmassa, 1900-luvun musiikkianalyysissä vähemmälle huomiolle. Esimerkiksi
-{" "}<a href="#S-Adorno2006">Theodore Adorno (2006)</a> on vaikutusvaltaisissa kirjoituksissaan peilannut Schenkeriläistä
+{" "}<a href="#S-Adorno2006"><b>Theodore Adorno</b> (2006)</a> on vaikutusvaltaisissa kirjoituksissaan peilannut Schenkeriläistä
 musiikkikäsitystä ja kuvaillut musiikin esittäjiä l. tulkitsijoita ”turhaksi välikädeksi”, jotka
 pitäisi ideaalitilanteessa voida jättää pois säveltäjän ja musiikin vastaanottajan välistä.</p>
 <p>
@@ -85,7 +85,7 @@ studiomuusikoille myönnettiin rajoitettua oikeussuojaa tuottamiinsa levytyksiin
 Rooman konventiossa (<a href="#S-Frith2004b">Frith & Marshall 2004b, 12–15</a>) (<a href="#fn2">Alaviite 2</a>). Länsimaisen musiikin kirjallisen
 taltioinnin ja tuotteistamisen historian merkitystä niin taidekäsitysten kuin
 musiikkitutkimuksen kannalta ei tulekaan vähätellä: Schenkeriläistä teoskeskeisyyttä
-kritisoinut musiikkitieteilijä Nicholas Cook onkin kuvaillut 1900-luvun musiikkitieteen
+kritisoinut musiikkitieteilijä <b>Nicholas Cook</b> onkin kuvaillut 1900-luvun musiikkitieteen
 tekstuaalisen historian ja läheisyyden kielentutkimukseen johtaneen ”liki skitsofreenisen
 mustavalkoiseen dissosiaatioon kirjallisen analyysin ja käytännöllisen esittämisen analyysin
 välillä” (<a href="#S-Cook2013">Cook 2013, 23</a>).
@@ -94,14 +94,14 @@ välillä” (<a href="#S-Cook2013">Cook 2013, 23</a>).
 Teoksen esittämiseen liittyvän merkitysulottuvuuden huomioimisen lisäksi on olennaista
 tarkastella lähemmin myös aiemmin sivuttua kysymystä subjektin omien skeemojen
 vaikutuksista musiikin hahmottamiseen. Näkyvä esimerkki viime vuosilta on yhdysvaltalaisen
-konservatiivikommentaattori Ben Shapiron poleemiset näkemykset siitä, kuinka rap ei ole
+konservatiivikommentaattori <b>Ben Shapiron</b> poleemiset näkemykset siitä, kuinka rap ei ole
 ”oikeaa musiikkia” sen täyttäessä musiikin kolmesta kriteeristä vain rytmin ja unohtaen
 melodian ja harmonian (<a href="S-ClassicFM2019">Classic FM 2019</a>). Shapiron kommentit kuvaavat hyvin sitä, kuinka
 musiikin ontologiaan liittyvät keskustelut sotkeutuvat usein sen arvotuksiin liittyviin
 väittelyihin (on myös huvittavaa, kuinka Shapiro unohtaa tässä formalistisessa analyysissään
 muun muassa musiikin sointivärin, dynamiikan ja rakenteen), mutta tekevät myös näkyväksi
 subjektikokemuksen keskeisyyden musiikin merkityksiä hahmotellessa. Musiikin
-sosiologiasta kirjoittaneen <a href="#S-Kennett2003">Chris Kennettin (2003)</a> argumentteja mukaillaksemme voitaneen
+sosiologiasta kirjoittaneen <a href="#S-Kennett2003"><b>Chris Kennettin</b> (2003)</a> argumentteja mukaillaksemme voitaneen
 esittää, etteivät esimerkiksi Freddie Gibbsin konsertissa tavallinen gangsta rap -fani ja Shapiro
 kuuntelisi samaa musiikkia, sillä toiselta puuttuu genren konventioihin lukemiseen liittyvä
 kompetenssi: tietämättä mitä ja miksi kuunnella ja minkälaisia genreen liittyviä merkityksiä
@@ -177,8 +177,8 @@ portfoliotarkoituksiin. (A1, A5, A7, A20, A21.)
 </div>
 <p>
 Seurasin <i>Qui:n</i> harjoituksia viikoittain sen harjoituskauden aikana. Sovin aineistonkeruussa
-käytettävistä harjoituskerroista teatterin taiteellisen johtajan Jussi Vahvaselän ja ohjaaja Tom
-Petäjän kanssa niin, että pyrin osallistumaan vähintään kerran viikossa harjoituksiin, joissa
+käytettävistä harjoituskerroista teatterin taiteellisen johtajan <b>Jussi Vahvaselän</b> ja ohjaaja <b>Tom
+Petäjän</b> kanssa niin, että pyrin osallistumaan vähintään kerran viikossa harjoituksiin, joissa
 käsiteltäisiin tarkastelun kohteeksi valitsemiani musiikkinumeroita. Rajasin pääasiallisesti
 tarkasteltavaksi materiaaliksi neljä teoksen kappaletta: molempien näytösten päätöskappaleet
 ”Ylistyslaulu Pariisille” ja ”Ylistyslaulu Turulle” sekä musiikkinumerot ”Bonjour 1” ja
@@ -186,10 +186,10 @@ tarkasteltavaksi materiaaliksi neljä teoksen kappaletta: molempien näytösten 
 numerosta (<a href="#liitteet">Liitteet</a>).
 </p>
 <p>
-Aineistonkeruun metodologiassa myötäilin väljästi <a href="#S-Hirsjarvi2010">Hirsjärven ja Hurmeen (2010)</a>{" "}
+Aineistonkeruun metodologiassa myötäilin väljästi <a href="#S-Hirsjarvi2010"><b>Sirkka Hirsjärven</b> ja <b>Helena Hurmeen</b> (2010)</a>{" "}
 teemahaastattelun metodia, joskin painotin aineistonkeruussani enemmän osallistuvaa
-havainnointia ja pidin toteuttamani haastattelut Jussi Vahvaselän (A6) ja koreografi Laura
-Alhon (A17) kanssa lyhyinä. Haastatteluita olennaisempana aineistonkeruun metodina taltioin
+havainnointia ja pidin toteuttamani haastattelut Jussi Vahvaselän (A6) ja koreografi <b>Laura
+Alhon</b> (A17) kanssa lyhyinä. Haastatteluita olennaisempana aineistonkeruun metodina taltioin
 esityksen harjoituksia digitaalinauhurilla, jolla nauhoitin yhteensä 35 tutkimusnauhoitetta,
 joista 12 hylkäsin aineistosta epäolennaisuuden perusteella. Lisäksi kuvasin muutamia
 valokuvia, neljä videonauhoitetta teoksen esityksestä 25.11.2022 sekä viisi videonauhoitetta
@@ -235,7 +235,7 @@ näiden tavoitteiden kommunikoinnissa onnistuminen esityksessä.
 </p>
 <p>
 Huomasin nojaavani analyysissäni vahvasti erityisesti metallimusiikkikirjoituksissaan
-ansioituneen musiikkitieteilijä Robert Walserin ajatuksiin populaarimusiikin analyysistä.
+ansioituneen musiikkitieteilijä <b>Robert Walserin</b> ajatuksiin populaarimusiikin analyysistä.
 Walserin mukaan formalististen ja tekstipainotteisten analyysimetodien vaarana on luoda
 musiikin analyysiin objektiivisuuden illuusiota ikään kuin musiikissa olisi objektiivisesti
 kuvattavia, liikkumattomia merkityksiä. Luonnollinen kieli hermeneuttisten merkitysten
@@ -255,7 +255,7 @@ työryhmältä oman, vähäisen Ranska-aiheisen yleissivistykseni rajoittaessa j
 ymmärtämistä. Vaikka vanhan sanonnan mukaan vitsin selittäminen on paras tapa pilata sen
 huumori, on komediaan painottuvan tekstin analyysissä erityisen keskeistä selittää tarkasti,
 <i>mikä</i> vitsissä on hauskaa ja <i>miten</i> se kommunikoidaan yleisölle käsikirjoituksen, musiikin,
-esittäjien ja näyttämökuvan vuorovaikutuksen kautta. Seuraavissa kappaleissa erittelen Qui:n
+esittäjien ja näyttämökuvan vuorovaikutuksessa. Seuraavissa kappaleissa erittelen Qui:n
 merkitysten rakentumista kronologisesti käsikirjoituksen syntymisestä sen tulkintaan ja
 edelleen sen sovittamiseen näyttämöllä.
 </p>
@@ -273,7 +273,7 @@ käsikirjoitus on tehty jo ennen näyttelijävalintoja ja teoksen tuomista näyt
 Musiikkia ja sketsikomediaa sisältävä <i>Qui</i> sisältää n. 15 musiikkinumeroa, joista suurin osa
 on satiirisesti uudelleensanoitettuja, tunnettuja ranskalaisia kappaleita. Kappaleet on
 sovittanut teatterin taiteellinen johtaja Jussi Vahvaselkä ja sanoittanut esityksen käsikirjoittaja
-Antto Terras yhdessä Vahvaselän kanssa. Revyy edustaa genrenä varieteeteatterin perinnettä,
+{" "}<b>Antto Terras</b> yhdessä Vahvaselän kanssa. Revyy edustaa genrenä varieteeteatterin perinnettä,
 jossa musiikkia, tanssia ja komediasketsejä yhdistelemällä kootaan kevyt huumorivetoinen
 esitys. Genrenä revyytä yhdistää keveys, joka voi ilmetä esimerkiksi juonen minimaalisuutena
 ja kokonaisuuden jäsentymisenä jonkin teeman tai johtoajatuksen ympärille. Myös Qui?
@@ -286,7 +286,7 @@ että revyyssä saa kirjoittaa, säveltää ja sovittaa ajatellen etupäässä v
 mielestä hauskaa. (A6.)    
 </p>
 <p>
-Qui:ta sitoo yhteen löysä juonellinen asetelma, jossa Ranskaan saapunut turisti (Jarmo Koski)
+Qui:ta sitoo yhteen löysä juonellinen asetelma, jossa Ranskaan saapunut turisti (<b>Jarmo Koski</b>)
 esiintyy näytelmän ensimmäisessä ja viimeisessä kohtauksessa toimien ikään kuin yleisön
 edustajana oppien näytelmän aikana ranskalaista kulttuuria ja summaten ajatuksensa
 ranskalaisuudesta näytelmän viimeisessä monologissa. Ranskalaista historiaa ja kulttuuria
@@ -327,8 +327,8 @@ tai ”taiteellisen leikin” suhteeseen: ”Se rakenteen muokkaaminen on mikä 
 […] ne legopalikat on sitä työtä, mut sit alkaa se hauska [leikkiminen].” (A6).</p>
 <p>
 Qui yhdistelee musiikissaan Vahvaselän tuottamia taustanauhoja ja lavalla esiintyvää
-muusikkoa Marko Valtosta, joiden säestyksellä näyttelijän viidestä näyttelijästä neljä (Elviira
-Kujala, Anna-Sofia Tuominen, Thomas Dellinger ja Joonatan Perälä) laulavat livenä.
+muusikkoa <b>Marko Valtosta</b>, joiden säestyksellä näyttelijän viidestä näyttelijästä neljä (<b>Elviira
+Kujala</b>, <b>Anna-Sofia Tuominen</b>, <b>Thomas Dellinger</b> ja <b>Joonatan Perälä</b>) laulavat livenä.
 Jokaisella laulavalla näyttelijällä on soolokappale, minkä lisäksi he laulavat usein
 lauluyhtyemäisissä, tiiviissä harmonioissa (close voicing). Laulajien ohjaaminen ja
 sovittaminen kappalekokonaisuuksiin liittyy olennaisesti Vahvaselän teokselle tuomaan
@@ -346,7 +346,7 @@ Leavesia”.
 <p>
 Tunnettujen kappaleiden uudelleensanoitukset ja intertekstuaalisten viittausten käyttäminen
 uudelleen kontekstualisoituina ovat hyvä esimerkki siitä, mitä tekijänoikeuslainsäädännöstä
-kirjoittanut juristi Lawrence Lessig on nimittänyt ”Disney-luovuudeksi” viitaten
+kirjoittanut juristi <b>Lawrence Lessig</b> on nimittänyt ”Disney-luovuudeksi” viitaten
 elokuvastudion alkutaipaleen runsaaseen lainatarinoiden käyttöön. Lessigin mukaan
 kulttuurituotantoon on aina liittynyt vanhan muokkaamista uudeksi, ja tätä luovuuden lajia
 tulisi hänen mukaansa juhlia ja kehittää sen sijaan, että teosten muokkaamiseen
@@ -368,7 +368,7 @@ Arvioidessa lyriikan ja musiikin merkitysten muotoutumista peilaavat kappalevali
 näihin yhdistetyt musikaaliset ja lyriikalliset vitsit yhtäältä alkuperäiskappaleisiin liittyviä
 merkityksiä ja toisaalta laulun sovittajien huumorintajua sekä näiden alkuperäistekstiin
 liittämiä assosiaatioita. Laulusovituksiin liittyvää uusien ja vanhojen merkitysten yhteen
-nivoutumista voidaan tarkastella musiikkitieteilijä Dai Griffithsin kuvailemien coverversioiden
+nivoutumista voidaan tarkastella musiikkitieteilijä <b>Dai Griffithsin</b> kuvailemien coverversioiden
 merkitysten ja sosiologisten ulottuvuuksien kautta. Griffithsin mukaan cover voi
 toimia esimerkiksi luokan tai identiteetin esittäjänä ja problematisoijana – vaikkapa miehen
 esittäessä alun perin naisen miehelle laulamaa rakkauslaulua lyriikan näkökulma kääntyy ja
@@ -495,7 +495,7 @@ ensimmäistä tahtia (71–83).
 </p>
 <p>
 Kappaleen A-osat rakentuvat 8 tahdin sykleistä, joissa harmonia varioi toonikasoinnuilla
-Em7- ja Em6/9 edeten viimeisessä kahdessa tahdissa G-duurille johtavaan ii-Vvalepurkaukseen,
+Em7- ja Em6/9 edeten viimeisessä kahdessa tahdissa G-duurille johtavaan ii-V -valepurkaukseen,
 missä dominanttisointu D7 on korvattu takaisin toonikaan johtavalla B7(#9)
 -soinnulla (<a href="#fn4">Alaviite 4</a>) ja tähän kuljettava Am7-sointu on harmonisoitu suurella septimillä muotoon Am(maj7). (Kuva 1.) A-osien Em-soinnuissa toistuva edestakainen liike toonikasta ja
 septimistä vierekkäisille sävelille jatkuu myös Am(maj7)- ja B7(#9)soinnussa: alkuperäisen
@@ -522,7 +522,7 @@ ja skeemojen tuotteeksi, vaan kulttuuriyhteisössä jaetut kokemukset muokkaavat
 harmonioihin liitettyjä merkityksiä tietoisesti tai tiedostamatta (ks. esim. <a href="#S-Kennett2003">Kennett 2003</a>, 196–
 217 missä opiskelijoiden kuvailemat assosiaatiot <a href="https://www.youtube.com/watch?v=QNcUnfvFAFI">Jimmy Smithin ”The Carpetbaggers” -
 teemasta (YouTube)</a> ovat huomattavan yhtenevät). Vaikkei Ylistyslaulun A-osan staattinen harmonia
-tarkoittaisi tyhjiössä mitään, se tarjoaa <a href="#S-Moore2009">Allan Moorea (2009)</a> mukaillen tulkintaa
+tarkoittaisi tyhjiössä mitään, se tarjoaa <a href="#S-Moore2009"><b>Allan Moorea</b> (2009)</a> mukaillen tulkintaa
 mahdollistavia affordansseja (<a href="#fn5">Alaviite 5</a>), joiden tulkintaan vaikuttavat sekä subjektin omat skeemat että
 kollektiivinen kulttuurinen muisti tarkasteltavan kaltaisen harmonian aiemmasta käytöstä.
 </p>
@@ -543,7 +543,7 @@ täydentävän roolin, jossa lyriikka esiintyy lyhyissä, itsenäisemmissä osuu
 Musiikkitekstuurin ja lyriikan merkitysten painottamisessa voidaan tukeutua myös
 laulumusiikin ”identiteettimerkkien” merkitystä lyriikan rytmin ja soonisen tilan
 hahmottelussa. Laulumusiikissa kappaleen identiteettiä merkitsevät melodiset ja lyyriset
-aiheet luovat aiheesta kirjoittaneen Luiz Tatit’n mukaan kappaleeseen ajallisesti valkenevan
+aiheet luovat aiheesta kirjoittaneen <b>Luiz Tatit’n</b> mukaan kappaleeseen ajallisesti valkenevan
 merkitysulottuvuuden. (<a href="#S-Tatit2002">Tatit 2002, 37–48.</a>) Ylistyslaulussa kappaleen avaava melodinen aihe
 ja fraasi ”Kujat hämyiset sykkivän keitaan” tahdeissa 5–6 voidaan nähdä tällaisena
 ”Ylistyslaulun Pariisille” identiteettimerkkinä, joka toistuu säkeistöissä kahdeksan tahdin
@@ -658,7 +658,7 @@ merkityksellisyyttä tilanteista, joita näyttelijät itse pitävät rutiininoma
 <p>
 Lienee kuitenkin selvää, että sen lisäksi, <i>mitä</i> musiikillista tai lyyristä materiaalia muusikko
 tai laulaja tuottaa, keskeistä tulkinnan kannalta on <i>miten</i> kyseisen musiikillisen aiheen esittää
-ja miltä se kuulostaa. Laulun tulkinnan merkityksiä voi havainnollistaa paralleelilla eilyyrisessä
+ja miltä se kuulostaa. Laulun tulkinnan merkityksiä voi havainnollistaa paralleelilla ei-lyyrisessä
 musiikissa: esimerkiksi sähkökitarassa samojen sormenliikkeiden ja instrumentin
 tuottama signaali <i>merkitsee</i> hyvin erilaisia asioita riippuen siitä, onko signaalia esimerkiksi
 särötetty efektein. Myös laulutekniikassa vaikkapa fraasi ”En tahdo sinua enää” voi viestiä
@@ -699,7 +699,7 @@ Rouge saa siitä esikuvan” komediaa etsittiin säkeen kömpelöä rytmitystä 
 </p>
 <p>
 Näytelmän teksti ja kappalelyriikka kehittyi harjoituskautena kuvatuilla tavoilla
-vuorovaikutuksessa työryhmän kanssa heijastellen popmusiikin tutkija Timothy Warnerin
+vuorovaikutuksessa työryhmän kanssa heijastellen popmusiikin tutkija <b>Timothy Warnerin </b>
 kuvaamaa geneettistä luovuusmallia (Kuva 2). Warner käyttää malliaan havainnollistamaan
 äänitetuotannossa tapahtuvaa prosessia, jossa studiosessioita varten kehitetyt kappaleaihiot,
 tempokartat, sanoitukset ja muu ennakkotuotannollinen materiaali (konsepti) kehittyy
@@ -750,7 +750,7 @@ nähdä viestivän palatsin houkuttelevuutta nähtävyyksien paljouden keskellä
 Pohtiessa liikkuvien kehojen vaikutuksia musiikin tulkintaan on mainittava visuaalisen
 informaation vaikutuksista ääniärsykkeiden kokemiseen olevan myös laajaa empiiristä
 näyttöä. Yksi vaikutusvaltaisimpia aihepiiriä käsitteleviä havaintopsykologian tutkimuksia on
-<a href="#S-McGurk1976">Harry McGurkin ja John MacDonaldin (1976) tutkimus</a>, jossa havaittiin ristiriitaiseen
+<a href="#S-McGurk1976"><b> Harry McGurkin</b> ja <b>John MacDonaldin</b> (1976) tutkimus</a>, jossa havaittiin ristiriitaiseen
 videoraitaan yhdistetyn puheäänen tuottaman aistiristiriidan vaikuttavan koehenkilöiden
 raportoimiin kokemuksiin kuulemastaan ääniärsykkeestä: esimerkiksi kuultu ”ba-ba” -äänne
 yhdistettynä ”ga-ga” -lausuntaa kuvaavaan videoon fuusioitui useimpien koehenkilöiden
@@ -776,11 +776,11 @@ toistuvat kaikissa näissä kokeissa yhtenevinä.
 </p>
 <p>
 Ottaen huomioon esimerkiksi, kuinka olennainen ilmiö henkilökeskeinen pop-tähteys populaarimusiikin historiassa on, on esiintymisen visuaalisen aspektin ja nonverbaalisen
-kommunikaation tarkastelu musiikissa suhteellisen nuori tutkimusala. Esitystutkija <a href="#S-Auslander2009">Philip
-Auslander (2009)</a> onkin kritisoinut ajatusta siitä, että populaarimuusikon ”persoonaa” tulisi
+kommunikaation tarkastelu musiikissa suhteellisen nuori tutkimusala. Esitystutkija <a href="#S-Auslander2009"><b>Philip
+Auslander</b> (2009)</a> onkin kritisoinut ajatusta siitä, että populaarimuusikon ”persoonaa” tulisi
 tarkastella yksinomaan musiikin markkinoinnin ja tuotteistamisen näkökulmasta ja hän
 korostaakin muusikon fyysisen läsnäolon, olemuksen ja elehdinnän kantavan olennaisia
-merkityksiä musiikissa. Auslander nojaa ”muusikkopersoonan” käsitteessään Simon Frithin
+merkityksiä musiikissa. Auslander nojaa ”muusikkopersoonan” käsitteessään <b>Simon Frithin </b>
 kuvailemaan poptähden ”kaksoisnäyttelemiseen” (double enactment), jossa esiintyvä
 muusikko näyttelee yhtäältä tämän tähtipersoonallisuutta ja toisaalta tämän laulaman laulun
 persoonallisuutta. Frithin mukaan tämä kaksoisnäytteleminen on näkyvimmillään esimerkiksi
@@ -863,8 +863,8 @@ V4.)
 Mainittakoon, että numeron olisi voinut pyrkiä toteuttamaan myös niin, että näyttelijät
 esittävät nähtävyyksiä kirjaimellisesti rakennuspukuihin sonnustautuneena. Toteutettuun
 valintaan lienee vaikuttanut ensisijaisesti kömpelöiden ja työläiden pukujen luomiseen
-liittyvät tuotannolliset seikat, mutta näytelmän puvustajan (Marjo Haapasalo), maskeeraajan
-(Minna Pilvinen) ja tarpeistovastaavan (Nanna Mäkinen) työn helpottamisen lisäksi
+liittyvät tuotannolliset seikat, mutta näytelmän puvustajan (<b>Marjo Haapasalo</b>), maskeeraajan
+(<b>Minna Pilvinen</b>) ja tarpeistovastaavan (<b>Nanna Mäkinen</b>) työn helpottamisen lisäksi
 nähtävyyksien esittäminen metaforisesti tavallisina pariisilaishahmoina mahdollistaa numeron
 luentaa ja tulkintaa muilla huomionarvoisilla tavoilla. Ensinnäkin nähtävyyksien abstraktointi
 tavallisiksi ihmisiksi ohjaa katsojaa kiinnittämään huomiota ennemmin lavalla olevaan
@@ -927,7 +927,7 @@ haluttuun tunnetilaan sopivat kasvonpiirteet tai elekieli, jolloin tämä voidaa
 koreografiaan tai näyttämökuvaan eri tavalla korostaen tai piilottaen tämän luonnollisia
 ominaisuuksia. Voidaankin nähdä, että samoin kuin teoksen sävellysten kanssa, liittyy
 koreografian laatimiseen ennakkoon kirjoittamisen lisäksi näyttämökuvan suunnittelua näyttelijöiden kanssa ja
-<i>näyttelijöillä</i>: kulloiseenkin produktioon valitut näyttelijät ovat
+<i> näyttelijöillä</i>: kulloiseenkin produktioon valitut näyttelijät ovat
 koreografin työn välineitä, joiden luonnolliset ominaisuudet kuten kehotyyppi tai elekieli
 vaikuttavat lopullisen koreografian laadintaan.
 </p>
@@ -965,7 +965,7 @@ pakeneminen lavasteisiin kappaleen lopussa syntyi alun perin tarpeesta saada tä
 sekunteja vaihtaa seuraavan kohtauksen roolivaatteisiin (A22). Tämä käytännön tarpeen
 vaatima aiempi lavalta poistuminen onnistuttiin kuitenkin kirjoittamaan osaksi ”Bonjourin”
 koreografiaa korostamalla nähtävyyksien päälletunkevuutta koreografiassa antaen näin
-turistihahmolle näyttämötoiminnallinen syy poistua lavalta – kappaleen konseptin ja
+turistihahmolle näyttämötoiminnallinen syy poistua lavalta. Kappaleen konseptin ja
 realisaation neuvotteleva suhde on selvästi havaittavissa niin tässä ratkaisussa kuin aiemmin
 kuvatussa Tuomisen lauluimprovisaation koreografioimisessa näyttämötoiminnallisesti
 perustelluksi.
@@ -1087,7 +1087,7 @@ livemusiikkia tarkastellaan McLuhanilaisittain (<a href="#S-McLuhan1964">McLuhan
 </p>
 <p>
 Samassa ajassa ja tilassa jaettavan teatterikokemuksen ritualistisuutta ja erityisyyttä
-voidaankin ennemmin tarkastella videotaitetta tutkineen <a href="#S-Rogers2013">Holly Rogersin (2013, 157)</a>
+voidaankin ennemmin tarkastella videotaitetta tutkineen <a href="#S-Rogers2013"><b>Holly Rogersin</b> (2013, 157)</a>
 sanallistamalla välittömyyden (immediacy) ja hypermediaalisuuden vastinparilla. Esimerkiksi
 maalauksessa maalauksen aihe pyrkii useimmiten olemaan välitön niin, ettei katsoja ajattele
 teosta katsoessaan katsovansa maalia kankaalla vaan kuvan aihetta. Teatteri taas on
@@ -1102,8 +1102,8 @@ kohtauksissa vuorosanattomissa rooleissa.
 Vaikka live-elämykset kantavat väistämättä tällaisia yleisökokemuksiin vaikuttavia sosiaalisia
 merkityksiä, ei teatterikokemusta jaettuna ja yhteisenä kokemuksena ole kuitenkaan
 mielekästä tarkastella yksinomaan yleisön manipuloimisena taidekokemuksen
-vastaanottamiseen sopivaan mielentilaan virittämällä. Esimerkiksi teoksen ääni- (Jan
-Lamberg) ja valosuunnittelu (Esa Näykki) ohjaavat yhtäältä katsomaan näyttämötoimintaa
+vastaanottamiseen sopivaan mielentilaan virittämällä. Esimerkiksi teoksen ääni- (<b>Jan
+Lamberg</b>) ja valosuunnittelu (<b>Esa Näykki</b>) ohjaavat yhtäältä katsomaan näyttämötoimintaa
 kuin taidetta, ovat ne myös erottamaton osa itse esitettävän taideteoksen kokonaisuutta.
 Livekokemuksen merkityksenannon kannalta on nähdäkseni kuitenkin reilua tunnustaa myös
 tavat, joilla yleisön kokemusta pyritään ohjaamaan paitsi teoksen sisäisesti, myös esitystä
@@ -1140,7 +1140,7 @@ valokyltein (<a href="#S-Auslander2008">Auslander 2008, 27</a>). Myös Qui:ssa v
 ajastettu niin, että yleisön taputus kohtausten välissä tekee siirtymästä sujuvan. Tuuratessani
 näytelmän teknistä ajoa 4.11.2022 kiinnitin huomiota muutamaan kohtaukseen, jotka
 käynnistävät ääni- ja valoiskut olivat jopa suunniteltu yleisöreaktioiden ympärille – kohtaus
-voi alkaa, kun yleisö lakkaa taputtamasta. Mikäli edellinen kohtaus ei syystä tai toisesta
+voi alkaa, kun yleisö lakkaa taputtamasta edellisen kohtauksen päättävälle punchlinelle. Mikäli edellinen kohtaus ei syystä tai toisesta
 päättyisi yleisön nauruun ja aplodeihin, olisi siirtymä näiden kohtausten välillä paitsi
 ajallisesti kömpelö, myös aavemaisen hiljainen. Komedianäytelmän rytmittäminen
 yleisöreaktioiden ehdoilla on kuitenkin hyvin tavallinen käytäntö, enkä ole
@@ -1169,7 +1169,7 @@ kuitenkaan välity katsojasta riippumatta yleisölle yhteneväisenä: anekdootti
 mainita kumppanini huvittuvan aina tunnistaessaan Vahvaselän eri produktioihin tuottamissa
 taustanauhoissa toistuvia midi-saundeja. Itse taas olen tottunut näihin ”Jussi-saundeihin”
 luonnollisena osana Linnateatterin esitysten saundimaailmaa ja äänisuunnittelua.
-Kokemuksiemme erot kuvaavat yhtä tapaa, jota etnomusikologi Christopher Small kuvaa
+Kokemuksiemme erot kuvaavat yhtä tapaa, jota etnomusikologi <b>Christopher Small</b> kuvaa
 ”musiikiuttamiseksi”. Smallin mukaan musiikki ei ole kiinteä objekti vaan aktiviteetti, joka
 saa merkityksensä soittamisen, esittämisen ja kuuntelemisen toiminnassa (<a href="#S-Small1998">Small 1998</a>).
 Samojen ”Jussi-saundien” äänellinen kokemus ei yleensä merkitse itselleni mitään, mutta
@@ -1252,7 +1252,7 @@ merkitykset eivät tyypillisesti muutu esityksen aikana, mutta sen asettamat raj
 mahdollisuudet vaikuttavat yksisuuntaisesti muissa tuotannon vaiheissa ja osa-alueissa
 tehtäviin taiteellisiin valintoihin. Qui tarjosi tähän asetelmaan poikkeuksen produktion
 esituotannon aikana, jolloin esitystilaan ja näyttämön reunuksille asennettiin uusia valaisimia
-ja punaisia verhoja varieteemaisen tunnelman saavuttamiseksi esitykseen.
+ja punaisia verhoja varieteemaisen tunnelman saavuttamiseksi esityksessä.
 </p>
 <p>
 Eri taiteellisten osastojen tekemä valmisteleva työ muuttuu esityskaudella passiiviseksi
@@ -1292,7 +1292,7 @@ Qui:n on luonut ja mikä tekee Qui:sta Qui:n? Kuinka monta palaa esityksestä vo
 ennen kuin teoksen voidaan sanoa olevan eri?
 </p>
 <p>
-Theseuksen laiva -henkisen pohdinnan sijaan vastaus Qui:n ja muiden teatteriproduktioiden
+<a href="https://en.wikipedia.org/wiki/Ship_of_Theseus">Theseuksen laiva </a>-henkisen pohdinnan sijaan vastaus Qui:n ja muiden teatteriproduktioiden
 ontologiseen luonteeseen on helpompi ja tylsempi. Teos syntyy osien summasta
 täydellistymisen sijaan tuotannollisen ja taloudellisen sopimuksen myötä: Qui on
 yksinkertaisimmillaan se esitys, jonka Linnateatteri on päättänyt esityksessä sillä nimellä
