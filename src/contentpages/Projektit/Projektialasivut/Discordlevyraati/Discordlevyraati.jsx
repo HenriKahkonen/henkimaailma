@@ -68,21 +68,22 @@ class DiscordLevyRaatiPage extends HenkimaailmaPage {
     lrNextPage=() => {
         const oldPage=this.state.levyraatiPage
         return()=>{
-            console.log("Kliks seuraava sivu")
+            //console.log("Kliks seuraava sivu")
             this.setState({levyraatiPage:(oldPage+1)})
         }
     }
     lrLastPage= () => {
         const oldPage=this.state.levyraatiPage
         return() =>{
-            console.log("kliks edellinen sivu")
+            //console.log("kliks edellinen sivu")
             this.setState({levyraatiPage:(oldPage-1)})
         }
     }
     lrNavThing =(buttonName, buttonText)=> {
         const idScript = "lrnav-"+buttonName;
         const totalAlbumsCount = this.state.lrData.length
-        //const totalPages = (Math.ceil(totalAlbumsCount/20))-1
+        const totalPages = (Math.ceil(totalAlbumsCount/20))
+        //console.log("Totaalisivut: "+totalPages)
         if (buttonName==="last") {
             if (!(this.state.levyraatiPage===1)) {
                 return (
@@ -96,7 +97,7 @@ class DiscordLevyRaatiPage extends HenkimaailmaPage {
             } else return (<div className="lastbuttonlr"></div>)
         }
         if (buttonName==="next") {
-            if (!(this.state.levyraatiPage<=totalAlbumsCount)) {
+            if (this.state.levyraatiPage<totalPages) {
                 return (
                     <button
                         className="nextbuttonlr"
