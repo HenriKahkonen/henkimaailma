@@ -1500,6 +1500,8 @@ Publishing Ltd. Toim. Scott, Derek B. 131 –146.</li>
 </ul>
 
 <br/><h3 id="liitteet">Liitteet</h3>
+<p><a href={process.env.PUBLIC_URL+"/pdf/ideoitanayttamollaliitteet.pdf"}>Liitteet 1-4 (PDF)</a></p>
+{/*
     <div className="blogPDF"><iframe
         title="Ideoita näyttämöllä liitteet"
         src={process.env.PUBLIC_URL+"/pdf/ideoitanayttamollaliitteet.pdf"}
@@ -1507,6 +1509,7 @@ Publishing Ltd. Toim. Scott, Derek B. 131 –146.</li>
         height="1080">
     </iframe>
     </div>
+*/}
 </>
 )
 }
