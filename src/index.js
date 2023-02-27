@@ -110,7 +110,8 @@ async function StartSite() {
   console.log("yritetään hakea dataa")
   const lrData = await FetchLevyRaatiData()
   const livestatus = await isSkriimOnline()
-  console.log("Sivu käynnistyy, lrdata: "+lrData+" livestatus: "+livestatus)
+  console.log("Data haettu, sivu käynnistyy")
+  //console.log("Sivu käynnistyy, lrdata: "+lrData+" livestatus: "+livestatus)
   return renderRouter(lrData,livestatus);
 }
 StartSite();
