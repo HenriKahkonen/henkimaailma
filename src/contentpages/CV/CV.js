@@ -51,13 +51,13 @@ class CV extends HenkimaailmaPage {
                         </div> 
                     </div>
                     <div className="KouluItem">
-                        <div className="kouluyr">2012</div>
+                        <div className="kouluyr">2013</div>
                         <div className="kouludat">
                             <b>Musiikin perustutkinto</b>, <i>Oulun konservatorio, Pop/Jazz -linja</i>
                         </div> 
                     </div>
                     <div className="KouluItem">
-                        <div className="kouluyr">2009</div>
+                        <div className="kouluyr">2012</div>
                         <div className="kouludat">
                             <b>Ylioppilastutkinto</b>, <i>Madetojan musiikkilukio</i>
                         </div> 
@@ -70,13 +70,13 @@ class CV extends HenkimaailmaPage {
                             Valo- ja äänisuunnittelu, näytösten ajaminen, kiertueet
                         </div> 
                     </div>
-                    <div className="KouluItem">
+                    {/*<div className="KouluItem">
                         <div className="kouluyr">2017-2019</div>
                         <div className="kouludat">
                             <b>Vuokratyöntekijä</b>, <i>VMP</i><br/>
                             Varastotyöntekijä, siivooja
                         </div> 
-                    </div>
+                    </div>*/}
                     <div className="KouluItem">
                         <div className="kouluyr">2015</div>
                         <div className="kouludat">
@@ -97,13 +97,13 @@ class CV extends HenkimaailmaPage {
                             <b>Muusikko</b>, <i>Oulun Yliopisto, Eudaimonia -seminaarisarja</i><br/>
                         </div> 
                     </div>
-                    <div className="KouluItem">
+                    {/*<div className="KouluItem">
                         <div className="kouluyr">2011</div>
                         <div className="kouludat">
                             <b>Myyntineuvottelija</b>, <i>Novia Oy</i><br/>
                             Puhelinmyynti
                         </div> 
-                    </div>
+                    </div>*/}
 
                     <h4>Muu kokemus ja vastuutehtävät</h4>
                     <div className="KouluItem">
@@ -125,9 +125,21 @@ class CV extends HenkimaailmaPage {
                         </div> 
                     </div>
                     <div className="KouluItem">
+                        <div className="kouluyr">2018-2019</div>
+                        <div className="kouludat">
+                            <b>Sihteeri</b>, <i>Musiikkitieteilijöiden ainejärjestö Tritonus ry</i><br/>
+                        </div> 
+                    </div>
+                    <div className="KouluItem">
                         <div className="kouluyr">2016-2019</div>
                         <div className="kouludat">
                             <b>Stage manager</b>, <i>H2Ö- ja Ilmiö -festivaalit</i><br/>
+                        </div> 
+                    </div>
+                    <div className="KouluItem">
+                        <div className="kouluyr">2017-2018</div>
+                        <div className="kouludat">
+                            <b>Musiikkivastaava</b>, <i>Turkulainen Humanistispeksi</i><br/>
                         </div> 
                     </div>
 
