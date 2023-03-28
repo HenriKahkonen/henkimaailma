@@ -47,7 +47,7 @@
     background-color: transparent;
   }
   .NavBarList nav img {
-    width:20vw;
+    width:40vw;
     margin-bottom:0.7vh;
     filter: grayscale(100%) contrast(2);
   }

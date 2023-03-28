@@ -38,6 +38,12 @@ a:active { text-decoration: none; }
     border-style: solid solid solid solid;
     */
   }
+  @media screen and (max-width:930px) {
+    .projectItemContainer{
+      width:234px;
+      height:350px;
+    }
+  }
     .projectItemImage {
       width:100%;
       height:auto;

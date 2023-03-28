@@ -7,7 +7,7 @@ class CV extends HenkimaailmaPage {
         return (
             <>
                
-            <div className="sisalto">
+            <div className="prose">
                 <h1>Sivun kirjoittajasta</h1>
                 <img className="sidePic" src='https://i.imgur.com/e1054Ls.jpg' alt="Henri Kähkönen"></img>
              
@@ -97,6 +97,7 @@ class CV extends HenkimaailmaPage {
                             <b>Muusikko</b>, <i>Oulun Yliopisto, Eudaimonia -seminaarisarja</i><br/>
                         </div> 
                     </div>
+
                     {/*<div className="KouluItem">
                         <div className="kouluyr">2011</div>
                         <div className="kouludat">

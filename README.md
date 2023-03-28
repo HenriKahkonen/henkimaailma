@@ -2,6 +2,10 @@
 
 Henkan kotisivut - frontend.
 
+## v. 1.0.1. 28.03.2023
+
+Käärijä-video lisätty, CSS mobiilille: purkkaa ja teippiä asenneltu
+
 ## v. 1.0.0. - en tiedä miten versionumerointi toimii
 
 Sisällöt kirjoitettu, sormet ristiin ja deployhousut jalkaan

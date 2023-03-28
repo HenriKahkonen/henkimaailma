@@ -63,6 +63,10 @@ return (
             <img src={rating} alt={"Arvosana: "+(review.rating/10)}/>
         </div>
     </div>
+    {/*Mobiililaitteilla arvosana databoksin jälkeen*/}
+    <div className="arvioPageRating-postDataBox">
+        <img src={rating} alt={"Arvosana: "+(review.rating/10)}/>
+    </div>
     </>
 )
 }

@@ -22,6 +22,13 @@ import {
     loader as youTubePeliarvioLoader    
 } from './Projektit/Projektialasivut/YouTubePeliarviosivu.jsx';
 
+///TÄÄLLÄ OLLAAN NYT
+import { MusiikkiYouTube } from './Projektit/Projektialasivut/MusiikkiYouTube.jsx';
+import { 
+    MusiikkiYouTubeSivu,
+    loader as musiikkiYTLoader    
+} from './Projektit/Projektialasivut/MusiikkiYouTubeSivu.jsx';
+
 import {
     Blog,
     loader as blogLoader} from './Blog/Blog.js';
@@ -57,6 +64,10 @@ export {
     YouTubePeliarviot,
     YouTubePeliarviosivu,
     youTubePeliarvioLoader,
+
+    MusiikkiYouTube,
+    MusiikkiYouTubeSivu,
+    musiikkiYTLoader,
 
     blogLoader,
     Blog,

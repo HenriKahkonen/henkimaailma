@@ -28,8 +28,8 @@ export function DiscordLevyRaatiDocs() {
                 <a href="#leaderboard">- Levyraadin top 10-leaderboardin näyttäminen</a><br/>
                 <a href="#itjustworks">Miten se toimii?</a><br/>
                 <a href="#lahdekoodi">- Lähdekoodi</a><br/>
+                <a href="#todo">Suunnitteilla olevat toiminnallisuudet</a><br/>
 
-                
                 <br/><h2 id="about">Discord-levyraati?</h2>
                 <div className="sidePic">
                     <img src="https://i.imgur.com/YbKjnh4.png" alt="Jives"></img>
@@ -111,7 +111,11 @@ export function DiscordLevyRaatiDocs() {
                 <h3 id="rate">Albumin arvioiminen</h3>
                 <div className="codeSnippet">
                     <div className="codeSnippetalert">Kutsuttava albumia vastaavassa ketjussa.</div>
-                    {"jives! rate <arvosana 0-100 tai murtolukuna esim. 7/10>"}</div>
+                    {"jives! rate <arvosana 0-100 tai murtolukuna esim. 7/10> p"}
+                    <div className="codeSnippetNote">Kirjoittamalla "p" komennon perään viimeisenä argumenttinä lähetetty arvosana näkyy ketjussa. Ilman p:tä voit jättää arvosanan anonyymisti.</div>
+                    </div>
+
+                    <div></div>
                     <p>
                         Jives tallentaa käyttäjän antaman pistemäärän albumin tietoihin tietokannassa.
                     </p>
@@ -121,12 +125,16 @@ export function DiscordLevyRaatiDocs() {
                     </p>
                     <p>
                         Jos käyttäjä on jo arvioinut saman levyn, Jives korvaa vanhan arvion uudella.
+                    </p>
+                    <p>
+                        Levylle voi myös antaa pistemäärän 1-10 Jivesin arvosteluketjuun luomia reaktioita painamalla. Jätetty reaktio poistuu reagoimisen jälkeen, eli äänestäminen on näin anonyymi(hköä).
                     </p>                
                 <br/>
                 <h3 id="myrating">Oman arvion kysyminen</h3>
                 <div className="codeSnippet">
                     <div className="codeSnippetalert">Kutsuttava albumia vastaavassa ketjussa.</div>
-                    {"jives! myrating"}</div>
+                    {"jives! myrating p"}
+                    <div className="codeSnippetNote">Kirjoittamalla "p" komennon perään viimeisenä argumenttinä Jives kertoo arvosanan ketjussa julkisesti. Ilman p:tä Jives kertoo arvosanasi yksityisviestilä.</div></div>
                     <p>
                         Jives vastaa käyttäjälle tämän aiemmin antamalla pistemäärällä.
                     </p>
@@ -135,7 +143,8 @@ export function DiscordLevyRaatiDocs() {
                 <h3 id="score">Albumin pistekeskiarvon kysyminen</h3>
                 <div className="codeSnippet">
                     <div className="codeSnippetalert">Kutsuttava albumia vastaavassa ketjussa.</div>
-                    {"jives! score"}</div>
+                    {"jives! score p"}
+                    <div className="codeSnippetNote">Kirjoittamalla "p" komennon perään viimeisenä argumenttinä Jives kertoo pistekeskiarvon ketjussa julkisesti. Ilman p:tä Jives kertoo pistekeskiarvon yksityisviestilä.</div></div>
                     <p>
                         Jives vastaa albumin tämänhetkisellä arvioiden keskiarvolla.
                     </p>
@@ -143,7 +152,8 @@ export function DiscordLevyRaatiDocs() {
                 <br/>
                 <h3 id="leaderboard">Levyraadin top 10 -leaderboardin näyttäminen</h3>
                 <div className="codeSnippet">
-                    {"jives! leaderboard"}</div>
+                    {"jives! leaderboard p"}
+                    <div className="codeSnippetNote">Kirjoittamalla "p" komennon perään viimeisenä argumenttinä Jives vastaa julkisella viestillä.</div></div>
                     <p>
                         Jives listaa kymmenen korkeinta pistemäärää saanutta albumia.
                     </p>
@@ -175,6 +185,21 @@ export function DiscordLevyRaatiDocs() {
                 <p>
                     Huomautettakoon, että Discord-botin ajamisen ohella Jives tuplaa myös Henkimaailman backendinä, jota kautta levyraadin data fetchataan verkkosivulle.
                 </p>
+                <br/>
+
+                <br/><h2 id="todo">To-do -lista</h2>
+                <p>
+                    Jivesia kehitellään fiiliksen ja yleisöpalautteen perusteella paremmaksi löytyvän ajan puitteissa. Tällä hetkellä suunnitteilla on seuraavia ominaisuuksia (TBA):
+                    <ul>
+                        <li>
+                            Bandcamp -tuki (kansa janoaa Draama-Helmeä)
+                        </li>
+                        <li>
+                            Levyjen lisääminen raatiin ajastetusti kerran tai kaksi viikossa
+                        </li>
+                    </ul>
+                </p>
+
                 <br/>
             </div>
         </div>

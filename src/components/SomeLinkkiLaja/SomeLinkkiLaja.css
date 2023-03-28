@@ -19,3 +19,10 @@
 .SomeLink:hover{
     opacity:80%;
 }
+
+@media screen and (max-width:930px) {
+    /*Suuremmat ikonit mobiilille*/
+    .SomeLink {
+        width: 10vw;
+    }
+}

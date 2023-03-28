@@ -22,6 +22,11 @@ import {
   YouTubePeliarviot,
   YouTubePeliarviosivu,
   youTubePeliarvioLoader,
+
+  MusiikkiYouTube,
+  MusiikkiYouTubeSivu,
+  musiikkiYTLoader,
+
   blogLoader,
   blogItemLoader,
   BlogItem,
@@ -80,6 +85,13 @@ const renderRouter = (lrData,liveStatus) => {
                   { path:":peliarvioTitle", 
                     loader: youTubePeliarvioLoader,
                     element: <YouTubePeliarviosivu/>,},
+                  ],},
+              { path: "musaYouTube",
+                children : [
+                  { index:true, element:<MusiikkiYouTube/>},
+                  { path:":musaYTTitle", 
+                    loader: musiikkiYTLoader,
+                    element: <MusiikkiYouTubeSivu/>,},
                   ],},
               ],},
           { path: "blog",

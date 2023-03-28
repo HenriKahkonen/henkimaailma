@@ -112,6 +112,13 @@ class DiscordLevyRaatiPage extends HenkimaailmaPage {
 
     render() {
         const levyraatiData = [...this.state.lrData]
+        .filter(function (l) {
+            return (
+                l[6]>0
+            )})
+
+
+
         //const totalAlbumsCount = levyraatiData.length
         //const totalPages = Math.ceil(totalAlbumsCount/20)
         let leaderboard = [...levyraatiData].splice((this.state.levyraatiPage-1)*20,20)

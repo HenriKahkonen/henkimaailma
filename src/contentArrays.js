@@ -6,6 +6,7 @@ import {TYTWabuKaba2021} from "./contentpages/Projektit/Projektialasivut/TYT-Wap
 import {EnsimmainenPsykoosiEP} from './contentpages/Projektit/Projektialasivut/Ensimmainen Psykoosi EP.jsx';
 import {Ympyrat} from './contentpages/Projektit/Projektialasivut/Ympyrat.jsx';
 import {YouTubePeliarviot} from './contentpages/Projektit/Projektialasivut/YouTubePeliarviot.jsx'
+import {MusiikkiYouTube} from "./contentpages/Projektit/Projektialasivut/MusiikkiYouTube.jsx";
 import {DJKEFMTP} from './contentpages/Projektit/Projektialasivut/MiscMusiikki/DJ-Kalustoelukka&FMashina-Tyydyttava-Pikanen.jsx';
 import {HTMItalwaysForgets} from './contentpages/Projektit/Projektialasivut/MiscMusiikki/HTM-It-Always-Forgets';
 import {HTMTheSpaceRace} from "./contentpages/Projektit/Projektialasivut/MiscMusiikki/HTM-The-Space-Race.jsx";
@@ -86,6 +87,32 @@ export const ContentArrays = [
             "ytid" :"hmIVHQpGvhg",
             "sl": true
         }
+    ]},
+
+    {list:"musaYT",
+    content: [
+        {
+            "id": "myt1",
+            "title": "(Vain) Yksi sample -> yksi biisi",
+            "url": "yksi-sample-yksi-biisi",
+            "fullUrl": "projektit/musaYouTube/yksi-sample-yksi-biisi",
+            "date": new Date("2022-06-09T16:00:00Z"),
+            "tags": ["Musiikkituotanto","Haasteet"],
+            "ftags": ["YouTube"],
+            "ytid" : "7EBasiMtlDc",
+            "sl" : false,
+        },
+        {
+            "id": "myt2",
+            "title": "Vastine Käärijän Cha Cha Cha -plagiointikeskusteluun",
+            "url": "cha-cha-cha-plagiarismi",
+            "fullUrl": "projektit/musaYouTube/cha-cha-cha-plagiarismi",
+            "date": new Date("2023-03-28T16:00:00Z"),
+            "tags": ["Musiikkianalyysi","Kritiikki","Musiikkitiede","Tekijänoikeus"],
+            "ftags": ["YouTube"],
+            "ytid" : "Vw29QZb4_Ng",
+            "sl" : true,
+        },
     ]},
 
     {list:"blog",
@@ -214,6 +241,17 @@ export const ContentArrays = [
             "ftags" : ["Muut"],
             "sl" : false,
             "element" : <DiscordLevyRaati/>
+        },
+        {
+            "id": 10,
+            "title": "Musiikkiaiheiset YouTube-jutut",
+            "url" : "musaYouTube",
+            "imgurl" : "https://i.imgur.com/08scNZb.png",
+            "date" : new Date("2023-03-27T16:00:00Z"),
+            "tags": ["YouTube"],
+            "ftags" : ["YouTube"],
+            "sl" : false,
+            "element" : <MusiikkiYouTube/>
         }
     ]},
 
@@ -270,6 +308,19 @@ export const ContentArrays = [
             "bp": [
                 "Tervetuloa maailmaan, Henkimaailma",
             ],
+        },
+        {
+            "id": 2,
+            "major": false,
+            "title": "Siistintää + Käärijävideo",
+            "date": new Date("2023-03-28T16:00:00Z"),
+            "bp": [
+                "Sivupalkin (navigaatio) järjestystä muutettu",
+                "CSS yksinkertaistettu kautta linjan ja luettavuutta mobiililaitteilla parannettu hiukan (lisämuutoksia todnäk vielä edessä)",
+                "Lisätty Käärijä-video ja uusi kategoria musa-aiheisille YouTube-jutuille",
+                "Discord-levyraatiin lisätty filtteri: jos levyä ei ole vielä arvosteltu ei se näy levyjen listassa (ennen näkyi listan perällä arvosanana 0",
+                "Jivesin dokumentaatiota päivitetty ajankohtaisemmaksi",
+            ]
         }
     ]},
 ]
@@ -289,9 +340,10 @@ const filterSpotLighteds=(fullArray)=> {
 export const KontsaArray = {
         kaikki : sortByDate(ContentArrays),
         peliarviot : sortByDate(ContentArrays[0].content),
-        blog : sortByDate(ContentArrays[1].content),
-        projektit : sortByDate(ContentArrays[2].content),
-        arviot : sortByDate(ContentArrays[3].content),
-        changeLog : sortByDate(ContentArrays[4].content),
-        spotlightArray : filterSpotLighteds(sortByDate(ContentArrays))
+        musaYT : sortByDate(ContentArrays[1].content),
+        blog : sortByDate(ContentArrays[2].content),
+        projektit : sortByDate(ContentArrays[3].content),
+        arviot : sortByDate(ContentArrays[4].content),
+        changeLog : sortByDate(ContentArrays[5].content),
+        spotlightArray : sortByDate(filterSpotLighteds(ContentArrays)),
 }

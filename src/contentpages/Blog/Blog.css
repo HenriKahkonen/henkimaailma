@@ -1,42 +1,37 @@
+/*Blogilistaus*/
 .blogListItem {
     padding-bottom: 20px;
 }
-
 .blogItemContainer {
-    width:100%;
     display:flex;
     flex-direction:row;
     justify-content:space-between;
 }
-
 .blogTitleContainer {
     max-width:45vw;
 }
-
 .blogTitle {
-    font-size:medium;
     font-weight:1000;
     line-height: 0.4;
 }
-
 .blogListDateContainer {
     justify-content:right;
 }
-
 .blogListDate {
     float:right;
 }
-  
 .postTag {
     font-size: small;
     margin-top:10px;
     padding-right:4px;
 }
-
 .postDate {
     font-size: medium;
     padding-right: 5px;
 }
+
+/*Blogitekstissä*/
+/*Ks. myös app.css -> prose*/
 .blogiotsikkokuva {
     width:90%;
     margin-bottom:4vh;
@@ -50,7 +45,7 @@
     margin-top:3vh;
     margin-bottom:3vh;
     margin-left:2vw;
-    width:60%;
+    width:80%;
   }
   .quoteBoxInfo {
     font-size:normal;
@@ -70,8 +65,15 @@
 .blogiotsikkokuva img {
     display:block;
     width:80%;
-
 }
+/*Muutokset mobiililaitteen CSS:ään*/
+@media screen and (max-width:930px) {
+    .blogiotsikkokuva img {
+      width:100%;
+    }
+}
+
+/*Kuvat tekstin sisällä*/
 .blogImgContainer,
 .blogImgContainerNoZoom {
   text-align:center;
@@ -94,8 +96,8 @@
   width:50vw;
 }
 .blogImgContainer iframe {
-  width:50vw;
-  height:50vh;
+  width:100%;
+  height:auto;
   margin:auto;
 }
 
