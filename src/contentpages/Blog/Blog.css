@@ -135,3 +135,16 @@
   width:60vw;
   margin:0;
 }
+.twoBlocks {
+  display:flex;
+  flex-flow: row nowrap;
+  width:90%;
+  margin:auto;
+  margin-top:4vh;
+}
+.twoBlocksSub {
+  width:50%;
+}
+.twoBlocksSub li {
+  margin-top:1vh;
+}

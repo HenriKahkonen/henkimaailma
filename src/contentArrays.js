@@ -16,6 +16,9 @@ import  DDLKCNTBI  from "./contentpages/Arviot/ArvioPages/DDLKCNTBI.jsx";
 import  NDFETO  from "./contentpages/Arviot/ArvioPages/NDFETO.jsx";
 import { AnnanHeviOpinnot } from "./contentpages/Projektit/Projektialasivut/AnnanHeviOpinnot.jsx";
 import { DiscordLevyRaati } from "./contentpages/Projektit/Projektialasivut/Discordlevyraati/Discordlevyraati.jsx";
+import { IPodAikakapseli } from "./contentpages/Projektit/Projektialasivut/iPodAikakapseli.jsx";
+import { HyvatJaHuonotTeatterit } from "./contentpages/Blog/BlogPosts/HyvatJaHuonotTeatterit.jsx";
+import { SnSSamplepack } from "./contentpages/Projektit/Projektialasivut/SnS-Samplepack.jsx";
 
 export const ContentArrays = [
     
@@ -122,6 +125,7 @@ export const ContentArrays = [
         "title": "Mitä hemmettiä nyt taas Henkka",
         "url": "mita-hemmettia-nyt-taas-henkka",
         "date": new Date('2023-02-22T20:00:00Z'),
+        "date2": new Date('2023-02-22T20:00:00Z'),
         "imgurl": "https://i.imgur.com/diayd7A.png",
         "tags": ["Meta", "Ohjelmointi"],
         "sl": false,
@@ -132,11 +136,23 @@ export const ContentArrays = [
         "title": "Ideoita näyttämöllä - Merkitysten konstruointi näyttämömusiikin tuotantoprosessissa",
         "url": "ideoita-nayttamolla",
         "date": new Date('2023-02-23T16:00:00Z'),
+        "date2": new Date('2023-02-22T20:00:00Z'),
         "imgurl": "https://i.imgur.com/Y1IUose.png",
         "tags": ["Musiikkitiede", "Teatteri", "Koulu"],
         "sl": false,
         "element": <IdeoitaNayttamolla/> 
-    }
+    },
+    {
+        "id": "blog3",
+        "title": "Hyvät ja huonot teatteriesitykset",
+        "url": "hyvat-ja-huonot-teatteriesitykset",
+        "date": new Date('2023-03-31T16:00:00Z'),
+        "date2": new Date('2023-03-31T20:00:00Z'),
+        "imgurl": "https://i.imgur.com/JMPpeHt.png",
+        "tags": ["Teatteri", "Listat"],
+        "sl": false,
+        "element": <HyvatJaHuonotTeatterit/> 
+    },
     ]},
 
     {list:"projektit",
@@ -252,7 +268,30 @@ export const ContentArrays = [
             "ftags" : ["YouTube"],
             "sl" : false,
             "element" : <MusiikkiYouTube/>
-        }
+        },
+        {
+            "id": 11,
+            "title": "iPod-aikakapseli (Turun Wappuradio 27.4.2021)",
+            "url": "ipod-aikakapseli",
+            "imgurl": "https://i.imgur.com/Gbx6cFa.png",
+            "date": new Date("2021-04-27T16:00:00Z"),
+            "tags": ["Radio"],
+            "ftags": ["Muut"],
+            "sl": false,
+            "element": <IPodAikakapseli/>
+        },
+        {
+            "id": 12,
+            "title": "Sounds and Scapes -sample pack",
+            "url": "sns-samplepack",
+            "fullUrl": "projektit/sns-samplepack",
+            "imgurl": "https://i.imgur.com/BAxT5CT.png",
+            "date": new Date("2023-04-03T16:00:00Z"),
+            "tags": ["Äänisuunnittelu, kenttä-äänitteet"],
+            "ftags": ["MusicMisc"],
+            "sl": true,
+            "element": <SnSSamplepack/>
+        },
     ]},
 
     {list:"arviot",
@@ -321,7 +360,18 @@ export const ContentArrays = [
                 "Discord-levyraatiin lisätty filtteri: jos levyä ei ole vielä arvosteltu ei se näy levyjen listassa (ennen näkyi listan perällä arvosanana 0",
                 "Jivesin dokumentaatiota päivitetty ajankohtaisemmaksi",
             ]
-        }
+        },
+        {
+            "id": 3,
+            "major": false,
+            "title": "iPod-aikakapseli ja SnS-samplepack",
+            "date": new Date("2023-04-01T16:00:00Z"),
+            "bp": [
+                "Projekteihin lisätty löytynyt i-Pod-aikakapselin tallenne",
+                "Projekteihin lisätty SnS-samplepaketti",
+                "Blog: 'Hyvät ja huonot teatterijutut'"
+            ]
+        },
     ]},
 ]
 

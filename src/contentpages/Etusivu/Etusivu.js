@@ -17,6 +17,7 @@ function SpotLightBox() {
         imgClass = "contentBoxImageContainerYT"
     } else {
         imgClass = "contentBoxImageContainer"
+        imgurl = item.imgurl
     }
     return (
         <div className="etusivuContentBox">

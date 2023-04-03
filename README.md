@@ -2,6 +2,10 @@
 
 Henkan kotisivut - frontend.
 
+## v. 1.0.2. 03.04.2023
+
+Lisätty löytynyt taltio iPod-aikakapselista, yksi blogikirjoitus ja SnS-sample pack.
+
 ## v. 1.0.1. 28.03.2023
 
 Käärijä-video lisätty, CSS mobiilille: purkkaa ja teippiä asenneltu

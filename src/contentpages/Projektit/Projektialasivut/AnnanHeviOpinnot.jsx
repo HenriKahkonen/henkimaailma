@@ -3,7 +3,7 @@ import { HenkimaailmaPage } from "../../../components";
 export class AnnanHeviOpinnot extends HenkimaailmaPage {
     render() {
         return (
-            <div id="AHOPage">
+            <div id="RadioPage">
                 <img src="https://images.ctfassets.net/t9xhrsz4qoew/4DBhGYACcHfPrQPEtIvWg/e96a895690270254317a634c0574025e/Hevi_opinnot_promo_suuri2_-_Henri_K__hk__nen.jpg?q=75&w=1200&fm=webp" alt="Annan hevi opinnot promokuva"></img>
                 <p>Anna ei kuuntele heviä - vielä! Tällä hevin pikakurssilla tarjoillaan metalliuntuvikoille suunnattu läpileikkaus metalligenreihin ja niiden parhaisiin paloihin. Oppaina rässin, dödiksen, jytäriffien ja skank-komppien maailmassa toimivat musiikkitieteen opiskelijat Henkka ja Paavo. </p>
                 <p>Äänessä: <b>Anna</b>, <b>Henkka</b> ja <b>Paavo</b>.</p>

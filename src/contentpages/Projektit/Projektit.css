@@ -219,11 +219,11 @@ a:active { text-decoration: none; }
   height: 620px;
   margin:0;
 }
-#AHOPage iframe {
+#RadioPage iframe {
   float:unset;
   margin:0;
 }
-#AHOPage img {
+#RadioPage img {
   float:right;
   width:50%;
   margin-left:4vw;
@@ -262,4 +262,26 @@ a:active { text-decoration: none; }
 }
 .SongLyricHider :hover {
   color:#0b64b8;
+}
+.SnS-Section {
+  width:100%;
+  display:flex;
+  margin:auto;
+  margin-top:6vh;
+  margin-bottom:2vh;
+  flex-flow: row nowrap;
+  gap:40px;
+}
+.SnS-Section a {
+  color:black;
+}
+.SnS-Section a:hover {
+  color:blue;
+}
+.SnS-Section img {
+  width:10%;
+  height:auto;
+}
+.tracklisting{
+  font-size:12px;
 }
