@@ -365,7 +365,7 @@ export const ContentArrays = [
             "id": 3,
             "major": false,
             "title": "iPod-aikakapseli ja SnS-samplepack",
-            "date": new Date("2023-04-01T16:00:00Z"),
+            "date": new Date("2023-04-03T16:00:00Z"),
             "bp": [
                 "Projekteihin lisätty löytynyt i-Pod-aikakapselin tallenne",
                 "Projekteihin lisätty SnS-samplepaketti",
