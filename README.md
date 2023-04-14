@@ -2,6 +2,10 @@
 
 Henkan kotisivut - frontend.
 
+## v. 1.0.3. 14.04.2023
+
+3D-mallinnuksia, Metasivun update
+
 ## v. 1.0.2. 03.04.2023
 
 Lisätty löytynyt taltio iPod-aikakapselista, yksi blogikirjoitus ja SnS-sample pack.

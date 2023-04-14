@@ -6,8 +6,14 @@
     padding-bottom:4vh;
 }
 .skriimiIkkuna {
+    display:block;
     margin:auto;
 }
+.skriimiIkkuna iframe {
+    width:60vw;
+    height: 33.75vw;
+}
+
 .skriimiBanneri {
     width:50%;
     margin:auto;

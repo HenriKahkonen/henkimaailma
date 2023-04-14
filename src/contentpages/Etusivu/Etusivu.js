@@ -97,14 +97,13 @@ export function SkriimBuilder(status) {
             <>
             <div id="twitchStreamBox">
                 <div className="skriimiBanneri">
-                    <img src={process.env.PUBLIC_URL+"/img/skriimOnline.gif"} width="70" alt="Banneri joka huomauttaa livestreamin olevan käynnissä"></img>
+                    <a href="https://www.twitch.tv/henkonenvideo"><img src={process.env.PUBLIC_URL+"/img/skriimOnline.gif"} width="70" alt="Banneri joka huomauttaa livestreamin olevan käynnissä"></img></a>
                 </div>
                 <div className="skriimiIkkuna"><iframe 
                     title="LiveStream player"
-                    src="https://player.twitch.tv/?channel=henkonenvideo&parent=localhost" 
+                    src="https://player.twitch.tv/?channel=henkonenvideo&parent=localhost&parent=henkimaailma.net" 
                     allowFullScreen={true} 
-                    height="567" 
-                    width="930">  
+                >  
                 </iframe></div>
             </div>
             </>

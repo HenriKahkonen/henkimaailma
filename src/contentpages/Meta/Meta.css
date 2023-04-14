@@ -10,3 +10,9 @@
 .UDdate {
     font-size:small;
 }
+.metaPage a {
+    color: #0b64b8;
+}
+.metaPage a:hover {
+    color: #1b0807;
+}

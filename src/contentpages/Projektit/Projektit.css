@@ -285,3 +285,34 @@ a:active { text-decoration: none; }
 .tracklisting{
   font-size:12px;
 }
+/*Real Life Loot*/
+.rllNav {
+  margin-top:4vh;
+  margin-bottom:4vh;
+  display:flex;
+  flex-flow:row nowrap;
+  align-items: center;
+  gap:4vw;
+  text-align: center;
+}
+.rllNav img {
+  display:block;
+  width: 432px;
+  height:auto;
+}
+.rllList button {
+  background-color:#0b64b800;
+  border:0px;
+  color: #1b0807;
+  font-family:courier;
+  font-size:large;
+  min-width:400px;
+  text-align: left;
+  padding:0px;
+}
+.rllList button:hover {
+  color: #0b64b8;
+}
+.rllDate {
+  font-size:small;
+}

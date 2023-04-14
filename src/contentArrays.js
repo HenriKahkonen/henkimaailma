@@ -19,6 +19,7 @@ import { DiscordLevyRaati } from "./contentpages/Projektit/Projektialasivut/Disc
 import { IPodAikakapseli } from "./contentpages/Projektit/Projektialasivut/iPodAikakapseli.jsx";
 import { HyvatJaHuonotTeatterit } from "./contentpages/Blog/BlogPosts/HyvatJaHuonotTeatterit.jsx";
 import { SnSSamplepack } from "./contentpages/Projektit/Projektialasivut/SnS-Samplepack.jsx";
+import { RealLifeLoot } from "./contentpages/Projektit/Projektialasivut/RealLifeLoot.jsx";
 
 export const ContentArrays = [
     
@@ -288,10 +289,25 @@ export const ContentArrays = [
             "imgurl": "https://i.imgur.com/BAxT5CT.png",
             "date": new Date("2023-04-03T16:00:00Z"),
             "tags": ["Äänisuunnittelu, kenttä-äänitteet"],
-            "ftags": ["MusicMisc"],
+            "ftags": ["Muut"],
             "sl": true,
             "element": <SnSSamplepack/>
         },
+        
+        {
+            "id": 13,
+            "title": "Real Life Loot",
+            "url": "reallifeloot",
+            "fullUrl":"projektit/reallifeloot",
+            "imgurl": "https://i.imgur.com/sirt5Kf.png" ,
+            "date": new Date("2023-04-14T16:00:00Z"),
+            "tags": ["3D-mallinnus"],
+            "ftags": ["Muut"],
+            "sl": false,
+            "element": <RealLifeLoot/>
+        },
+        
+        
     ]},
 
     {list:"arviot",
@@ -336,43 +352,6 @@ export const ContentArrays = [
             "element": <DDLKCNTBI/>
         }
     ]},
-
-    {list: "changeLog",
-    content: [
-        {
-            "id": 1,
-            "major": true,
-            "title": "Henkimaailma 1.0 on täällä",
-            "date": new Date("2023-02-01T16:00:00Z"),
-            "bp": [
-                "Tervetuloa maailmaan, Henkimaailma",
-            ],
-        },
-        {
-            "id": 2,
-            "major": false,
-            "title": "Siistintää + Käärijävideo",
-            "date": new Date("2023-03-28T16:00:00Z"),
-            "bp": [
-                "Sivupalkin (navigaatio) järjestystä muutettu",
-                "CSS yksinkertaistettu kautta linjan ja luettavuutta mobiililaitteilla parannettu hiukan (lisämuutoksia todnäk vielä edessä)",
-                "Lisätty Käärijä-video ja uusi kategoria musa-aiheisille YouTube-jutuille",
-                "Discord-levyraatiin lisätty filtteri: jos levyä ei ole vielä arvosteltu ei se näy levyjen listassa (ennen näkyi listan perällä arvosanana 0",
-                "Jivesin dokumentaatiota päivitetty ajankohtaisemmaksi",
-            ]
-        },
-        {
-            "id": 3,
-            "major": false,
-            "title": "iPod-aikakapseli ja SnS-samplepack",
-            "date": new Date("2023-04-03T16:00:00Z"),
-            "bp": [
-                "Projekteihin lisätty löytynyt i-Pod-aikakapselin tallenne",
-                "Projekteihin lisätty SnS-samplepaketti",
-                "Blog: 'Hyvät ja huonot teatterijutut'"
-            ]
-        },
-    ]},
 ]
 
 
@@ -394,6 +373,5 @@ export const KontsaArray = {
         blog : sortByDate(ContentArrays[2].content),
         projektit : sortByDate(ContentArrays[3].content),
         arviot : sortByDate(ContentArrays[4].content),
-        changeLog : sortByDate(ContentArrays[5].content),
         spotlightArray : sortByDate(filterSpotLighteds(ContentArrays)),
 }
