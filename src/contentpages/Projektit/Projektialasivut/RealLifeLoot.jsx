@@ -74,7 +74,7 @@ export class RealLifeLoot extends HenkimaailmaPage {
                     >{String.fromCharCode(60,60,60)}</button>
                 
                     <div>
-                        <img src={this.items[(this.state.item-1)].link}></img>
+                        <img src={this.items[(this.state.item-1)].link} alt=""></img>
                         <div>{parseDate(this.items[(this.state.item-1)].date)}</div>
                     </div>
                     <button
