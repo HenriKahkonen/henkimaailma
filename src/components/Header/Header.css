@@ -1,18 +1,56 @@
-.App-header-new {
-  min-height:16vh;
-  /*color:white;
-  background-image: url(https://i.imgur.com/zcTKp0l.png);
-  background-repeat: repeat;*/
-  display: flex;
-  flex-direction: row;
-}
+.App header {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
 
-.Header-new-textcontainer {
-  font-family:'Courier New', Courier, monospace;
-  padding-left:1vw;
-  margin-right:auto;
-  border:1px;
-  border-style: none none solid none;
-  margin-bottom:2vh;
-  width:100%;
+    --NavImgH: 60px; /*Original ~120px*/
+    --NavButtGap: 10px;
+
+    --NavImgHMobile: 25px;
+    --NavButtGapMobile: 5px;
+  }
+.App header h1 {margin-left:auto;margin-right:auto;}
+
+/*Muutokset mobiililaitteen CSS:ään*/
+@media screen and (max-width:930px) {
+    .App header{
+     --NavImgH: var(--NavImgHMobile);
+     --NavButtGap: var(var(--NavButtGapMobile));
+     font-size:x-small;
+    }
+  }
+  
+
+  .NavBarContainer {
+
+    width:95%;
+    margin:auto;
+
+    display:flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:var(--NavButtGap);
+
+    /*border-style: solid none none none;
+    border-color: rgba(0, 0, 0, 0.3);
+    border-width: 1px;*/
+
+    padding-bottom:0;
+
+  }
+
+  .NavButt {
+    height: var(--NavImgH);
+    width: fit-content;
+    display:flex;
+    justify-content: center;
+  }
+  
+  .NavBarContainer img {
+    filter: grayscale(100%) contrast(2);
+    height: var(--NavImgH);
 }
+  .NavBarContainer img:hover {filter:grayscale(80%);}
+  .NavBarContainer a.active img {filter: grayscale(50%) contrast(2);}
+  

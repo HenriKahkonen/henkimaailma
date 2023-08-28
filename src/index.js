@@ -13,30 +13,25 @@ import {
   Sivu404,
   ErrorRoot,
   Etusivu,
-  ProjektiLista,
-  Projekti,
-  projektiLoader,
-  Blog,
-  Meta,
-  CV,
+
+  Posts as PostsList,
+  PostPage,
+  PostLoader,
   YouTubePeliarviot,
   YouTubePeliarviosivu,
   youTubePeliarvioLoader,
 
-  MusiikkiYouTube,
-  MusiikkiYouTubeSivu,
-  musiikkiYTLoader,
+  Levyraati,
+  LevyraatiDocs,
+  LevyraatiTietosuoja,
 
-  blogLoader,
-  blogItemLoader,
-  BlogItem,
-  Arviot,
-  arviotLoader,
-  ArvioItem,
-  arvioItemLoader,
-  DiscordLevyRaati,
-  DiscordLevyRaatiDocs,
-  DiscordLevyRaatiTietosuoja,
+  Meta,
+  Yhteys,
+  CV
+
+
+
+
 } from "./contentpages"
 
 import { 
@@ -52,6 +47,8 @@ const renderRouter = (lrData,liveStatus) => {
       children: [{
         errorElement: <Sivu404 />,
         children: [
+
+          //ETUSIVU
           { index:true, 
             // Loadereiden määrittely täällä näin on paras keksimäni ratkaisu siihen 
             // ettei stream statusta ja lr dataa tarvi fetchata niin paljoa
@@ -62,50 +59,48 @@ const renderRouter = (lrData,liveStatus) => {
               return {levyRaatiLeaderBoard, skriimThings}
             },
             element:<Etusivu/> },
-          { path: "projektit",
+
+            //SYÖTE
+            { path: "posts",
             children : [
-              { index:true, element:<ProjektiLista/> },
-              { path: ":projectUrl", element: <Projekti/>, loader: projektiLoader, },
-              { path: "discordlevyraati",
-                children: [
-                  { index:true, 
-                    //Selittämättömästä syystä yllä oleva systeemi ei toimi tässä
-                    //Levyraadin voi kuitenkin buildata lähettämällä datan loaderiin
-                    loader: () => { 
-                      return {lrData}
-                    },
-                    element: <DiscordLevyRaati/>},
-                  { path:"docs", element:<DiscordLevyRaatiDocs/> },
-                  { path:"tietosuoja", element:<DiscordLevyRaatiTietosuoja/> },
-                ],
-                },
+              { index:true, element:<PostsList/> }, // TODO:CHANGE THIS 
+              { path: ":postUrl", element: <PostPage/>, loader: PostLoader, },
               { path: "peliarviot",
                 children : [
                   { index:true, element:<YouTubePeliarviot/>},
                   { path:":peliarvioTitle", 
                     loader: youTubePeliarvioLoader,
                     element: <YouTubePeliarviosivu/>,},
-                  ],},
-              { path: "musaYouTube",
-                children : [
-                  { index:true, element:<MusiikkiYouTube/>},
-                  { path:":musaYTTitle", 
-                    loader: musiikkiYTLoader,
-                    element: <MusiikkiYouTubeSivu/>,},
-                  ],},
-              ],},
-          { path: "blog",
+                  ],
+              },
+            ],
+            },
+
+            //LEVYRAATI
+            { path: "levyraati",
             children: [
-              { index:true, loader: blogLoader, element:<Blog/>},
-              { path: ":blogPost", loader: blogItemLoader, element: <BlogItem/>},
-            ],},
-          { path: "arviot",
+              { index:true, 
+                //Selittämättömästä syystä yllä oleva systeemi ei toimi tässä
+                //Levyraadin voi kuitenkin buildata lähettämällä datan loaderiin
+                loader: () => { 
+                  return {lrData}
+                },
+                element: <Levyraati/>},
+              { path:"docs", element:<LevyraatiDocs/> },
+              { path:"tietosuoja", element:<LevyraatiTietosuoja/> },
+            ],
+            },
+
+            //META JA CV
+            { path: "meta",
             children: [
-              { index:true, loader: arviotLoader, element: <Arviot/> },
-              { path: ":arvio", loader: arvioItemLoader, element: <ArvioItem/> },
-            ],},
-          { path: "meta", element: <Meta/> },
-          { path: "cv", element: <CV/> },
+              {index:true,
+              element: <Meta/>},
+              { path: "yhteys", element: <Yhteys/>},
+              { path: "cv", element: <CV/>},
+            ]
+          },
+
         ],
       }]
     },

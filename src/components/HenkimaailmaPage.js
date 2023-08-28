@@ -1,7 +1,7 @@
 import React from 'react';
-import { listTags, parseDate } from './functions';
 
 class HenkimaailmaPage extends React.Component {
+
     constructor(props) {
         super(props)
         this.state = props.state
@@ -30,17 +30,8 @@ class HenkimaailmaPage extends React.Component {
         console.log("Logataan peritty state komponentissa",this.constructor.name,"-> State:",this.state.hereditaryState)
     }   
 
-    generatePostHeader () {
-        return (
-            <div>
-            <h1>{this.arrayItem.title}</h1>
-            <div className ="postInfoBox">
-                <span className="postDate">{parseDate(this.arrayItem.date)}</span><br/>
-                {listTags(this.arrayItem,true)}
-            </div>
-        </div>
-        )
-    }
+
+
 
 }
 

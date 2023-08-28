@@ -1,0 +1,26 @@
+.Somelinkkilaja {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+.SomeLink{
+    padding-top:4px;
+    opacity:0.5;
+    max-width: 60px;
+    padding-left:0.2vw;
+    padding-right:0.2vw;
+    cursor:pointer;
+}
+
+.SomeLink:hover{
+    opacity:0.6;
+}
+
+
+
+@media screen and (max-width:930px) {
+    .SomeLink {
+        max-width: 35px;
+    }
+}

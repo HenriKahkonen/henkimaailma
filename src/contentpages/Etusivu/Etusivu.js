@@ -1,68 +1,69 @@
 import './Etusivu.css'
-import { KontsaArray } from "../../contentArrays.js";
+import {PostsLists} from "../../contentArrays.js";
 import { 
     NavLink,
     useLoaderData,
 } from "react-router-dom";import { getRatingPngFromRating } from '../../components/functions';
 
-
-function SpotLightBox() {
-    let imgurl = "https://i.imgur.com/fHHgmrq.png" //spaceholder
-    let imgClass;
-    const item = KontsaArray.spotlightArray[0];
-    // Jos spotlightin juttu on Tubevideo, sen thumbnailin kuvasuhde on eri
-    // --> vaihdetaan kuvan className
-    if (item.ftags.includes("YouTube")) {
-        imgurl = "https://img.youtube.com/vi/"+item.ytid+"/maxresdefault.jpg"
-        imgClass = "contentBoxImageContainerYT"
-    } else {
-        imgClass = "contentBoxImageContainer"
-        imgurl = item.imgurl
-    }
-    return (
-        <div className="etusivuContentBox">
-            <div className="contentBoxHeader">Uusinta KONTENTTIA:</div>
-                <div className={imgClass}>
-                    <NavLink to={item.fullUrl}><img src={imgurl} width="100%" alt={item.title}></img></NavLink>
-                </div>
-                <div className="contentBoxFooter">
-                    <div><NavLink to={item.fullUrl}>{item.title}</NavLink></div>
-                </div>
-        </div>
-    )
-}
-function BlogBox() {
-    let imgurl = "https://i.imgur.com/fHHgmrq.png" //spaceholder
-    const item = KontsaArray.blog[0];
-    if (item.imgurl) {imgurl = item.imgurl}
+export function Etusivu() {
+    window.scrollTo(0,0);
+    const {/*levyRaatiLeaderBoard,*/ skriimThings} = useLoaderData();
     return (
         <>
-        <div className="etusivuContentBox">
-                <div className="contentBoxHeader">Blogi:</div>
-                    <div className="contentBoxImageContainerYT">
-                        <NavLink to={"blog/"+item.url}><img src={imgurl} width="100%" alt={item.title}></img></NavLink>
-                    </div>
-                <div className="contentBoxFooter"><NavLink to={"blog/"+item.url}>{item.title}</NavLink></div>
-            
-        </div>
+            {skriimThings}
+
+            <div className="KontentBox">
+                <div id="SpotlightBoxesContainer">
+                    {SpotLightBox("Video:","v2")}
+                    {SpotLightBox("Also Check Out:","pr7")}
+                    {SpotLightBox("Blog:","blog3")}
+                    {SpotLightBox("Arvio:","a2")}                   
+                </div>
+            </div>
+
+            {/*<div className="KontentBox">
+                {levyRaatiLeaderBoard}
+            </div>*/}
+
         </>
     )
 }
 
-function ArvioBox() {
-    //Kokeillaan toistaiseksi tehdä näin, jos arviolta puuttuu kuva se vaatii korjausta ja sietääkin näkyä rumasti
-    //let imgurl = "https://i.imgur.com/fHHgmrq.png" //spaceholder
-    const item = KontsaArray.arviot[0];
+function SpotLightBox(text,id) {
+    const post = PostsLists.findById(id)
+    let title = post.title
+    if (post.category==="Arviot") {
+        title = title.replace("Arvio: ","")
+    }
+    let imgurl = post.imgurl
+    if (post.category===("Videot" || "Peliarviot")) {
+        imgurl ="https://img.youtube.com/vi/"+post.ytid+"/maxresdefault.jpg"
+    }
+    let url = "posts/"+post.url
+
+
     return (
-        <div className="etusivuContentBox">
-            <div className="contentBoxHeader">Arvioista:</div>
-            <div className="contentBoxImageContainer">
-            <NavLink to={"arviot/"+item.url}><img src={item.coverArt} width="100%" alt={item.title}></img></NavLink>
-            </div>
-            <div className="contentBoxFooter">
-                <NavLink to={"arviot/"+item.url}>{item.title}</NavLink>
-            </div>
+    <div className="spotlightbox">
+
+        <div className="spotlightboxheader">
+            {text}
         </div>
+
+        <div className="spotlightboxImageContainer">
+            <NavLink to={url}>
+                <img 
+                    src={imgurl} 
+                    width="80%" 
+                    alt={post.title}>       
+                </img>
+            </NavLink>
+        </div>
+
+        <div className="spotlightboxfooter">
+            <div><NavLink to={url}>{title}</NavLink></div>
+        </div>
+        
+    </div>
     )
 }
 
@@ -72,7 +73,7 @@ export function LevyRaatiLeaderboard(leaderb) {
     let leaderboard = [...leaderb].splice(0,10); 
     return (
         <div id="levyArvioBotTopList">
-            <div className="levyRaatiLeaderboardHeader"><NavLink to="/projektit/discordlevyraati">Discord-levyraati leaderboard</NavLink></div>
+            <div className="levyRaatiLeaderboardHeader"><NavLink to="/levyraati">Discord-levyraati leaderboard</NavLink></div>
             {leaderboard.map(item => 
                 <div className="levyraatiLeaderboardItem" key={item[2]}>
                     <img src={item[2]} alt=""></img>
@@ -94,39 +95,23 @@ export function LevyRaatiLeaderboard(leaderb) {
 export function SkriimBuilder(status) {
     if (status===true) {
         return (
-            <>
-            <div id="twitchStreamBox">
-                <div className="skriimiBanneri">
-                    <a href="https://www.twitch.tv/henkonenvideo"><img src={process.env.PUBLIC_URL+"/img/skriimOnline.gif"} width="70" alt="Banneri joka huomauttaa livestreamin olevan käynnissä"></img></a>
+            <div className="KontentBox">
+                <div className="skriimi">
+                    <div className="skriimiBanneri">
+                        <a href="https://www.twitch.tv/henkonenvideo"><img src={process.env.PUBLIC_URL+"/img/skriimOnline.gif"} width="70" alt="Banneri joka huomauttaa livestreamin olevan käynnissä"></img></a>
+                    </div>
+                    <div>
+                        <iframe
+                            title="LiveStream player"
+                            src="https://player.twitch.tv/?channel=henkonenvideo&parent=localhost&parent=henkimaailma.net" 
+                            allowFullScreen={true} 
+                        ></iframe>
+                    </div>
                 </div>
-                <div className="skriimiIkkuna"><iframe 
-                    title="LiveStream player"
-                    src="https://player.twitch.tv/?channel=henkonenvideo&parent=localhost&parent=henkimaailma.net" 
-                    allowFullScreen={true} 
-                >  
-                </iframe></div>
             </div>
-            </>
         )
     } else { return }
 }
 
 
 
-
-export function Etusivu() {
-    const {levyRaatiLeaderBoard, skriimThings} = useLoaderData();
-    return (
-        <>
-        {skriimThings}
-        <div id="etusivuContainer">
-            <div className="etusivuBoxesContainer">
-                {SpotLightBox()}
-                {ArvioBox()}
-                {BlogBox()}
-            </div>
-            {levyRaatiLeaderBoard}
-        </div>
-        </>
-    )
-}

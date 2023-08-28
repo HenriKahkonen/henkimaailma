@@ -2,6 +2,14 @@ import axios from "axios";
 import { Component } from "react";
 import HTMLReactParser from "react";
 //import { levyRaatiDataLocal } from "..";
+import { NavLink } from "react-router-dom";
+
+export function isSoundCloud(post) {
+    if (post.ftags.includes("Soundcloud")) {
+        return true
+    }
+    return false
+}
 
 export async function FetchLevyRaatiData() {
     //console.log(localdata.getLevyRaatiData())
@@ -85,7 +93,7 @@ export const getRatingPng = (post) => {
 export const areTagsSelected = (itemtocheck, tagsToCompare) => {
     //console.log("Tagit jotka chekataan",itemtocheck['tags'], "Verrataan", tagsToCompare)
     return tagsToCompare.some(function (v) {
-        return itemtocheck['ftags'].indexOf(v) >=0;
+        return itemtocheck['category'] ===v;
     })
 }
 
@@ -99,6 +107,45 @@ export const filterListByTag = (list, tagsToCompare) => {
 export const parseDate = (date) => {
     const options = {year: 'numeric', month: 'short', day: 'numeric'}
     return new Date(date).toLocaleDateString(undefined, options)
+}
+
+export function generatePostListHeader (post) {
+    if (post.dateUpdate===undefined) {
+        return(
+        <div>  
+            <div className="postListTitle">{post.title}</div>
+            <div className="postListDate">{parseDate(post['date'])}</div>
+            <span className="postListTags">{post.category} - </span>
+            {listTags(post,true,"postListTags")}
+        </div>
+        )
+    } else return (
+        <div>
+            <div className="postListTitle">{post.title}</div>
+            <div className="postListDate">{parseDate(post['date'])}<i>{", päivit. "}{parseDate(post['dateUpdate'])}{""}</i></div>
+            <span className="postListTags">{post.category} - </span>
+            {listTags(post,true,"postListTags")}
+        </div>
+    )
+}
+
+export function generatePostHeader (post) {
+    if (post.dateUpdate===undefined) {
+        return(
+            <div className="PostTitle">
+                <h1><NavLink to="/posts">posts</NavLink> / {post.title.toLowerCase()}</h1>
+                <div>{parseDate(post['date'])}</div>
+                <span className="postListTags">{post.category} - </span>{listTags(post,true,"postListTags")}
+            </div>
+        )
+    } else return (
+        <div className="PostTitle">
+             <h1><NavLink to="/posts">posts</NavLink> / {post.title.toLowerCase()}</h1>
+            <div>{parseDate(post['date'])}<i>{", päivit. "}{parseDate(post['dateUpdate'])}{""}</i></div>
+            <span>{post.category} - </span>
+            {listTags(post,true)}
+        </div>
+    )
 }
 
 export const getYouTubeThumbnail = (id) => {
@@ -116,10 +163,10 @@ export const latestInArray = (array) => {
     return latest
 }
 
-export const listTags = (item, divider) => {
+export const listTags = (item, divider, classname) => {
     const ProjectTags = item['tags']
     const posttagsDivved = ProjectTags.map((tag) => 
-        <span className="postTag" key={ProjectTags.indexOf(tag)}>{tag}</span>
+        <span className={classname} key={ProjectTags.indexOf(tag)}>{tag}</span>
         
     )
     

@@ -1,11 +1,11 @@
-import { HenkimaailmaPage } from "../../components";
 import './Sivu404.css'
+import React from 'react';
 
-class Sivu404 extends HenkimaailmaPage {
+class Sivu404 extends React.Component  {
     
     render() {
         return (
-        <div className="sisalto">
+        <div className="KontentBox">
             <h1>404</h1>
             <div>
                 <p>

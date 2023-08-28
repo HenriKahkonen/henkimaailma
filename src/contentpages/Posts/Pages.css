@@ -1,0 +1,125 @@
+/*SNS SAMPLE PACKS*/
+
+.img-button {
+
+    --imgButtonImg: calc(var(--leveys)*0.1);
+    --imgButtonWidth: calc(var(--leveys)*0.4);
+
+
+    width:var(--imgButtonWidth);
+    display:flex;
+  
+    padding:10px;
+    padding-right:30px;
+    gap:30px;
+  
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items:center;
+  
+    transition: .2s ease;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  
+    box-shadow: var(--pienivarjo);
+    border-radius:15px;
+    background-color: rgba(255, 255, 255, 0.3);
+  
+    margin-top:30px;
+    margin-bottom:30px;
+  
+  }.img-button:hover{
+    opacity: 0.95;
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+  
+  .img-button-imagecontainer {
+    max-width: calc(var(--imgButtonImg)*1.1);
+    height: var(--imgButtonImg);
+    display:flex;
+    align-items:center;
+    align-self:center;
+  }
+  
+  .img-button-imagecontainer img{
+    display:block;
+    margin:auto;
+    width:var(--imgButtonImg);
+    height:var(--imgButtonImg);
+  }
+
+  .img-button-dualcontainer {
+    display:flex;
+    flex-flow: row nowrap;
+    gap:calc(var(--leveys)*0.02)
+  }
+  @media screen and (max-width:930px) {
+    .img-button-dualcontainer {
+      flex-direction:column;
+      gap:0px;
+    }
+    .img-button-dualcontainer .img-button {
+      margin:10px;
+    }
+
+  }
+  .img-button-overlayImg {
+    position: absolute;
+    align-self: flex-end;
+    opacity:0.4;
+
+  }
+
+
+  /*Real life loot*/
+  .rllNav {
+    width: fit-content;
+    margin:auto;
+    margin-top:4vh;
+    margin-bottom:4vh;
+    display:flex;
+    flex-flow:row nowrap;
+    align-items: center;
+    gap:4vw;
+    text-align: center;
+  }
+  .rllNav img {
+    display:block;
+    width: calc(var(--leveys)*0.4);
+    height:auto;
+  }
+
+  .rllList {
+    width:fit-content;
+    margin:auto;
+  }
+  .rllList button {
+    background-color:#0b64b800;
+    border:0px;
+    color: #1b0807;
+    font-family:courier;
+    font-size:medium;
+    min-width:400px;
+    text-align: left;
+    padding:0px;
+  }
+  .rllList button:hover {
+    color: #0b64b8;
+  }
+  .rllDate {
+    font-size:small;
+  }
+
+  .SongLyricHider {
+    font-family: 'Courier New', Courier, monospace;
+    cursor:pointer;
+    border:none;
+    background-color: #ffffff00;
+    padding:0;
+  }
+  .SongLyricHider :hover {
+    color:#0b64b8;
+  }
+  

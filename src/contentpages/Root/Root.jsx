@@ -2,33 +2,24 @@ import '../../App.css'
 
 import 
     {
-        Outlet,
+      Outlet,
     } from "react-router-dom";
 
 import 
     {
       Header,
-      NavigationColumn,
-      NavigationBar,
-      SomeLinkkiLaja,
-      FinalFooter,
+      SomeLinkkiLaja as Footer,
     } from "../../components";
+
 
 export function Root() {
     return (
         <div className="App">
-          <div className="Master-container">
-              <NavigationColumn/> {/*Ei näytetä kännykällä&tabletilla*/}
-              <div className="MainContainer">
-                <Header/>
-                <NavigationBar/> {/*Ei näytetä PC:llä*/}
-                  <div className="Kontsa">
-                    <Outlet/>
-                  </div>
-                <SomeLinkkiLaja/>
-              </div>
+          <div className="MainContainer">
+            <Header/>
+              <Outlet/>
+            <Footer/>
           </div>
-        <FinalFooter/> 
         </div>
     );
 }
