@@ -270,8 +270,18 @@ export const PostsList = [
         "tags": ["Musiikkianalyysi","Kritiikki","Musiikkitiede","Tekijänoikeus"],
         "category": "Videot",
         "ytid" : "Vw29QZb4_Ng",
-        "sl" : true,
+
         "desc": "Onko Cha Cha Cha plagiaatti?"
+    },
+    {
+        "id": "v3",
+        "title": "Tehdään rumpusampler akustisesta rumpusetistä",
+        "url": "musavlog-drumrack",
+        "date": new Date("2023-08-28T19:30:00Z"),
+        "tags": ["Musiikkituotanto"],
+        "category": "Videot",
+        "ytid" : "7z3H__umOL4",
+        "desc": "Musavlog SnS4-samplepäkistä."
     },
 
     //   ARVIOT  
@@ -367,6 +377,7 @@ export function changeLog() {
             <li>Nettisivun CSS uudistettu nätimmäksi ja frontin koodia despaghettifioitu</li>
             <li>Blog ja arviot sulautettu {"->"} <Link to="../posts">/posts</Link></li>
             <li><Link to="../posts/sns-samplepack4">SnS4: Rumpusampleja</Link></li>
+            <li><Link to="../posts/musavlog-drumrack">Vlog</Link> kyseisten samplejen tuottamisesta</li>
             <li><Link to="../levyraati">Levyraati</Link> nyt omana sivunaan</li>
             <li><Link to="../posts/reallifeloot">Real Life Loottiin</Link> lisätty pari esinettä jotka unohtuneet lisätä aiemmin</li>
         </ul>
