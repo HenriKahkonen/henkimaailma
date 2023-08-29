@@ -2,6 +2,10 @@
 
 Henkan kotisivut - frontend.
 
+## v. 1.1.0 29.08.2023
+
+CSS uudistettu ja sivurakenne yksinkertaistettu rajusti.
+
 ## v. 1.0.3. 14.04.2023
 
 3D-mallinnuksia, Metasivun update

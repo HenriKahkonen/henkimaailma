@@ -1,6 +1,6 @@
 .App {
   --leveys: 1000px; /*Laatikot, header, footer*/
-  --leveysMobile: 350px;
+  --leveysMobile: 85vw;
   --taustavari: linear-gradient(0deg, rgba(221,221,221,1) 0%, rgba(255,255,255,1) 100%, rgba(0,212,255,1) 100%);
 
   --reunat: 2vh;
