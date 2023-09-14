@@ -283,6 +283,16 @@ export const PostsList = [
         "ytid" : "7z3H__umOL4",
         "desc": "Musavlog SnS4-samplepäkistä."
     },
+    {
+        "id": "v4",
+        "title": "Kirja-arvio: Lailasta Almaan",
+        "url": "arvio-lailasta-almaan",
+        "date": new Date("2023-09-14T16:00:00Z"),
+        "tags": ["Musiikkitiede","Kritiikki"],
+        "category": "Videot",
+        "ytid" : "UF2ZfvKXO3I",
+        "desc": "Ajatukseni Lailasta-Almaan -kirjan vahvuuksista ja heikkouksista."
+    },
 
     //   ARVIOT  
     {
@@ -370,6 +380,14 @@ export function changeLog() {
     return(
         <>
 
+<div>
+        <div><b>Lailasta Almaan-arvio</b></div>
+        <div className="">{parseDate(new Date("2023-09-14T16:00:00Z"))}</div>
+        <ul>
+            <li><Link to="../posts/arvio-lailasta-almaan">Uusi video</Link>: kirja-arvio - Lailasta Almaan</li>
+        </ul>
+    </div><br/>
+        
         <div>
         <div><b>Nettisivun kokonaisvaltainen harjaus</b></div>
         <div className="">{parseDate(new Date("2023-08-28T16:00:00Z"))}</div>
