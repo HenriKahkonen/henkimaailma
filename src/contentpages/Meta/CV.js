@@ -28,14 +28,14 @@ function CV()  {
                             <div className="kouludat">
                                 <b>Filosofian maisteri</b>, <i>Turun yliopisto, Musiikkitiede</i><br/>
                                 Pro Gradu: <a href="https://www.utupub.fi/handle/10024/153797">Musiikkisisällöntuottajat ja YouTuben affordanssit</a><br/>
-                                Sivuaine: Tietojenkäsittelytiede
+                                Sivuaine: Tietojenkäsittelytiede, aineopintojen kokonaisuus
                             </div> 
                         </div>
                         <div className="KouluItem">
                             <div className="kouluyr">2019</div>
                             <div className="kouludat">
                                 <b>Humanististen tieteiden kandidaatti</b>, <i>Turun yliopisto, Musiikkitiede</i><br/>
-                                Sivuaine: Mediatutkimus
+                                Sivuaine: Mediatutkimus, aineopintojen kokonaisuus
                             </div> 
                         </div>
                         <div className="KouluItem">
@@ -75,7 +75,7 @@ function CV()  {
                             <div className="kouluyr">2015</div>
                             <div className="kouludat">
                                 <b>Musiikinopettaja</b>, <i>Mannerheimin lastensuojeluliitto</i><br/>
-                                Muskarin setä
+                                Opetusmateriaalien laatiminen, oppituntien suunnittelu ja toteutus. 0-6 -vuotiaiden lasten musiikkileikkikouluryhmät.
                             </div> 
                         </div>
                         <div className="KouluItem">
