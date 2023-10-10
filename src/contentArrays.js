@@ -380,7 +380,16 @@ export function changeLog() {
     return(
         <>
 
-<div>
+        <div>
+        <div><b>Levyraatifiksailua</b></div>
+        <div className="">{parseDate(new Date("2023-10-10T12:30:00Z"))}</div>
+        <ul>
+            <li>Päivitys <Link to="../levyraati">levyraadin</Link> toimintaan: Jives ymmärtää nyt myös spotifyn lyhennettyjä linkkejä (mobiili) </li>
+            <li>Saitin footerin linkkejä päivitetty</li>
+        </ul>
+    </div><br/>
+
+        <div>
         <div><b>Lailasta Almaan-arvio</b></div>
         <div className="">{parseDate(new Date("2023-09-14T16:00:00Z"))}</div>
         <ul>

@@ -2,6 +2,10 @@
 
 Henkan kotisivut - frontend.
 
+## v. 1.1.2 10.10.2023
+
+Linkkejä päivitelty
+
 ## v. 1.1.1 14.09.2023
 
 Uusi video: Lailasta Almaan -arvio.
