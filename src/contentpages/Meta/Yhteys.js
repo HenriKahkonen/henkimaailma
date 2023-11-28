@@ -13,9 +13,9 @@ function Yhteys() {
                 <NavLink to="/meta/yhteys"> 
                     <div className="KBSubNavActive"><h1>yhteys</h1></div>
                 </NavLink>
-                <NavLink to="/meta/cv"> 
-                <div className="KBSubNav"><h1>cv</h1></div>
-                </NavLink>
+                {/*<NavLink to="/meta/cv"> 
+                    <div className="KBSubNav"><h1>cv</h1></div>
+                </NavLink>*/}
             </div>   
 
 

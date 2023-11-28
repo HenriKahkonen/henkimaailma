@@ -12,9 +12,9 @@ function CV()  {
                     <NavLink to="/meta/yhteys"> 
                         <div className="KBSubNav"><h1>yhteys</h1></div>
                     </NavLink>
-                    <NavLink to="/meta/cv"> 
-                    <div className="KBSubNavActive"><h1>cv</h1></div>
-                    </NavLink>
+                   {/*<NavLink to="/meta/cv"> 
+                        <div className="KBSubNavActive"><h1>cv</h1></div>
+                    </NavLink>*/}
                 </div>                
 
             <div className="cv">
