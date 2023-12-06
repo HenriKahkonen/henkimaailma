@@ -14,10 +14,10 @@ export function Etusivu() {
 
             <div className="KontentBox">
                 <div id="SpotlightBoxesContainer">
-                    {SpotLightBox("Video:","v4")}
-                    {SpotLightBox("Also Check Out:","v3")}
-                    {SpotLightBox("Blog:","blog3")}
-                    {SpotLightBox("Arvio:","a2")}                   
+                    {SpotLightBox("Video:","pa7")}
+                    {SpotLightBox("Also Check Out:","v4")}
+                    {/*{SpotLightBox("Blog:","blog3")}*/}
+                    {/*{SpotLightBox("Arvio:","a2")}*/}                   
                 </div>
             </div>
 
@@ -36,7 +36,7 @@ function SpotLightBox(text,id) {
         title = title.replace("Arvio: ","")
     }
     let imgurl = post.imgurl
-    if (post.category===("Videot" || "Peliarviot")) {
+    if (post.category==="Videot" || post.category==="Peliarviot") {
         imgurl ="https://img.youtube.com/vi/"+post.ytid+"/maxresdefault.jpg"
     }
     let url = "posts/"+post.url

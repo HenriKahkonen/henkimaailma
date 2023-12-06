@@ -250,6 +250,18 @@ export const PostsList = [
         "ytid" :"hmIVHQpGvhg",
         "desc": "Pelastetaan maailma meganatseilta."
     },
+    {
+        "id": "pa7",
+        "title": "Peliarvio: Suomalaiset Freewarepelit 90- ja 00-luvuilta",
+        "category": "Peliarviot",
+        "imgform": "YouTube",
+        "url": "suomalaiset-freewarepelit",
+        "date": new Date("2023-12-06T09:00:00Z"),
+        "tags": ["Ilmaispelit", "Suomipelit"],
+
+        "ytid" :"ILIggfhUmDg",
+        "desc": "Itsenäisyyspäivän tunnelmiin tehty video suomalaisista freewarepeleistä."
+    },
 
     //VIDEOT
     {
@@ -379,6 +391,14 @@ export const PostsList = [
 export function changeLog() {
     return(
         <>
+
+    <div>
+        <div><b>Suomipelit-video</b></div>
+        <div className="">{parseDate(new Date("2023-12-06T10:20:00Z"))}</div>
+        <ul>
+            <li><Link to="../posts/peliarviot/suomalaiset-freewarepelit">Uusi video</Link> suomalaisista sharewarepeleistä </li>
+        </ul>
+    </div><br/>
 
         <div>
         <div><b>Levyraatifiksailua</b></div>
