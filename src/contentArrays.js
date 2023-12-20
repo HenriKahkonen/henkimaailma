@@ -262,6 +262,18 @@ export const PostsList = [
         "ytid" :"ILIggfhUmDg",
         "desc": "Itsenäisyyspäivän tunnelmiin tehty video suomalaisista freewarepeleistä."
     },
+    {
+        "id": "pa8",
+        "title": "Peliarvio: Suomalaiset Freewarepelit, osa 2",
+        "category": "Peliarviot",
+        "imgform": "YouTube",
+        "url": "suomalaiset-freewarepelit-pt2",
+        "date": new Date("2023-12-18T16:00:00Z"),
+        "tags": ["Ilmaispelit", "Suomipelit", "Mediakritiikki"],
+
+        "ytid" :"lhKfmdEgLkU",
+        "desc": "Jatkoa keskustelulle suomalaisista freewarepeleistä."
+    },
 
     //VIDEOT
     {
@@ -391,6 +403,14 @@ export const PostsList = [
 export function changeLog() {
     return(
         <>
+
+    <div>
+        <div><b>Suomipelit pt2</b></div>
+        <div className="">{parseDate(new Date("2023-12-18T16:00:00Z"))}</div>
+        <ul>
+            <li><Link to="../posts/peliarviot/suomalaiset-freewarepelit-pt2">Video</Link> - jatkoa aiemmalle keskustelulle suomalaisista freewarepeleistä </li>
+        </ul>
+    </div><br/>
 
     <div>
         <div><b>Suomipelit-video</b></div>

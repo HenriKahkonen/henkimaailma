@@ -2,42 +2,27 @@
 
 Henkan kotisivut - frontend.
 
-## v. 1.1.2 10.10.2023
+Nettisivu toimii käytännössä ilmoitustauluna eri projekteilleni. Levyraati-sivu fetchaa sivun backendistä (Jives-bot) levyraadin tulokset. Main deployaa Netlifyyn.
 
+## Changelog re: sivurakenne
+
+10.10.2023
 Linkkejä päivitelty
 
-## v. 1.1.1 14.09.2023
-
-Uusi video: Lailasta Almaan -arvio.
-
-## v. 1.1.0 29.08.2023
-
+29.08.2023
 CSS uudistettu ja sivurakenne yksinkertaistettu rajusti.
 
-## v. 1.0.3. 14.04.2023
+14.04.2023
+3D-mallinnuksia, Metasivun rakenne muutettu
 
-3D-mallinnuksia, Metasivun update
-
-## v. 1.0.2. 03.04.2023
-
-Lisätty löytynyt taltio iPod-aikakapselista, yksi blogikirjoitus ja SnS-sample pack.
-
-## v. 1.0.1. 28.03.2023
-
+28.03.2023
 Käärijä-video lisätty, CSS mobiilille: purkkaa ja teippiä asenneltu
-
-## v. 1.0.0. - en tiedä miten versionumerointi toimii
-
 Sisällöt kirjoitettu, sormet ristiin ja deployhousut jalkaan
 
-## 0.5.3 17.2.2023
-
+17.2.2023
 Front-backend -keskustelu toimii. Turhia fetchejä vähennetty niin, että router hakee esim. levyraadin datan sivuston käynnistäessä ja muistaa sen tekemättä uusia kutsuja datalle.
-
 Koodia siistitty jonkin verran luettavammaksi.
-
 Discord-levyraadin dokumentaatio ja alasivut tehty.
 
-## 10.02.2023 v. sovitaan nyt vaikka 0.5.0
-
-Siirretty joitain toiminnallisuuksia backendin hoidettavaksi jotta front olisi kevyempi ja järkevämpi
+10.02.2023
+Siirretty joitain toiminnallisuuksia backendiin
