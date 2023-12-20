@@ -39,7 +39,13 @@ function SpotLightBox(text,id) {
     if (post.category==="Videot" || post.category==="Peliarviot") {
         imgurl ="https://img.youtube.com/vi/"+post.ytid+"/maxresdefault.jpg"
     }
-    let url = "posts/"+post.url
+    let url;
+    if (post.category==="Peliarviot") {
+        url="posts/peliarviot/"+post.url
+    } else {
+        url = "posts/"+post.url
+    }
+    
 
 
     return (
