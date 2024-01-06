@@ -274,6 +274,18 @@ export const PostsList = [
         "ytid" :"lhKfmdEgLkU",
         "desc": "Jatkoa keskustelulle suomalaisista freewarepeleistä."
     },
+    {
+        "id": "pa9",
+        "title": "Peliarvio: Rogue Legacy 2",
+        "category": "Peliarviot",
+        "imgform": "YouTube",
+        "url": "rogue-legacy-2",
+        "date": new Date("2024-01-04T16:00:00Z"),
+        "tags": ["Roguelite", "Platformer"],
+
+        "ytid" :"St_9QieihVA",
+        "desc": "Cellar Door Gamesin tasoloikka-roguelit."
+    },
 
     //VIDEOT
     {
@@ -403,6 +415,14 @@ export const PostsList = [
 export function changeLog() {
     return(
         <>
+
+    <div>
+        <div><b>Rogue Legacy 2 -arvio</b></div>
+        <div className="">{parseDate(new Date("2024-01-04T16:00:00Z"))}</div>
+        <ul>
+            <li><Link to="../posts/peliarviot/rogue-legacy-2">Arvio</Link>: - Rogue Legacy 2 </li>
+        </ul>
+    </div><br/>
 
     <div>
         <div><b>Suomipelit pt2</b></div>
