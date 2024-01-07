@@ -105,6 +105,7 @@ const renderRouter = (lrData,liveStatus) => {
       }]
     },
   ]);
+  
   ReactDOM.createRoot(document.getElementById('avtal')).render( 
     <React.StrictMode>
       <RouterProvider router={router} />

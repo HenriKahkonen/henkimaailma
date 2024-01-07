@@ -1,0 +1,46 @@
+#peliarvioContainer {
+    display: flex;
+    gap:20px;
+    flex-direction:column;
+}
+
+
+.peliarvioListItemContainer {
+    width: 95%;
+    display: flex;
+    gap:10px;
+
+    transition: .2s ease;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+.peliarvioListItemContainer:hover {
+    opacity: 0.9;
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+.peliarvioThumbnailContainer {
+    width: 30%;
+}
+
+.peliarvioThumbnail {
+    width: 100%;
+}
+
+
+
+#postNavigationContainer {
+    margin-top:10px;
+    display:flex;
+    justify-content: space-between;
+    flex-basis:49%;
+}
+#lastItem {
+    width:33%;
+    text-align: left;
+}
+#nextItem {
+    text-align: right;
+    max-width:33%;
+}

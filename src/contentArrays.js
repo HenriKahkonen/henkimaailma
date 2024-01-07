@@ -421,6 +421,7 @@ export function changeLog() {
         <div className="">{parseDate(new Date("2024-01-04T16:00:00Z"))}</div>
         <ul>
             <li><Link to="../posts/peliarviot/rogue-legacy-2">Arvio</Link>: - Rogue Legacy 2 </li>
+            <li>Tunkattu <Link to="../posts/peliarviot/">peliarviosivun</Link> navigaatio ja CSS</li>
         </ul>
     </div><br/>
 

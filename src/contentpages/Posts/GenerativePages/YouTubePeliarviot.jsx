@@ -3,6 +3,7 @@ import React from "react";
 import { parseDate } from "../../../components/functions";
 import { listTags } from "../../../components/functions";
 import { NavLink, Link } from "react-router-dom";
+import './Peliarviolistaus.css'
 
 class PeliarvioListItem extends React.Component {
     render() {
@@ -14,30 +15,31 @@ class PeliarvioListItem extends React.Component {
         let url = "/posts/peliarviot/"+this.props.item.url
         
         return (
-            
+            <Link to={url}>
             <div className="peliarvioListItemContainer">
                 <div className="peliarvioThumbnailContainer">
-                    <Link to={url}>
+                    
                         <div className="peliarvioThumbnail">
                             <img className="peliarvioThumbnail"src={thumbnailsrc} alt="Thumbnail"></img>
                         </div>
-                    </Link>
+                    
                 </div>
                 <div className="peliarvioTextBox">
-                    <Link to={url}>
+                    
                     <div className="peliarvioTitle">{shortName}</div>
-                    </Link>
+                    
                     <div>{date}</div>
                     <div>{tags}</div>
                 </div>
             </div>
+            </Link>
             
         )
     }
 }
 
 export class YouTubePeliarviot extends React.Component {
-    peliarvioarray = KontsaArray.peliarviot
+    peliarvioarray = KontsaArray.filter((post) => post.category==="Peliarviot")
     render() {
         return (
             <div className="KontentBox">

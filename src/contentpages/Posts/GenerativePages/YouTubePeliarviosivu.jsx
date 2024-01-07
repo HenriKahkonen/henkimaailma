@@ -3,6 +3,7 @@ import { useLoaderData } from "react-router-dom"
 import { parseDate } from "../../../components/functions"
 import { listTags } from "../../../components/functions"
 import { NavLink } from "react-router-dom"
+import './Peliarviolistaus.css'
 
 export async function loader({ params }) {
     if (!params.peliarvioTitle) {
@@ -24,15 +25,15 @@ export async function loader({ params }) {
 
 
 export function YouTubePeliarviosivu() {
-    window.scrollTo(0,0);
+    /*window.scrollTo(0,250);*/
     const arvio = useLoaderData();
     const kaikkiPeliarviot = PostsLists.peliarviot
 
     const next = kaikkiPeliarviot[(kaikkiPeliarviot.indexOf(arvio))-1]
     const last = kaikkiPeliarviot[(kaikkiPeliarviot.indexOf(arvio))+1]
 
-    console.log("NEXT:",next)
-    console.log("LAST:", last)
+    /*console.log("NEXT:",next)
+    console.log("LAST:", last)*/
 
     const videosrc = "https://www.youtube.com/embed/"+arvio.ytid
     return (

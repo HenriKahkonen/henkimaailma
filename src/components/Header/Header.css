@@ -32,7 +32,7 @@
     justify-content: center;
     gap:var(--NavButtGap);
 
-    /*border-style: solid none none none;
+    /*border-style: solid solid solid solid;
     border-color: rgba(0, 0, 0, 0.3);
     border-width: 1px;*/
 
