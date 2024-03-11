@@ -59,12 +59,19 @@ const convertRatingString = (rating) => {
 
 export const getRatingPngFromRating = (rating) => {
     let kuvapiste;
+    //let kouluarvosanapiste;
     if (!rating && rating!==0) {
         return null
     }
 
-     //KOKONAISLUKU 0-1000
+    //MUUNNETAAN KOULUARVOSANAKSI
+    //Asteikko 0-1000 -> 375-1000
+    //kouluarvosanapiste=(rating*625/1000)+375;
+
+    //KOKONAISLUKU 0-1000
     kuvapiste = Math.floor(rating/25)*25;
+    //kouluarvosanapiste = Math.floor(kouluarvosanapiste/25)*25;
+
     //console.log("Muunnetaan pisteet:",rating,"->",kuvapiste)
     return process.env.PUBLIC_URL+"/img/arvosanat/"+kuvapiste+".png"
 }

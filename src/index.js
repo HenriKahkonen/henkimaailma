@@ -36,12 +36,15 @@ import {
 
 import { 
   LevyRaatiLeaderboard,
-  SkriimBuilder } from './contentpages/Etusivu/Etusivu';
+  //SkriimBuilder
+ } from './contentpages/Etusivu/Etusivu';
 import { 
   FetchLevyRaatiData, 
-  isSkriimOnline } from './components/functions';
+  //isSkriimOnline
+ } from './components/functions';
 
-const renderRouter = (lrData,liveStatus) => {
+//const renderRouter = (lrData,liveStatus) => { 
+const renderRouter = (lrData) => {
   const router = createBrowserRouter([
     { path: "*", element: <Root />, errorElement: <ErrorRoot />, 
       children: [{
@@ -55,8 +58,9 @@ const renderRouter = (lrData,liveStatus) => {
             // ympäri sivustoa
             loader: () => {
               const levyRaatiLeaderBoard = LevyRaatiLeaderboard(lrData)
-              const skriimThings = SkriimBuilder(liveStatus)
-              return {levyRaatiLeaderBoard, skriimThings}
+              //const skriimThings = SkriimBuilder(liveStatus)
+              //return {levyRaatiLeaderBoard, skriimThings}
+              return {levyRaatiLeaderBoard}
             },
             element:<Etusivu/> },
 
@@ -117,10 +121,11 @@ const renderRouter = (lrData,liveStatus) => {
 async function StartSite() {
   console.log("yritetään hakea dataa")
   const lrData = await FetchLevyRaatiData()
-  const livestatus = await isSkriimOnline()
+  //const livestatus = await isSkriimOnline()
   console.log("Data haettu, sivu käynnistyy")
   //console.log("Sivu käynnistyy, lrdata: "+lrData+" livestatus: "+livestatus)
-  return renderRouter(lrData,livestatus);
+  //return renderRouter(lrData,livestatus);
+  return renderRouter(lrData);
 }
 StartSite();
 
