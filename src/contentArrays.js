@@ -329,6 +329,16 @@ export const PostsList = [
         "ytid" : "UF2ZfvKXO3I",
         "desc": "Ajatukseni Lailasta-Almaan -kirjan vahvuuksista ja heikkouksista."
     },
+    {
+        "id": "v5",
+        "title": "UMK2024 Tier List",
+        "url": "umk2024-tier-list",
+        "date": new Date("2024-02-10T16:00:00Z"),
+        "tags": ["Musiikki","UMK","Euroviisut"],
+        "category": "Videot",
+        "ytid" : "NBcTaj2i2R4",
+        "desc": "Löysin rantein ajatuksia vuoden 2024 Uuden Musiikin Kilpailu -kandidaateista."
+    },
 
     //   ARVIOT  
     {
@@ -417,10 +427,19 @@ export function changeLog() {
         <>
 
     <div>
+        <div><b>UMK -reaktiot ja konepellin alla kikkailua</b></div>
+        <div className="">{parseDate(new Date("2024-03-11T12:00:00Z"))}</div>
+        <ul>
+            <li><Link to="../posts/umk2024-tier-list">Video</Link>: UMK2024 tier list lisätty </li>
+            <li>Eräs vanha Jives-bugi fiksattu</li>
+        </ul>
+    </div><br/>
+
+    <div>
         <div><b>Rogue Legacy 2 -arvio</b></div>
         <div className="">{parseDate(new Date("2024-01-04T16:00:00Z"))}</div>
         <ul>
-            <li><Link to="../posts/peliarviot/rogue-legacy-2">Arvio</Link>: - Rogue Legacy 2 </li>
+            <li><Link to="../posts/peliarviot/rogue-legacy-2">Arvio</Link>: Rogue Legacy 2 </li>
             <li>Tunkattu <Link to="../posts/peliarviot/">peliarviosivun</Link> navigaatio ja CSS</li>
         </ul>
     </div><br/>
