@@ -4,7 +4,7 @@ const SomeLinkkiLaja = () => {
     return (
         <footer className="Somelinkkilaja">
             <div><a href="https://www.youtube.com/@henkonen"><img className="SomeLink" src={process.env.PUBLIC_URL+'/img/80x80-youtube.png'} alt="YouTube"></img></a></div>
-            <div><a href="https://github.com/HankTheMachine"><img className="SomeLink" src={process.env.PUBLIC_URL+'/img/80x80-github.png'} alt="GitHub"></img></a></div>
+            <div><a href="https://github.com/HenriKahkonen"><img className="SomeLink" src={process.env.PUBLIC_URL+'/img/80x80-github.png'} alt="GitHub"></img></a></div>
             <div><a href="https://discord.gg/GPtVSVaVz7"><img className="SomeLink" src={process.env.PUBLIC_URL+'/img/80x80-discord.png'} alt="Discord"></img></a></div>
             <div><a href="https://www.instagram.com/henk_kone/"><img className="SomeLink" src={process.env.PUBLIC_URL+'/img/80x80-instagram.png'} alt="Instagram"></img></a></div>
     {/*
