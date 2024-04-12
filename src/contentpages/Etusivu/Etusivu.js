@@ -14,8 +14,8 @@ export function Etusivu() {
 
             <div className="KontentBox">
                 <div id="SpotlightBoxesContainer">
-                    {SpotLightBox("Video:","v5")}
-                    {SpotLightBox("Also Check Out:","pa8")}
+                    {SpotLightBox("Video:","v6")}
+                    {SpotLightBox("Also Check Out:","v5")}
                     {/*{SpotLightBox("Blog:","blog3")}*/}
                     {/*{SpotLightBox("Arvio:","a2")}*/}                   
                 </div>

@@ -339,6 +339,16 @@ export const PostsList = [
         "ytid" : "NBcTaj2i2R4",
         "desc": "Löysin rantein ajatuksia vuoden 2024 Uuden Musiikin Kilpailu -kandidaateista."
     },
+    {
+        "id": "v6",
+        "title": "Tyhjentävä analyysi: Windows95Man - No Rules!",
+        "url": "analyysi-no-rules",
+        "date": new Date("2024-04-12T16:00:00Z"),
+        "tags": ["Musiikki","UMK","Euroviisut"],
+        "category": "Videot",
+        "ytid" : "HMnRij_5_fU",
+        "desc": "Kriittinen luenta W95Manin euroviisukappaleesta ja puolustuspuheenvuoro humoristiselle taiteelle."
+    },
 
     //   ARVIOT  
     {
@@ -425,6 +435,14 @@ export const PostsList = [
 export function changeLog() {
     return(
         <>
+
+    <div>
+        <div><b>W95Man-analyysivideo</b></div>
+        <div className="">{parseDate(new Date("2024-04-12T16:00:00Z"))}</div>
+        <ul>
+            <li><Link to="../posts/analyysi-no-rules">Video</Link>: W95Man-analyysi lisätty </li>
+        </ul>
+    </div><br/>
 
     <div>
         <div><b>UMK -reaktiot ja konepellin alla kikkailua</b></div>
