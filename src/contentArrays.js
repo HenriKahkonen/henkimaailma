@@ -422,7 +422,7 @@ export const PostsList = [
         "title": "Hyvät ja huonot teatteriesitykset",
         "category": "Blog",
         "url": "hyvat-ja-huonot-teatteriesitykset",
-        "dateUpdate": new Date('2023-08-26T09:00:00Z'),
+        "dateUpdate": new Date('2024-04-22T18:00:00Z'),
         "date": new Date('2023-03-31T20:00:00Z'),
         "imgurl": "https://i.imgur.com/GDkSb3C.png",
         "tags": ["Teatteri", "Listat"],

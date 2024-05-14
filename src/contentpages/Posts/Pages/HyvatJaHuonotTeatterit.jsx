@@ -57,6 +57,8 @@ export function HyvatJaHuonotTeatterit() {
                         <li>Ikävän maa (Turun Ylioppilasteatteri) *</li>
                         <li>Pearly Gates (Turun Ylioppilasteatteri) *</li>
                         <li>Kuin kotkat jäällä (Turun Ylioppilasteatteri) *</li>
+                        <li>Tiikeriooppera (TTT) *</li>
+                        <li>Nukebox *</li>
                     </ul>
                 </div>
             </div>
