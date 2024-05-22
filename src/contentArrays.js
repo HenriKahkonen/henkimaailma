@@ -437,6 +437,15 @@ export function changeLog() {
         <>
 
     <div>
+        <div><b>Mainoksia, bwahaha</b></div>
+        <div className="">{parseDate(new Date("2024-05-22T16:00:00Z"))}</div>
+        <ul>
+            <li> Sivulla on nyt Googlen Adsense -mainoksia (sama mainostili kuin YouTubessa). Todnäk rullataan mainosten määrää myöhemmin takaisin kun on kokeiltu mikä on käyttökokemuksen kannalta liikaa.</li>
+            <li> Tietyt sivut (levyraadin docs ja tietosuojalauseke, meta ja yhteys) kielletty mainoksilta </li>
+        </ul>
+    </div><br/>
+
+    <div>
         <div><b>W95Man-analyysivideo</b></div>
         <div className="">{parseDate(new Date("2024-04-12T16:00:00Z"))}</div>
         <ul>
