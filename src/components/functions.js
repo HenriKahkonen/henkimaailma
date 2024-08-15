@@ -35,6 +35,36 @@ export async function isSkriimOnline() {
     return status
 }
 
+export async function FetchChangeLog () {
+    let ChangeLogData;
+    await axios.get("https://raw.githubusercontent.com/HenriKahkonen/HenkimaailmaMarkups/main/ChangeLog.xml")
+        .then(res => ChangeLogData = res.data)
+    var parser = new DOMParser();
+
+    var ChangeLogHTML = "";
+    var updatesDoc = parser.parseFromString(ChangeLogData,"text/xml")
+    var updates = updatesDoc.getElementsByTagName("update");
+
+    for (var i = updates.length-1; i >= 0; i--) {
+        ChangeLogHTML += 
+            "<b>"+updates[i].getAttribute("title")+"</b></br>"
+            +"<div>"+updates[i].getAttribute("date")+"</div><ul>";
+        
+        var bulletpoints = updates[i].getElementsByTagName("li");
+        
+        for (var bp = 0; bp < bulletpoints.length; bp++) {
+            var updateItem = bulletpoints[bp]
+            ChangeLogHTML += (updateItem).outerHTML;
+        }
+
+        ChangeLogHTML += "</ul><br/>"
+    }
+    ChangeLogHTML += "</ul>"
+
+    console.log("CL haettu")
+    return ChangeLogHTML;
+}
+
 export const CurrentTab = () => {
     let a = window.location.pathname;
     if (a===''){

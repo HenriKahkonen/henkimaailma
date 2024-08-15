@@ -40,10 +40,11 @@ import {
  } from './contentpages/Etusivu/Etusivu';
 import { 
   FetchLevyRaatiData, 
-  isSkriimOnline
+  isSkriimOnline,
+  FetchChangeLog
  } from './components/functions';
 
-const renderRouter = (lrData,liveStatus) => { 
+const renderRouter = (lrData,liveStatus,changelog) => { 
   const router = createBrowserRouter([
     { path: "*", element: <Root />, errorElement: <ErrorRoot />, 
       children: [{
@@ -97,6 +98,9 @@ const renderRouter = (lrData,liveStatus) => {
             { path: "meta",
             children: [
               {index:true,
+                loader: () => {
+                  return {changelog}
+                },
               element: <Meta/>},
               { path: "yhteys", element: <Yhteys/>},
               { path: "cv", element: <CV/>},
@@ -120,9 +124,10 @@ async function StartSite() {
   console.log("Yritetään hakea dataa...")
   const lrData = await FetchLevyRaatiData()
   const livestatus = await isSkriimOnline()
+  const changelog = await FetchChangeLog()
   console.log("Data haettu, sivu käynnistyy")
   //console.log("Sivu käynnistyy, lrdata: "+lrData+" livestatus: "+livestatus)
-  return renderRouter(lrData,livestatus);
+  return renderRouter(lrData,livestatus,changelog);
 }
 StartSite();
 

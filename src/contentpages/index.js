@@ -15,7 +15,7 @@ import {Levyraati} from "./Levyraati/Levyraati.jsx";
 import {LevyraatiDocs} from "./Levyraati/LevyraatiDocs.jsx"
 import {LevyraatiTietosuoja} from "./Levyraati/LevyraatiTietosuoja.jsx"
 
-import Meta from './Meta/Meta.js';
+import {Meta} from './Meta/Meta.jsx';
 import CV from './Meta/CV.js';
 import Yhteys from './Meta/Yhteys.js';
 
