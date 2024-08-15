@@ -35,17 +35,14 @@ export function LevyraatiDocs() {
                     <img src="https://i.imgur.com/YbKjnh4.png" alt="Jives"></img>
                     <div><i>Henkimaailman Discord-palvelimen botti Jives.</i></div>
                 </div>
-                <p>
-                    Uusista somealustoista Discord on viehättänyt minua erityisesti siksi, että se on onnistunut yhdistämään ääni- ja videopuhelut foorumirakennetta muistuttavan tekstikeskusteluympäristön kanssa. Syrjäytettyjen Messengerien ja Skypejen markkina-asemalla patsasteleva Discord on myös pitkään tukenut erilaisia botteja, ja runsaat Discordin kanssa toimivat kirjastot ovat tehneet botin ohjelmoimisesta mahdollista myös vähemmän paatuneille ohjelmointiharrastajille.
+                <p>    
+                    Halusin kastaa varpaani Discordin rajapinnassa ohjelmoimiseen. Ajattelin, että olisi hauskaa jäsentää keskustelua musiikista Discord-palvelimelle, johon voisi liittää myös toiminnallisuutta kuten mahdollisuuden arvioida albumeita suoraan palvelimen sisällä. Näitä tarkoituksia palvelemaan aloitin <b>Jivesin</b> ohjelmoimisen. 
                 </p>
                 <p>    
-                    Halusin itsekin kastaa varpaani Discordin rajapinnassa ohjelmoimiseen. Ajattelin, että olisi hauskaa jäsentää keskustelua musiikista Discord-palvelimelle, johon voisi liittää myös toiminnallisuutta kuten mahdollisuuden arvioida albumeita suoraan palvelimen sisällä. Näitä tarkoituksia palvelemaan aloitin <b>Jivesin</b> rakentamisen, ja pitkällisen kokeilemisen ja erehdysten kautta oppimisen kautta versio 1.0 elää ja hengittää *toistaiseksi* suhteellisen itsenäisesti. 
-                </p>
-                <p>    
-                    Jives toimii toistaiseksi vain <a href="https://discord.gg/GPtVSVaVz7">omalla Discord-palvelimellani</a> ei vähiten siksi, että botin suunnittelu vain yhdellä palvelimella toimivaksi on yksinkertaisin tapa lähestyä sen ohjelmointia. Tietosuojan ja toiminnallisuuden varmistamisen näkökulmasta on myös helpointa, että tietokannan sisältöä voi manipuloida vain kontrolloidun ympäristön sisällä. Lisäksi botin hostaaminen vain itse hallinnoimassani ympäristössä antaa ei-niin-ohuesti verhoillun tekosyyn markkinoida kaikkea muita touhujani. <a href='#lahdekoodi'>Jivesin lähdekoodista</a> voi toki ottaa mallia vastaavan botin rakentamiseen muualle.
+                    Jives toimii <a href="https://discord.gg/GPtVSVaVz7">Discord-palvelimellani</a>. <a href='#lahdekoodi'>Jivesin lähdekoodista</a> voi ottaa mallia vastaavan botin rakentamiseen muualle.
                 </p>
                 <p>
-                    Kasvonsa ja nimen Jivesille on (ilman suostumustaan) lainannut <b>Adrian Edmondson</b>, jonka roolihahmo eräässä <b>Bottom</b>-farssikomedian jaksossa tekeytyy hovimestariksi. Palvelimen digitaalisen palvelijan oli ehdottomasti oltava hovimestari, sillä hovimestarit ovat universaalisti hauskoja.
+                    Kasvonsa ja nimen Jivesille on (ilman suostumustaan) lainannut <b>Adrian Edmondson</b>, jonka roolihahmo tekeytyy eräässä <b>Bottom</b>-farssikomedian jaksossa hovimestariksi. Palvelimen digitaalisen palvelijan oli ehdottomasti oltava hovimestari, sillä hovimestarit ovat universaalisti hauskoja.
                 </p>
 
                 <br/>

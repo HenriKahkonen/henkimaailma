@@ -10,7 +10,8 @@ class LevyRaatiPage extends HenkimaailmaPage {
         super(props)
         this.state= {
             lrData: this.props.lrData,
-            levyraatiPage : 1
+            levyraatiPage : 1,
+            albumsperPage : 50
         }
     }
 
@@ -31,13 +32,13 @@ class LevyRaatiPage extends HenkimaailmaPage {
     lrNavThing =(buttonName, buttonText)=> {
         const idScript = "lrnav-"+buttonName;
         const totalAlbumsCount = this.state.lrData.length
-        const totalPages = (Math.ceil(totalAlbumsCount/20))
-        //console.log("Totaalisivut: "+totalPages)
+        const totalPages = (Math.ceil(totalAlbumsCount/this.state.albumsperPage))
+
         if (buttonName==="last") {
             if (!(this.state.levyraatiPage===1)) {
                 return (
                     <button
-                        className="lastbuttonlr"
+                        className="navbutton"
                         id={idScript}
                         onClick={this.lrLastPage()}>
                         {buttonText}
@@ -49,7 +50,7 @@ class LevyRaatiPage extends HenkimaailmaPage {
             if (this.state.levyraatiPage<totalPages) {
                 return (
                     <button
-                        className="nextbuttonlr"
+                        className="navbutton"
                         id={idScript}
                         onClick={this.lrNextPage()}>
                         {buttonText}
@@ -63,15 +64,14 @@ class LevyRaatiPage extends HenkimaailmaPage {
         const levyraatiData = [...this.state.lrData]
         .filter(function (l) {
             return (
-                l[6]>0
+                l[6]>0 // filter out albums that are submitted but whose total score is 0 (meaning they haven't been rated yet)
             )})
 
-        //const totalAlbumsCount = levyraatiData.length
-        //const totalPages = Math.ceil(totalAlbumsCount/20)
-        let leaderboard = [...levyraatiData].splice((this.state.levyraatiPage-1)*20,20)
+        const albumsOnPage = this.state.albumsperPage
+        let leaderboard = [...levyraatiData].splice((this.state.levyraatiPage-1)*albumsOnPage,albumsOnPage)
+
         return (
             <div className="KontentBox">
-
                 <div className="KontentBoxSubNav">
                     <NavLink to="/levyraati">
                         <div className="KBSubNavActive"><h1>tulokset</h1></div> 
@@ -84,56 +84,65 @@ class LevyRaatiPage extends HenkimaailmaPage {
                     </NavLink>
                 </div>   
 
+                
                 <div id="levyArvioLeaderboard">    
 
-                    <div id="blrlbHeader">
+                    <div className="blrlbHeaderFooter">
                         <div id="leaderboardNavigation">
-                            {this.lrNavThing("last","Edelliset")}
+                            <div className="navButtonSpacer">{this.lrNavThing("last","Edelliset")}</div>
                             <div className="navTexts">
                                 Näytetään<br/>
                                 {levyraatiData.indexOf(leaderboard[0])+1}{" - "} 
                                 {levyraatiData.indexOf(leaderboard[(leaderboard.length)-1])+1}
                                 {" / "}{levyraatiData.length}
                             </div>
-                            {this.lrNavThing("next","Seuraavat")}
+                            <div className="navButtonSpacer">{this.lrNavThing("next","Seuraavat")}</div>
                         </div>
                     </div>
 
                     {leaderboard.map(item => 
-                        <div className="blrlb-Item" key={item[2]}>
-                            <div className="blrlb-ranking">
-                                {"#"+(levyraatiData.indexOf(item)+1)}
-                            </div>    
-                            <img src={item[2]} alt=""></img>
-                            <div className="blrlb-item-databox">
-                                <a href={"https://discord.com/channels/1031479962005409802/1070620790816510003/threads/"+item[7]}><b>{item[0]}</b>
-                                <br/>{item[1]} ({item[3].slice(0,4)})</a> 
-                                <div className="blrlbCopyright">{item[4][0].text}</div>
+                        <div className="blrlb-Item" key={item[2]}>  
+                            
+                            
+
+                            <div className="blrlb-artandNo">
+                                <div> <img src={item[2]} alt=""></img> {/*Kansikuva*/} </div>
+                                <div className="blrlb-orderNo">{"#"+(levyraatiData.indexOf(item)+1)}:</div>
                             </div>
-                            <div className="blrlbRatingBox">
-                                <img src={getRatingPngFromRating(item[5])} alt={(item[5]/10)+" pistettä"}></img>
-                                <div className="blrlbrn">
-                                    ({item[5]/10}) ({item[6]})
+                                <div className="blrlb-item-databox">
+                                    <div className="blrlb-titlebox">
+                                        <div>
+                                            <a href={"https://discord.com/channels/1031479962005409802/1070620790816510003/threads/"+item[7]}> <b>{item[0]}</b>
+                                            <br/>{item[1]} ({item[3].slice(0,4)})</a>
+                                        </div>
+                                        <div className="blrlb-ratingPic">
+                                            <img src={getRatingPngFromRating(item[5])} alt={(item[5]/10)+" pistettä"}></img>
+                                            ({item[5]/10}) ({item[6]})
+                                        </div>
+                                    </div>
+                                    
+                                    <div className="blrlbCopyright">{item[4][0].text}</div>
                                 </div>
-                            </div>
                         </div>
+
                     )}
                     
 
-                    <div id="blrlbFooter">
+                    <div className="blrlbHeaderFooter">
                         <div id="leaderboardNavigation">
-                            {this.lrNavThing("last","Edelliset")}
+                            <div className="navButtonSpacer">{this.lrNavThing("last","Edelliset")}</div>
                             <div className="navTexts">
                                 Näytetään<br/>
                                 {levyraatiData.indexOf(leaderboard[0])+1}{" - "} 
                                 {levyraatiData.indexOf(leaderboard[(leaderboard.length)-1])+1}
                                 {" / "}{levyraatiData.length}
                             </div>
-                            {this.lrNavThing("next","Seuraavat")}
+                            <div className="navButtonSpacer">{this.lrNavThing("next","Seuraavat")}</div>
                         </div>
                     </div>
 
-                </div>     
+                </div> 
+                   
 
             </div>
         )

@@ -109,15 +109,15 @@ const renderRouter = (lrData,liveStatus) => {
   ]);
   
   ReactDOM.createRoot(document.getElementById('avtal')).render( 
-    <React.StrictMode>
+    //<React.StrictMode>
       <RouterProvider router={router} />
-    </React.StrictMode>
+    //</React.StrictMode>
   )
 }
 
 // React-reititin (nettisivu) käynnistyy
 async function StartSite() {
-  console.log("yritetään hakea dataa")
+  console.log("Yritetään hakea dataa...")
   const lrData = await FetchLevyRaatiData()
   const livestatus = await isSkriimOnline()
   console.log("Data haettu, sivu käynnistyy")
