@@ -1,6 +1,6 @@
 import { NavLink, useLoaderData } from "react-router-dom";
 import "./Levyraati.css";
-import { getRatingPngFromRating } from "../../components/functions";
+import {percRatingImgs } from "../../components/functions";
 import React from "react";
 import HenkimaailmaPage from "../../components/HenkimaailmaPage";
 
@@ -115,10 +115,22 @@ class LevyRaatiPage extends HenkimaailmaPage {
                                             <a href={"https://discord.com/channels/1031479962005409802/1070620790816510003/threads/"+item[7]}> <b>{item[0]}</b>
                                             <br/>{item[1]} ({item[3].slice(0,4)})</a>
                                         </div>
-                                        <div className="blrlb-ratingPic">
+
+                                        <div className = "ratingContainer">
+                                            <div className="ratingperc">
+                                                {percRatingImgs(item[5]).map(imgsrc =>
+                                                    <div className="ratingDigit">
+                                                        <img src={imgsrc} alt="Number"></img>
+                                                    </div>
+                                                )}
+                                            </div>
+                                            ({item[6]})
+                                        </div>
+
+                                        {/*<div className="blrlb-ratingPic">
                                             <img src={getRatingPngFromRating(item[5])} alt={(item[5]/10)+" pistettä"}></img>
                                             ({item[5]/10}) ({item[6]})
-                                        </div>
+                                        </div>*/}
                                     </div>
                                     
                                     <div className="blrlbCopyright">{item[4][0].text}</div>

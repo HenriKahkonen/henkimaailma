@@ -1,3 +1,5 @@
+//VANHA VERSIO ETUSIVUSTA W SPOTLIGHT-LAATIKOT
+
 import './Etusivu.css'
 import {PostsLists} from "../../contentArrays.js";
 import { 
@@ -46,7 +48,7 @@ function SpotLightBox(text,id) {
         url = "posts/"+post.url
     }
     
-
+    
 
     return (
     <div className="spotlightbox">

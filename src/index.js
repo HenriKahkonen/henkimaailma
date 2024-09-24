@@ -7,44 +7,25 @@ import {
 } from "react-router-dom";
 
 //SIVUIMPORTIT
-import './index.css';
+import './index.css'; import './contentpages/Posts/Pages.css'
 import {Root} from "./contentpages/Root/Root.jsx"
 import {
-  Sivu404,
-  ErrorRoot,
-  Etusivu,
-
-  Posts as PostsList,
-  PostPage,
-  PostLoader,
-  YouTubePeliarviot,
-  YouTubePeliarviosivu,
-  youTubePeliarvioLoader,
-
-  Levyraati,
-  LevyraatiDocs,
-  LevyraatiTietosuoja,
-
-  Meta,
-  Yhteys,
-  CV
-
-
-
-
+  Sivu404, ErrorRoot, EtusivuFeed, //Etusivu,
+  Sivukartta,
+  PostPage, PostLoader, //Posts as Postslist, 
+  YouTubePeliarviot, YouTubePeliarviosivu, youTubePeliarvioLoader,
+  Levyraati, LevyraatiDocs, LevyraatiTietosuoja,
+  Meta, Yhteys, CV
 } from "./contentpages"
-
+/*import { 
+  SkriimBuilder //, LevyRaatiLeaderboard
+ } from './contentpages/Etusivu/Etusivu';*/
 import { 
-  LevyRaatiLeaderboard,
-  SkriimBuilder
- } from './contentpages/Etusivu/Etusivu';
-import { 
-  FetchLevyRaatiData, 
-  isSkriimOnline,
-  FetchChangeLog
+  FetchLevyRaatiData, isSkriimOnline, FetchChangeLog, postsJsonFetch, SnSJsonFetch
  } from './components/functions';
+import { SnSSamplepacksAll } from './contentpages/Posts/Pages/SnS-Samplepacks-All.jsx';
 
-const renderRouter = (lrData,liveStatus,changelog) => { 
+const renderRouter = (lrData,liveStatus,changelog,postsJSON,SnSData) => { 
   const router = createBrowserRouter([
     { path: "*", element: <Root />, errorElement: <ErrorRoot />, 
       children: [{
@@ -56,26 +37,38 @@ const renderRouter = (lrData,liveStatus,changelog) => {
             // Loadereiden määrittely täällä näin on paras keksimäni ratkaisu siihen 
             // ettei stream statusta ja lr dataa tarvi fetchata niin paljoa
             // ympäri sivustoa
-            loader: () => {
-              const levyRaatiLeaderBoard = LevyRaatiLeaderboard(lrData)
-              const skriimThings = SkriimBuilder(liveStatus)
-              return {levyRaatiLeaderBoard, skriimThings}
+            
+            loader: 
+            () => {
+              //const levyRaatiLeaderBoard = LevyRaatiLeaderboard(lrData)
+              //const skriimThings = SkriimBuilder(liveStatus)
+              return {liveStatus,postsJSON}
             },
-            element:<Etusivu/> },
+            element:<EtusivuFeed/>
+          },
+
+          //SIVUKARTTA
+          {path: "sivukartta",
+          index:true,
+          loader: () => {return {postsJSON}},
+          element: <Sivukartta/>
+          },
 
             //SYÖTE
             { path: "posts",
             children : [
-              { index:true, element:<PostsList/> }, // TODO:CHANGE THIS 
-              { path: ":postUrl", element: <PostPage/>, loader: PostLoader, },
+              //{ index:true, element:<PostsList/> }, // TODO:CHANGE THIS 
+              {index:true, loader: () => {return {postsJSON}}, element:<Sivukartta/>},
+              { path: ":postUrl", element: <PostPage posts={postsJSON}/>, loader: PostLoader},
               { path: "peliarviot",
                 children : [
-                  { index:true, element:<YouTubePeliarviot/>},
+                  { index:true, element:<YouTubePeliarviot posts={postsJSON}/>},
                   { path:":peliarvioTitle", 
                     loader: youTubePeliarvioLoader,
-                    element: <YouTubePeliarviosivu/>,},
+                    element: <YouTubePeliarviosivu posts={postsJSON}/>,},
                   ],
               },
+              { path: "sns-samplepacks", element: <SnSSamplepacksAll snspacks={SnSData}/>}
             ],
             },
 
@@ -125,9 +118,11 @@ async function StartSite() {
   const lrData = await FetchLevyRaatiData()
   const livestatus = await isSkriimOnline()
   const changelog = await FetchChangeLog()
+  const postsList = await postsJsonFetch()
+  const SnSlist = await SnSJsonFetch()
   console.log("Data haettu, sivu käynnistyy")
   //console.log("Sivu käynnistyy, lrdata: "+lrData+" livestatus: "+livestatus)
-  return renderRouter(lrData,livestatus,changelog);
+  return renderRouter(lrData,livestatus,changelog,postsList,SnSlist);
 }
 StartSite();
 

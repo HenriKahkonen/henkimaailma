@@ -30,10 +30,10 @@ class MetaPage extends HenkimaailmaPage {
                         {/*<NavLink to="/meta/cv"> 
                             <div className="KBSubNav"><h1>cv</h1></div>
                         </NavLink>*/}            
-                </div>     
-                <div className="Prose">
+                </div><br/>
+
                     <div id="ChangeLogListaus"></div>
-                </div>
+
             </div>
             )
     }

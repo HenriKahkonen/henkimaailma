@@ -1,60 +1,143 @@
 /*SNS SAMPLE PACKS*/
 
+.SnSListing {
+  display:flex;
+  flex-flow: column nowrap;
+  gap:20px;
+  margin-top:40px;
+  margin-bottom:40px;
+}
+
+.SnSPack {
+  width:90%;
+  margin:auto;
+  padding:20px;
+  transition: .2s ease;
+  box-shadow: var(--pienivarjo);
+  border-radius:15px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.SnSPack:hover{
+  opacity: 0.95;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.SnSPackInfo {
+  display:flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  gap:30px;
+  font-size:small;
+}
+.SnSPackInfo h1 {
+  font-weight:bold;
+  font-size: large;
+  line-height: normal;
+  margin: auto;
+}
+.SnSDescription {
+  font-size:medium;
+  margin-top:40px;
+  margin-bottom:10px;
+}
+.SnSDownloadButtonsContainer {
+  display:flex;
+  flex-flow:column nowrap;
+  gap:10px;
+}
 .img-button {
 
-    --imgButtonImg: calc(var(--leveys)*0.1);
-    --imgButtonWidth: calc(var(--leveys)*0.4);
+  --imgButtonImg: calc(var(--leveys)*0.1);
+  --imgButtonWidth: calc(var(--leveys)*0.4);
 
 
-    width:var(--imgButtonWidth);
-    display:flex;
+  width:var(--imgButtonWidth);
+  display:flex;
+
+  padding:10px;
+  padding-right:30px;
+  gap:30px;
+
+  flex-flow: row nowrap;
+  align-items:center;
+
+  transition: .2s ease;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+
+  box-shadow: var(--pienivarjo);
+  border-radius:15px;
+  background-color: rgba(255, 255, 255, 0.3);
+
+}.img-button:hover{
+  opacity: 0.95;
+  -webkit-transform: scale(1.03);
+  transform: scale(1.03);
+  background-color: rgba(118, 156, 226, 0.3);
+}
+
+.img-button-imagecontainer {
+  max-width: calc(var(--imgButtonImg)*1.1);
+  height: var(--imgButtonImg);
+  display:flex;
+  align-items:center;
+  align-self:center;
+}
+
+.img-button-imagecontainer img{
+  display:block;
+  margin:auto;
+  width:var(--imgButtonImg);
+  height:var(--imgButtonImg);
+}
+.SnSDownloadText {
+  margin-bottom:auto;
+  text-align: right;
+}
+
+.SnSShowTrackListingButton {
+  font-family: 'Courier New', Courier, monospace;
+  cursor:pointer;
+  border:none;
+  background-color: #ffffff00;
+  padding:0;
+  color:rgba(31, 31, 31, 0.75);
+}
+.SnSHideTrackListingButton {
+  display:none;
+  font-family: 'Courier New', Courier, monospace;
+  cursor:pointer;
+  border:none;
+  background-color: #ffffff00;
+  padding:0;
+  color:rgba(31, 31, 31, 0.75);
+}
+.SnSTracklistingButtonsarea {
+  border-style:none none solid none;
+  padding-bottom:5px;
+  border-width: 1px;
+  margin-top:40px;
+  border-color: rgba(31, 31, 31, 0.321);
   
-    padding:10px;
-    padding-right:30px;
-    gap:30px;
-  
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items:center;
-  
-    transition: .2s ease;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  
-    box-shadow: var(--pienivarjo);
-    border-radius:15px;
-    background-color: rgba(255, 255, 255, 0.3);
-  
-    margin-top:30px;
-    margin-bottom:30px;
-  
-  }.img-button:hover{
-    opacity: 0.95;
-    -webkit-transform: scale(1.05);
-    transform: scale(1.05);
-    background-color: rgba(255, 255, 255, 0.6);
-  }
-  
-  .img-button-imagecontainer {
-    max-width: calc(var(--imgButtonImg)*1.1);
-    height: var(--imgButtonImg);
-    display:flex;
-    align-items:center;
-    align-self:center;
-  }
-  
-  .img-button-imagecontainer img{
-    display:block;
-    margin:auto;
-    width:var(--imgButtonImg);
-    height:var(--imgButtonImg);
-  }
+}
+
+.SnSTrackListing {
+  display:none;
+  padding:20px;
+  font-size: small;
+  column-count: 3;
+  line-height: 1.2;
+}
+
+
 
   .img-button-dualcontainer {
     display:flex;
     flex-flow: row nowrap;
     gap:calc(var(--leveys)*0.02)
   }
+
+  
   @media screen and (max-width:930px) {
     .img-button-dualcontainer {
       flex-direction:column;
@@ -63,15 +146,59 @@
     .img-button-dualcontainer .img-button {
       margin:10px;
     }
+    .SnSListing {
+      margin-top:20px;
+      margin-bottom:20px;
+    }
+        
+    .SnSPackInfo {
+      flex-flow: column nowrap;
+      gap:20px;
+      font-size:x-small;
+    }
+    .SnSPackInfo h1 {
+      font-size: medium;
+    }
+
+    .SnSDescription {
+      font-size:small;
+      margin-bottom:20px;
+    }
+
+    .SnSDownloadButtonsContainer {
+      display:flex;
+      flex-flow:row nowrap;
+      gap:10px;
+      margin:auto;
+    }
+    .img-button {
+      padding:9px;
+      gap:5px;
+      text-align:left;
+    }
+    
+
+    
+    .img-button-imagecontainer img{
+      display:block;
+      margin:auto;
+      width:var(--imgButtonImg);
+      height:var(--imgButtonImg);
+    }
+    
+    .SnSTrackListing {
+      font-size: x-small;
+      column-count: 2;
+    }
 
   }
+
   .img-button-overlayImg {
     position: absolute;
     align-self: flex-end;
     opacity:0.4;
 
   }
-
 
   /*Real life loot*/
   .rllNav {

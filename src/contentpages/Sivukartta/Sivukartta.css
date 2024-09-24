@@ -1,0 +1,89 @@
+.sivukarttacontainer {
+    display: flex;
+    flex-flow: row nowrap;
+    gap:30px;
+}
+
+.sivukarttacolumn {
+    display:flex;
+    flex-flow: column nowrap;
+    max-width:50%;
+}
+
+.sivukarttaOsioTitle {
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content:flex-start;
+    gap:20px;
+    border-style: none none solid none;
+    border-width: 2px;
+    margin:40px;
+    margin-left:0px;
+    margin-bottom:20px;
+    padding:5px;
+    padding-bottom:15px;
+}
+.sivukarttaOsioTitleText {
+    font-size:x-large;
+    font-weight: bold;
+    margin-top:auto;
+    margin-bottom:auto;
+}
+
+.sivukarttaOsioTitleImg {
+    display: flex;
+    object-fit: contain;
+    width:20%;
+}
+.sivukarttaOsioTitleImg img {
+    width:100%;
+    margin:auto;
+}
+.sivukarttaListItem {
+    margin-left:10px;
+    margin-bottom:5px;
+}
+
+.sivukarttaLink {
+    font-size: normal;
+    margin: 3px;
+    line-height: normal;
+    font-weight: bold;
+}
+.sivukarttaDate {
+    font-size: small;
+    margin:3px;
+    margin-left:15px;
+
+}
+
+@media screen and (max-width:930px) {
+    .sivukarttaOsioTitleImg {
+        display:none;
+    }
+
+    .sivukarttaOsioTitle {
+        border-width: 1px;
+        margin:10px;
+        margin-left:0px;
+        margin-bottom:10px;
+        padding-bottom:5px;
+    }
+    .sivukarttaOsioTitleText {
+        font-size:small;
+    }
+    .sivukarttaListItem {
+        margin-left:5px;
+        margin-bottom:2px;
+    }
+    .sivukarttacontainer {
+        margin:0px;
+        font-size:x-small;
+    }
+    .sivukarttaDate {
+        font-size: xx-small;
+        margin:3px;
+        margin-left:15px;
+    
+    }
+}

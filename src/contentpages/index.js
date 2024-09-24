@@ -1,12 +1,16 @@
 import Sivu404 from './Sivu404/Sivu404.js';
 import ErrorRoot from './Sivu404/ErrorRoot.js'
 
+/* //VANHA ETUSIVU
 import {
     Etusivu,
     //loader as etusivuLoader,
-} from './Etusivu/Etusivu.js';
+} from './Etusivu/Etusivu.js';*/ 
+import EtusivuFeed from './Etusivu/EtusivuUusi.jsx';
 
-import Posts from './Posts/Posts.jsx'
+import Sivukartta from './Sivukartta/Sivukartta.jsx'
+
+//import Posts from './Posts/Posts.jsx'
 import {PostPage, loader as PostLoader} from './Posts/PostPage.jsx'
 import {YouTubePeliarviosivu,loader as youTubePeliarvioLoader} from './Posts/GenerativePages/YouTubePeliarviosivu.jsx';
 import { YouTubePeliarviot } from './Posts/GenerativePages/YouTubePeliarviot.jsx';
@@ -23,9 +27,11 @@ export {
     ErrorRoot,
     Sivu404,
 
-    Etusivu,
+    /*Etusivu,*/ //Vanha etusivu
+    EtusivuFeed,
 
-    Posts,
+    Sivukartta,
+
     PostPage,
     PostLoader,
     YouTubePeliarviot,

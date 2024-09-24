@@ -2,7 +2,7 @@ import React from "react";
 
 export function IdeoitaNayttamolla() {
     return (
-    <div className="Prose">
+    <>
     <p>Pari sanaa tästä esseestä:</p>
     <p>Tämä teksti on opintosuoritukseni multimodaalisen musiikin ja esityksen tutkimuksen kurssille Turun Yliopiston musiikkitieteen oppiaineessa. Massiivisen ylipitkäksi paisunut teksti käsittelee taiteen merkitysten tietoista ja tahatonta rakentumista turkulaisen Linnateatterin esittämässä <i>Qui</i>-näytelmässä. </p>
     <p>Ankkuroiduin hahmotteleemaani tutkimusotteeseen ennen työn kirjoittamista, ja olen kiitollinen työn arvostelleen professori <b>John Richardsonin</b> kärsivällisyydestä tämän hyväksyttyä kaikki kohtuullisuuden rajat ylittävän tekstin kurssisuoritukseksi. Työ ja analyysi veivät mennessään, ja halusin tarkastella tutkimuskohdettani loppuun asti näkökulman asettamalla laajuudella silläkin uhalla, että teksti paisuisi pienen opinnäytetyön mittaiseksi. </p>
@@ -269,7 +269,7 @@ käsikirjoitus on tehty jo ennen näyttelijävalintoja ja teoksen tuomista näyt
 <p>
 Musiikkia ja sketsikomediaa sisältävä <i>Qui</i> sisältää n. 15 musiikkinumeroa, joista suurin osa
 on satiirisesti uudelleensanoitettuja, tunnettuja ranskalaisia kappaleita. Kappaleet on
-sovittanut teatterin taiteellinen johtaja Jussi Vahvaselkä ja sanoittanut esityksen käsikirjoittaja
+sovittanut teatterin taiteellinen johtaja Vahvaselkä ja sanoittanut esityksen käsikirjoittaja
 {" "}<b>Antto Terras</b> yhdessä Vahvaselän kanssa. Revyy edustaa genrenä varieteeteatterin perinnettä,
 jossa musiikkia, tanssia ja komediasketsejä yhdistelemällä kootaan kevyt huumorivetoinen
 esitys. Genrenä revyytä yhdistää keveys, joka voi ilmetä esimerkiksi juonen minimaalisuutena
@@ -309,7 +309,7 @@ käsikirjoitus on valmis ja kaikille aikaa reagoida. Nii nyt ku tiistaina alko h
 niin maanantaina oli käsikirjoitus melkein valmis. […] Kaikki mahdollinen aika
 käytettiin siihen käsikirjoituksen muokkaamiseen joka oli tietysti sit näistä biiseistä
 pois."
-<div className="quoteBoxInfo"><b>Jussi Vahvaselkä</b>. Tekijän haastattelu (A6).</div>
+<div className="quoteInfoBox"><b>Jussi Vahvaselkä</b>. Tekijän haastattelu (A6).</div>
 </div>
 <p>On selvää, että tiukentuneessa tuotantoaikataulussa ensimmäinen ja kriittisin kysymys
 musiikin suunnittelussa on ollut saada harjoituskauden alkuun jotain työstettävää ja
@@ -425,7 +425,7 @@ ihmiset joutuvat sietämään ovelleen saapuvia mormoneja kohdatessaan.
 </p>
 
     <div className="Prose-ImgDiv">
-        <iframe width="840" height="473" src="https://www.youtube.com/embed/eiBhmNTvyKc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"></iframe>
+        <iframe src="https://www.youtube.com/embed/eiBhmNTvyKc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"></iframe>
         <div className="kuvateksti"><i>Book of Mormon</i> -musikaalin kappaleen "Hellon" melodiassa ja tonaliteetissa on itsessään merkityksiä, jotka välittyvät kappaleen uudelleensanoitukseen <i>Qui</i>-revyyssä.</div>
     </div>
 
@@ -618,7 +618,7 @@ HK: "Et se teksteillä ja hahmoilla leikkiminen on jo sitä itse biisin opettelu
 Että annetaan mahdollisuuksia kokeilla että ’tää vois olla tämmönen tai
 tämmöinen’?"<br/><br/>
 JV: "Joo."<br/><br/>
-<div className="quoteBoxInfo"><b>Jussi Vahvaselkä</b>. Tekijän haastattelu. (A6)</div>
+<div className="quoteInfoBox"><b>Jussi Vahvaselkä</b>. Tekijän haastattelu. (A6)</div>
 </div>
 <p>
 Vahvaselän korostama tekstin osaamisen edellytys tulkinnallisiin mahdollisuuksiin sivuaa
@@ -903,7 +903,7 @@ ylös, ylös, ylös ylös… nii se oli heti silleen et ”okei, tuo näyttää 
 kokeillaan kaikki tota” […] Koska hekin on kuitenkin, he on niin taitavia ja
 kokeneita ammattilaisia kaikki, niin se on tosi rikasta ja palkitsevaa et heiltäkin
 tulee niit ideoita."
-<div className="quoteBoxInfo"><b>Laura Alho</b>. Tekijän haastattelu (A18).</div>
+<div className="quoteInfoBox"><b>Laura Alho</b>. Tekijän haastattelu (A18).</div>
 </div>
 <p>
 Näyttelijöiden ideoiden ja aloitteiden vaikutus lopulliseen koreografiaan näkyi
@@ -1515,6 +1515,6 @@ Publishing Ltd. Toim. Scott, Derek B. 131 –146.</li>
     </iframe>
     </div>
 */}
-</div>
+</>
 )
 }

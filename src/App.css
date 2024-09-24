@@ -1,6 +1,6 @@
 .App {
   --leveys: 1000px; /*Laatikot, header, footer*/
-  --leveysMobile: 85vw;
+  --leveysMobile: 90vw;
   --taustavari: linear-gradient(0deg, rgba(221,221,221,1) 0%, rgba(255,255,255,1) 100%, rgba(0,212,255,1) 100%);
 
   --reunat: 2vh;
@@ -12,9 +12,9 @@
   --reunapyor: 5px;
 
   --marginaali-yla: 20px;
-  --marginaali-ylaMobile: 20px;
+  --marginaali-ylaMobile: 0px;
   --marginaali-reunat: 40px;
-  --marginaali-reunatMobile:20px;
+  --marginaali-reunatMobile:10px;
   --marginaali-ala: 60px;
   --marginaali-header:30px;
   --marginaali-footer:10px;
@@ -121,9 +121,9 @@
 .KontentBoxSubNav {
   display:flex;
   flex-flow:row wrap;
-  gap: 10px 20px;
+  gap: 0px 20px;
   margin-top:10px;
-  margin-bottom:30px;
+  margin-bottom:0px;
 }
 .KontentBoxSubNav h1 {
   line-height: 0;
@@ -143,6 +143,9 @@
     flex-direction:column;
     gap:calc(var(--leveys)*0.1);
   }
+  .Prose {
+    padding:5px;
+  }
 }
 
 
@@ -157,6 +160,11 @@
   margin-top:3vh;
   margin-bottom:3vh;
 }
+.quoteBox {
+  padding:40px;
+  color: #5e4d4d;
+}
+
 .quoteInfoBox {
   text-align:right;
   font-size:normal;
@@ -170,8 +178,20 @@
 
 
 .Prose-ImgDiv {
+  display:flex;
+  flex-flow:column nowrap;
+  width:100%;
   margin-top: 60px;
   margin-bottom: 40px;
+  object-fit: contain;
+}
+.Prose-ImgDiv iframe {
+  width:100%;
+}
+.Prose-ImgDiv img {
+  max-width:100%;
+  width:100%;
+  object-fit: contain;
 }
 
 .kuvateksti {
@@ -199,7 +219,7 @@
   width:100%;
 }
 
- 
+
 
 
 /*Asetetaan ylhäällä asetetut muuttujat tänne*/
@@ -255,7 +275,21 @@
 .App a {color: var(--linkColor);text-decoration: none;}
 .App a:hover {color: var(--linkHoverColor);}
 
+.Prose {
+  padding:140px;
+  padding-top:0px;
+}
 .Prose a {
   color :#0b64b8;
   text-decoration: underline;
+}
+
+@media screen and (max-width:930px) {
+  .Prose {
+    padding:5px;
+    font-size:small;
+  }
+  .kuvateksti {
+    font-size:small;
+  }
 }

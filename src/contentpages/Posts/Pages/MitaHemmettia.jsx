@@ -2,7 +2,7 @@ import React from "react";
 
 export function MitaHemmettia() {
     return (
-        <div className="Prose">
+        <>
             <div className="quoteBox">
                 "Kyllä se on niin, että kun työtön mies alkaa vähän ohjelmoimaan, niin ei siinä hienhajuiselta manialta yksinkertaisesti voi välttyä!"
                 <div className="quoteBoxInfo">
@@ -64,6 +64,6 @@ export function MitaHemmettia() {
             </p>
             <p> Sivusto on nyt tässä, ja toivon hartaasti sen olevan toimintakuntoinen vielä kun se deployataan. Toivottavasti viihdyt!
             </p>
-        </div>
+        </>
         )
 }

@@ -3,12 +3,71 @@ import { Component } from "react";
 import HTMLReactParser from "react";
 //import { levyRaatiDataLocal } from "..";
 import { NavLink } from "react-router-dom";
+import {PostsList} from "../contentArrays.js"
+
+export function filterPostsByType(list, type) {
+    return list.filter((item)=>item['category']===type)
+}
 
 export function isSoundCloud(post) {
     if (post.ftags.includes("Soundcloud")) {
         return true
     }
     return false
+}
+
+export async function SnSJsonFetch() { 
+    let SnSfetched
+    await axios.get("https://raw.githubusercontent.com/HenriKahkonen/HenkimaailmaMarkups/main/SnSData.json")
+        .then(res => SnSfetched = res.data)
+    SnSfetched.Packs.forEach((pack)=>{
+        pack['Date']=new Date(pack['Date'])
+    })
+    return SnSfetched
+}
+
+export async function postsJsonFetch() { 
+    let fullArray = PostsList
+    // TODO: Fetch jostain järkevästi
+    let YTfetched
+    await axios.get("https://raw.githubusercontent.com/HenriKahkonen/HenkimaailmaMarkups/main/YTVideot.json")
+        .then(res => YTfetched = res.data)
+
+    let videos = [];
+    YTfetched['peliarviot'].forEach((item)=>{
+        item['category'] = "Peliarviot"
+        videos.push(item)
+    })
+
+    YTfetched['vlogit'].forEach((item)=>{
+        item['category'] = "Blog"
+        videos.push(item)
+    })
+
+    YTfetched['muu video'].forEach((item)=>{
+        item['category'] = "Muu video"
+        videos.push(item)
+    })
+
+    YTfetched['SnS'].forEach((item)=>{
+        item['category'] = "SnS"
+        videos.push(item)
+    })
+
+    YTfetched['euroviisut'].forEach((item)=>{
+        item['category'] = "euroviisut"
+        videos.push(item)
+    })
+
+    videos.forEach((item)=>{
+        item['imgform']="YouTube"
+        item['date']=new Date(item['date'])
+    })
+
+    fullArray = fullArray.concat(videos)
+    fullArray = sortByDate(fullArray)
+
+    return fullArray
 }
 
 export async function FetchLevyRaatiData() {
@@ -74,7 +133,7 @@ export const CurrentTab = () => {
 }
 
 const convertRatingString = (rating) => {
-    //console.log("muunnetaan stringistä")
+    console.log("muunnetaan stringistä")
     let numRating;
     let stringRatingJustNum = rating.replace(" 1/2","").replace("++","").replace("-","").replace("+",'');
     numRating = Number(stringRatingJustNum)*10;
@@ -89,6 +148,7 @@ const convertRatingString = (rating) => {
 
 export const getRatingPngFromRating = (rating) => {
     let kuvapiste;
+    console.log(rating)
     //let kouluarvosanapiste;
     if (!rating && rating!==0) {
         return null
@@ -104,6 +164,32 @@ export const getRatingPngFromRating = (rating) => {
 
     //console.log("Muunnetaan pisteet:",rating,"->",kuvapiste)
     return process.env.PUBLIC_URL+"/img/arvosanat/"+kuvapiste+".png"
+}
+
+export const percRatingImgs = (rating) => {
+    let simpleRating = Math.floor(rating/10).toString();
+    if (simpleRating.length < 3) {
+        simpleRating = "n"+simpleRating;
+    }
+    let imgs = [];
+    for (let nr of simpleRating) {
+        let img;
+        if (nr==="n") {
+            img="nullnumber"
+        }
+        else {
+            img = nr+abcRandom()
+        }
+        let imgpath = process.env.PUBLIC_URL+"/img/nr/"+img+".png"
+        imgs.push(imgpath)
+    }
+    imgs.push(process.env.PUBLIC_URL+"/img/nr/Pr"+abcRandom()+".png")
+    return imgs;
+}
+
+const abcRandom = () => {
+    const abc = ["a","b","c"]
+    return abc[Math.floor(Math.random()*3)]
 }
 
 export const getRatingPng = (post) => {
@@ -152,7 +238,7 @@ export function generatePostListHeader (post) {
         <div>  
             <div className="postListTitle">{post.title}</div>
             <div className="postListDate">{parseDate(post['date'])}</div>
-            <span className="postListTags">{post.category} - </span>
+            <span className="postListTags">{post.category} {">"} </span>
             {listTags(post,true,"postListTags")}
         </div>
         )
@@ -160,7 +246,7 @@ export function generatePostListHeader (post) {
         <div>
             <div className="postListTitle">{post.title}</div>
             <div className="postListDate">{parseDate(post['date'])}<i>{", päivit. "}{parseDate(post['dateUpdate'])}{""}</i></div>
-            <span className="postListTags">{post.category} - </span>
+            <span className="postListTags">{post.category} {">"} </span>
             {listTags(post,true,"postListTags")}
         </div>
     )
@@ -172,14 +258,14 @@ export function generatePostHeader (post) {
             <div className="PostTitle">
                 <h1><NavLink to="/posts">posts</NavLink> / {post.title.toLowerCase()}</h1>
                 <div>{parseDate(post['date'])}</div>
-                <span className="postListTags">{post.category} - </span>{listTags(post,true,"postListTags")}
+                <span className="postListTags">{post.category} {">"} </span>{listTags(post,true,"postListTags")}
             </div>
         )
     } else return (
         <div className="PostTitle">
              <h1><NavLink to="/posts">posts</NavLink> / {post.title.toLowerCase()}</h1>
             <div>{parseDate(post['date'])}<i>{", päivit. "}{parseDate(post['dateUpdate'])}{""}</i></div>
-            <span>{post.category} - </span>
+            <span>{post.category} {">"} </span>
             {listTags(post,true)}
         </div>
     )
@@ -256,8 +342,18 @@ export const listGenreTags = (item, divider) => {
 }
 
 export const sortByDate = (array) => {
-    return array.sort(function(a,b){
-        return b.date - a.date})
+    let initial = array
+    initial.forEach((item) => {
+        if (item.dateUpdate===undefined) {
+            item.dateUpdate = item.date
+        }})
+    let sorted = initial.sort(function(a,b){
+        return b.dateUpdate - a.dateUpdate})
+    sorted.forEach((item) => {
+        if (item.dateUpdate===item.date) {
+            item.dateUpdate = undefined
+        }})
+    return sorted
 }
 
 export class LyricQuote extends Component {

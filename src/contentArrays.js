@@ -1,21 +1,22 @@
-import { parseDate } from "./components/functions.js";
-import { Link } from "react-router-dom";
 // HERRA MUN VERENI
 
 // Tämä tiedosto on yksi frontin tärkeimmistä tietokasoista. Tähän viitataan melkein kaikkialla --> tätä päivittämällä suuri osa sivusta päivittyy ehjästi
-import { sortByDate } from "./components/functions.js";
+/*import { sortByDate } from "./components/functions.js";*/
 
 import {EnsimmainenPsykoosiEP} from './contentpages/Posts/Pages/Ensimmainen Psykoosi EP.jsx';
 import {Ympyrat} from './contentpages/Posts/Pages/Ympyrat.jsx';
 import {DJKEFMTP} from './contentpages/Posts/Pages/DJ-Kalustoelukka&FMashina-Tyydyttava-Pikanen.jsx';
-import { IPodAikakapseli } from "./contentpages/Posts/Pages/iPodAikakapseli.jsx";
+import {IPodAikakapseli} from "./contentpages/Posts/Pages/iPodAikakapseli.jsx";
 import {TYTWabuKaba2021} from "./contentpages/Posts/Pages/TYT-Wappukabaree2021.jsx";
 import {HTMTheSpaceRace} from "./contentpages/Posts/Pages/HTM-The-Space-Race.jsx";
 import {AnnanHeviOpinnot} from "./contentpages/Posts/Pages/AnnanHeviOpinnot.jsx";
 import {HTMItalwaysForgets} from './contentpages/Posts/Pages/HTM-It-Always-Forgets';
-import { SnSSamplepack123 } from "./contentpages/Posts/Pages/SnS-Samplepack.jsx";
-import { RealLifeLoot } from "./contentpages/Posts/Pages/RealLifeLoot.jsx";
-import {SnSSamplepack4} from "./contentpages/Posts/Pages/SnS-Samplepack4.jsx";
+
+import {RealLifeLoot} from "./contentpages/Posts/Pages/RealLifeLoot.jsx";
+
+import { SnSSamplepacksAll } from './contentpages/Posts/Pages/SnS-Samplepacks-All.jsx';
+//import {SnSSamplepack123} from "./contentpages/Posts/Pages/SnS-Samplepack.jsx";
+//import {SnSSamplepack4} from "./contentpages/Posts/Pages/SnS-Samplepack4.jsx";
 
 import  {DDLKCNTBI}  from "./contentpages/Posts/Pages/DDLKCNTBI.jsx";
 import  {NDFETO}  from "./contentpages/Posts/Pages/NDFETO.jsx";
@@ -57,7 +58,7 @@ export const PostsList = [
     },
     {
         "id": "mu3",
-        "title": "Hank The Machine - The Space Race",
+        "title": "The Space Race",
         "url": "htm-the-space-race",
         "imgurl": "https://i.imgur.com/ChOu6d3.png",
         "imgform": "Soundcloud",
@@ -71,7 +72,7 @@ export const PostsList = [
     },
     {
         "id": "mu4",
-        "title": "Hank The Machine - It Always Forgets",
+        "title": "It Always Forgets",
         "url": "htm-it-always-forgets",
         "imgurl": "https://i.imgur.com/1Z9Uuur.png",
         "imgform": "Soundcloud",
@@ -136,20 +137,47 @@ export const PostsList = [
         element: <AnnanHeviOpinnot/>,
         "desc": "Lähetetty Turun Wappuradiossa 24.4.2022."
     },
-    {
-        "id": "pr5",
+    // Sounds and Scapes
+    /*{
+        "id": "SnS3",
         "title": "Sample packs: Sounds and Scapes 1-3",
         "url": "sns-samplepack",
         "imgurl": "https://i.imgur.com/ehzDePS.png",
         "imgform": "SmallSquare",
         "date": new Date("2023-04-03T16:00:00Z"),
         "tags": ["Musiikkituotanto, Äänisuunnittelu, kenttä-äänitteet"],
-        "category": "Muuta",
+        "category": "SnS",
         "element": <SnSSamplepack123/>,
         "desc": "Tekijänoikeusvapaita sampleja ja kenttä-äänitteitä. Osat 1-3."
     },
     {
-        "id": "pr6",
+        "id": "SnS2",
+        "title": "Sounds and Scapes 4 - Drumkit oneshots",
+        "url": "sns-samplepack4",
+        "imgurl": "https://i.imgur.com/Yso2Ak7.png",
+        "imgform": "SmallSquare",
+        "date": new Date("2023-08-26T12:45:00Z"),
+        "tags": ["Musiikkituotanto, äänisuunnittelu, kenttä-äänitteet"],
+        "category": "SnS",
+        "element": <SnSSamplepack4/>,
+        "desc": "Tekijänoikeusvapaita rumpusampleja ja Ableton-drumrack."
+    },*/
+    {
+        "id": "SnS-All",
+        "title": "Sounds and Scapes: CC0 sound effect collections (Aggregate page)",
+        "url": "sns-samplepacks",
+        "imgurl": "https://i.imgur.com/Yso2Ak7.png",
+        "imgform": "SmallSquare",
+        "date": new Date("2023-04-03T12:45:00Z"),
+        "dateUpdate": new Date("2024-09-12T16:00:00Z"),
+        "tags": ["Music production, sound design, field recordings"],
+        "category": "SnS",
+        "element": <SnSSamplepacksAll/>,
+        "desc": "Royalty-free sound effects, samples and ambient tracks."
+    },
+    // 3D-mallinnus
+    {
+        "id": "3D1",
         "title": "Real Life Loot",
         "url": "reallifeloot",
         "imgurl": "https://i.imgur.com/i96PNGy.png" ,
@@ -157,199 +185,13 @@ export const PostsList = [
         "date": new Date("2023-04-03T16:00:00Z"),
         "dateUpdate": new Date("2023-04-20T16:00:00Z"),
         "tags": ["3D-mallinnus"],
-        "category": "Muuta",
+        "category": "3D",
         "element": <RealLifeLoot/>,
         "desc": "3D-mallinnuksia tavallisista esineistä."
     },
 
-    {
-        "id": "pr7",
-        "title": "Sounds and Scapes 4 - Drumkit oneshots",
-        "url": "sns-samplepack4",
-        "imgurl": "https://i.imgur.com/Yso2Ak7.png",
-        "imgform": "SmallSquare",
-        "date": new Date("2023-08-26T12:45:00Z"),
-        "tags": ["Musiikkituotanto, äänisuunnittelu, kenttä-äänitteet"],
-        "category": "Muuta",
-        "element": <SnSSamplepack4/>,
-        "desc": "Tekijänoikeusvapaita rumpusampleja ja Ableton-drumrack."
-    },
+
     
-    
-
-    //Peliarviot
-    {
-        "id": "pa1",
-        "title": "Peliarvio: Shovel Knight",
-        "url": "shovel-knight",
-        "imgform": "YouTube",
-        "date": new Date("2021-11-13T16:00:00Z"),
-        "tags": ["Tasoloikka", "Pikseligrafiikka", "Retro"],
-        "category": "Peliarviot",
-        "ytid" : "tdfxHlKB9yQ",
-        "sl": false,
-        
-        "desc": "Lapio laulaa ja videopelien pelaaminen kiinnostaa."
-    },
-    {
-        "id": "pa2",
-        "title": "Peliarvio: Star Realms",
-        "category": "Peliarviot",
-        "imgform": "YouTube",
-        "url": "star-realms",
-        "date": new Date("2021-11-27T16:00:00Z"),
-        "tags": ["Korttipelit","Lautapelit"],
-        "ytid" : "iFO8hB0Cg9w",
-        "sl": false,
-        "desc": "Korttipeli, avaruuslaivoja ja -tukikohtia."
-    },
-    {
-        "id": "pa3",
-        "title": "Peliarvio: Crusader Kings III",
-        "category": "Peliarviot",
-        "imgform": "YouTube",
-        "url": "crusader-kings-iii",
-        "date": new Date("2021-12-15T17:00:00Z"),
-        "tags": ["Strategia","Keskiaika"],
-        "ytid" : "pWg2fVGwG6k",
-        "sl": false,
-        "desc": "Katsele keskiaikaista Euraasian karttaa."
-    },
-    {
-        "id": "pa4",
-        "title": "Peliarvio: Loop Hero",
-        "category": "Peliarviot",
-        "imgform": "YouTube",
-        "url": "loop-hero",
-        "date": new Date("2022-06-16T16:00:00Z"),
-        "tags": ["Indie darling", "Idle", "Pikseligrafiikka"],
-        "ytid" : "YQ2q5ePILW0",
-        "desc": "Unohda, kasva ja koeta uudelleen."
-    },
-    {
-        "id": "pa5",
-        "title": "Peliarvio: Vampire Survivors",
-        "category": "Peliarviot",
-        "imgform": "YouTube",
-        "url": "vampire-survivors",
-        "date": new Date("2022-07-12T17:00:00Z"),
-        "tags": ["Indie darling", "Pikseligrafiikka"],
-        "ytid" :"n5oSsyv8T-U",
-        "desc": "Tyhmänsimppeli puolen tunnin pikseli-ilotulitus."
-
-    },
-    {
-        "id": "pa6",
-        "title": "Peliarvio: Wolfenstein: The New Order",
-        "category": "Peliarviot",
-        "imgform": "YouTube",
-        "url": "wolfenstein-the-new-order",
-        "date": new Date("2023-02-23T17:00:00Z"),
-        "tags": ["Räiskintä", "Vaihtoehtohistoria"],
-
-        "ytid" :"hmIVHQpGvhg",
-        "desc": "Pelastetaan maailma meganatseilta."
-    },
-    {
-        "id": "pa7",
-        "title": "Peliarvio: Suomalaiset Freewarepelit 90- ja 00-luvuilta",
-        "category": "Peliarviot",
-        "imgform": "YouTube",
-        "url": "suomalaiset-freewarepelit",
-        "date": new Date("2023-12-06T09:00:00Z"),
-        "tags": ["Ilmaispelit", "Suomipelit"],
-
-        "ytid" :"ILIggfhUmDg",
-        "desc": "Itsenäisyyspäivän tunnelmiin tehty video suomalaisista freewarepeleistä."
-    },
-    {
-        "id": "pa8",
-        "title": "Peliarvio: Suomalaiset Freewarepelit, osa 2",
-        "category": "Peliarviot",
-        "imgform": "YouTube",
-        "url": "suomalaiset-freewarepelit-pt2",
-        "date": new Date("2023-12-18T16:00:00Z"),
-        "tags": ["Ilmaispelit", "Suomipelit", "Mediakritiikki"],
-
-        "ytid" :"lhKfmdEgLkU",
-        "desc": "Jatkoa keskustelulle suomalaisista freewarepeleistä."
-    },
-    {
-        "id": "pa9",
-        "title": "Peliarvio: Rogue Legacy 2",
-        "category": "Peliarviot",
-        "imgform": "YouTube",
-        "url": "rogue-legacy-2",
-        "date": new Date("2024-01-04T16:00:00Z"),
-        "tags": ["Roguelite", "Platformer"],
-
-        "ytid" :"St_9QieihVA",
-        "desc": "Cellar Door Gamesin tasoloikka-roguelit."
-    },
-
-    //VIDEOT
-    {
-        "id": "v1",
-        "title": "(Vain) Yksi sample -> yksi biisi",
-        "url": "yksi-sample-yksi-biisi",
-        "date": new Date("2022-06-09T16:00:00Z"),
-        "tags": ["Musiikkituotanto","Haasteet"],
-        "category": "Videot",
-        "ytid" : "7EBasiMtlDc",
-        "desc": "Musavlog: Millaista oli tehdä 'It Always Forgets'."
-    },
-    {
-        "id": "v2",
-        "title": "Vastine Käärijän Cha Cha Cha -plagiointikeskusteluun",
-        "url": "cha-cha-cha-plagiarismi",
-        "date": new Date("2023-03-28T16:00:00Z"),
-        "tags": ["Musiikkianalyysi","Kritiikki","Musiikkitiede","Tekijänoikeus"],
-        "category": "Videot",
-        "ytid" : "Vw29QZb4_Ng",
-
-        "desc": "Onko Cha Cha Cha plagiaatti?"
-    },
-    {
-        "id": "v3",
-        "title": "Tehdään rumpusampler akustisesta rumpusetistä",
-        "url": "musavlog-drumrack",
-        "date": new Date("2023-08-28T19:30:00Z"),
-        "tags": ["Musiikkituotanto"],
-        "category": "Videot",
-        "ytid" : "7z3H__umOL4",
-        "desc": "Musavlog SnS4-samplepäkistä."
-    },
-    {
-        "id": "v4",
-        "title": "Kirja-arvio: Lailasta Almaan",
-        "url": "arvio-lailasta-almaan",
-        "date": new Date("2023-09-14T16:00:00Z"),
-        "tags": ["Musiikkitiede","Kritiikki"],
-        "category": "Videot",
-        "ytid" : "UF2ZfvKXO3I",
-        "desc": "Ajatukseni Lailasta-Almaan -kirjan vahvuuksista ja heikkouksista."
-    },
-    {
-        "id": "v5",
-        "title": "UMK2024 Tier List",
-        "url": "umk2024-tier-list",
-        "date": new Date("2024-02-10T16:00:00Z"),
-        "tags": ["Musiikki","UMK","Euroviisut"],
-        "category": "Videot",
-        "ytid" : "NBcTaj2i2R4",
-        "desc": "Löysin rantein ajatuksia vuoden 2024 Uuden Musiikin Kilpailu -kandidaateista."
-    },
-    {
-        "id": "v6",
-        "title": "Tyhjentävä analyysi: Windows95Man - No Rules!",
-        "url": "analyysi-no-rules",
-        "date": new Date("2024-04-12T16:00:00Z"),
-        "tags": ["Musiikki","UMK","Euroviisut"],
-        "category": "Videot",
-        "ytid" : "HMnRij_5_fU",
-        "desc": "Kriittinen luenta W95Manin euroviisukappaleesta ja puolustuspuheenvuoro humoristiselle taiteelle."
-    },
-
     //   ARVIOT  
     {
         "id": "a2",
@@ -365,8 +207,8 @@ export const PostsList = [
                 "year": "1988",
                 "label": "Earache Records",
         },
-        "category":"Arviot",
-        "rating": "8+",
+        "category":"Musiikkiarviot",
+        "rating": "81",
         "sl": false,
         "element": <NDFETO/>
     },
@@ -385,9 +227,9 @@ export const PostsList = [
                 "label": "Helmi Levyt"
         },
 
-        "category": "Arviot",
+        "category": "Musiikkiarviot",
         "sl": false,
-        "rating": "8+",
+        "rating": "83",
         "element": <DDLKCNTBI/>
     },
 
@@ -422,7 +264,7 @@ export const PostsList = [
         "title": "Hyvät ja huonot teatteriesitykset",
         "category": "Blog",
         "url": "hyvat-ja-huonot-teatteriesitykset",
-        "dateUpdate": new Date('2024-04-22T18:00:00Z'),
+        "dateUpdate": new Date('2024-08-26T18:00:00Z'),
         "date": new Date('2023-03-31T20:00:00Z'),
         "imgurl": "https://i.imgur.com/GDkSb3C.png",
         "tags": ["Teatteri", "Listat"],
@@ -432,134 +274,7 @@ export const PostsList = [
     },
 ]
 
-export function changeLog() {
-    return(
-        <>
-
-    <div>
-        <div><b>Mainoksia, bwahaha</b></div>
-        <div className="">{parseDate(new Date("2024-05-22T16:00:00Z"))}</div>
-        <ul>
-            <li> Sivulla on nyt Googlen Adsense -mainoksia (sama mainostili kuin YouTubessa). Todnäk rullataan mainosten määrää myöhemmin takaisin kun on kokeiltu mikä on käyttökokemuksen kannalta liikaa.</li>
-            <li> Tietyt sivut (levyraadin docs ja tietosuojalauseke, meta ja yhteys) kielletty mainoksilta </li>
-        </ul>
-    </div><br/>
-
-    <div>
-        <div><b>W95Man-analyysivideo</b></div>
-        <div className="">{parseDate(new Date("2024-04-12T16:00:00Z"))}</div>
-        <ul>
-            <li><Link to="../posts/analyysi-no-rules">Video</Link>: W95Man-analyysi lisätty </li>
-        </ul>
-    </div><br/>
-
-    <div>
-        <div><b>UMK -reaktiot ja konepellin alla kikkailua</b></div>
-        <div className="">{parseDate(new Date("2024-03-11T12:00:00Z"))}</div>
-        <ul>
-            <li><Link to="../posts/umk2024-tier-list">Video</Link>: UMK2024 tier list lisätty </li>
-            <li>Eräs vanha Jives-bugi fiksattu</li>
-        </ul>
-    </div><br/>
-
-    <div>
-        <div><b>Rogue Legacy 2 -arvio</b></div>
-        <div className="">{parseDate(new Date("2024-01-04T16:00:00Z"))}</div>
-        <ul>
-            <li><Link to="../posts/peliarviot/rogue-legacy-2">Arvio</Link>: Rogue Legacy 2 </li>
-            <li>Tunkattu <Link to="../posts/peliarviot/">peliarviosivun</Link> navigaatio ja CSS</li>
-        </ul>
-    </div><br/>
-
-    <div>
-        <div><b>Suomipelit pt2</b></div>
-        <div className="">{parseDate(new Date("2023-12-18T16:00:00Z"))}</div>
-        <ul>
-            <li><Link to="../posts/peliarviot/suomalaiset-freewarepelit-pt2">Video</Link> - jatkoa aiemmalle keskustelulle suomalaisista freewarepeleistä </li>
-        </ul>
-    </div><br/>
-
-    <div>
-        <div><b>Suomipelit-video</b></div>
-        <div className="">{parseDate(new Date("2023-12-06T10:20:00Z"))}</div>
-        <ul>
-            <li><Link to="../posts/peliarviot/suomalaiset-freewarepelit">Uusi video</Link> suomalaisista sharewarepeleistä </li>
-        </ul>
-    </div><br/>
-
-        <div>
-        <div><b>Levyraatifiksailua</b></div>
-        <div className="">{parseDate(new Date("2023-10-10T12:30:00Z"))}</div>
-        <ul>
-            <li>Päivitys <Link to="../levyraati">levyraadin</Link> toimintaan: Jives ymmärtää nyt myös spotifyn lyhennettyjä linkkejä (mobiili) </li>
-            <li>Saitin footerin linkkejä päivitetty</li>
-        </ul>
-    </div><br/>
-
-        <div>
-        <div><b>Lailasta Almaan-arvio</b></div>
-        <div className="">{parseDate(new Date("2023-09-14T16:00:00Z"))}</div>
-        <ul>
-            <li><Link to="../posts/arvio-lailasta-almaan">Uusi video</Link>: kirja-arvio - Lailasta Almaan</li>
-        </ul>
-    </div><br/>
-        
-        <div>
-        <div><b>Nettisivun kokonaisvaltainen harjaus</b></div>
-        <div className="">{parseDate(new Date("2023-08-28T16:00:00Z"))}</div>
-        <ul>
-            <li>Nettisivun CSS uudistettu nätimmäksi ja frontin koodia despaghettifioitu</li>
-            <li>Blog ja arviot sulautettu {"->"} <Link to="../posts">/posts</Link></li>
-            <li><Link to="../posts/sns-samplepack4">SnS4: Rumpusampleja</Link></li>
-            <li><Link to="../posts/musavlog-drumrack">Vlog</Link> kyseisten samplejen tuottamisesta</li>
-            <li><Link to="../levyraati">Levyraati</Link> nyt omana sivunaan</li>
-            <li><Link to="../posts/reallifeloot">Real Life Loottiin</Link> lisätty pari esinettä jotka unohtuneet lisätä aiemmin</li>
-        </ul>
-    </div><br/>
-
-        <div>
-        <div><b>Real Life Loot</b></div>
-        <div className="UDdate">{parseDate(new Date("2023-04-14T16:00:00Z"))}</div>
-        <ul>
-            <li>Projekteihin <Link to="../posts/reallifeloot">lisätty sivu 3D-mallinnuksille "Real Life Loot"</Link></li>
-            <li>Metasivu yksinkertaistettu, tukee nyt myös linkkejä</li>
-        </ul>
-    </div><br/>
-
-    <div>
-        <div><b>iPod-aikakapseli ja SnS-samplepack</b></div>
-        <div className="UDdate">{parseDate(new Date("2023-04-03T16:00:00Z"))}</div>
-        <ul>
-            <li>Projekteihin lisätty löytynyt <Link to="../posts/ipod-aikakapseli">iPod-aikakapselin tallenne</Link></li>
-            <li><Link to="../posts/sns-samplepack">SnS -samplepaketti</Link> lisätty projekteihin</li>
-            <li>Blog: <Link to="../posts/hyvat-ja-huonot-teatteriesitykset">"Hyvät ja huonot teatterijutut"</Link></li>
-        </ul>
-    </div><br/>
-
-    <div>
-        <div><b>Siistintää + Käärijävideo</b></div>
-        <div className="UDdate">{parseDate(new Date("2023-03-28T16:00:00Z"))}</div>
-        <ul>
-            <li>Sivupalkin (navigaatio) järjestystä muutettu</li>
-            <li>CSS Yksinkertaistettu kautta linjan ja luettavuutta mobiililaitteilla parannettu hiukan (lisämuutoksia todnäk vielä edessä) </li>
-            <li>Lisätty <Link to="../posts/cha-cha-cha-plagiarismi">Käärijä-video ja uusi projektisivu musa-aiheisille YouTube-jutuille</Link></li>
-            <li><Link to="../levyraati">Discord-levyraatiin</Link> lisätty filtteri: jos levyä ei ole vielä arvosteltu ei se näy levyjen listassa (ennen näkyi listan perällä, arvosanana 0)</li>
-            <li><Link to="../levyraati/docs">Jivesin dokumentaatiota</Link> päivitetty ajankohtaisemmaksi</li>
-        </ul>
-    </div><br/>
-
-    <div>
-        <div><b>Henkimaailma 1.0 on täällä</b></div>
-        <div className="UDdate">{parseDate(new Date("2023-02-01T16:00:00Z"))}</div>
-        <ul>
-            <li>Tervetuloa maailmaan, Henkimaailma</li>
-        </ul>
-    </div><br/>
-
-    </>
-    )
-}
-
+/*
 const filterCategory=(fullArray,category)=> {
     let peliarviot=[]
     for (let i=0;i < fullArray.length; i++) {
@@ -579,8 +294,9 @@ const filterSpotLighteds=(fullArray)=> {
         }
     return sortByDate(spotlighteds)
 }
+*/
 
-
+/*
 export const PostsLists = {
     peliarviot : filterCategory(PostsList,"Peliarviot"),
     videot: filterCategory(PostsList,"Videot"),
@@ -597,3 +313,4 @@ export const PostsLists = {
         return null
     }
 }
+    */

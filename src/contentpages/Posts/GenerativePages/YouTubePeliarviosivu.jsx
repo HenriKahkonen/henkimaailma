@@ -1,6 +1,6 @@
-import { PostsLists } from "../../../contentArrays.js"
+/*import { PostsLists } from "../../../contentArrays.js"*/
 import { useLoaderData } from "react-router-dom"
-import { parseDate } from "../../../components/functions"
+import { filterPostsByType, parseDate } from "../../../components/functions"
 import { listTags } from "../../../components/functions"
 import { NavLink } from "react-router-dom"
 import './Peliarviolistaus.css'
@@ -9,9 +9,8 @@ export async function loader({ params }) {
     if (!params.peliarvioTitle) {
         return null
     }
-
+    /*
     const peliarviot = PostsLists.peliarviot
-    console.log(peliarviot)
     let arvio = peliarviot.find(p => p.url === params.peliarvioTitle)
     console.log("Peliarviot loader: Projecttitle:", params.peliarvioTitle)
     if (!arvio) {
@@ -19,18 +18,28 @@ export async function loader({ params }) {
                 status: 404,
                 statusText: "Project seeked not found"
         })
-    }
-    return arvio;
+    }*/
+
+    return params.peliarvioTitle;
 }
 
 
-export function YouTubePeliarviosivu() {
+export function YouTubePeliarviosivu({posts}) {
     /*window.scrollTo(0,250);*/
-    const arvio = useLoaderData();
-    const kaikkiPeliarviot = PostsLists.peliarviot
+    const arvioTitle = useLoaderData();
+    const peliarviot = filterPostsByType(posts,"Peliarviot")
 
-    const next = kaikkiPeliarviot[(kaikkiPeliarviot.indexOf(arvio))-1]
-    const last = kaikkiPeliarviot[(kaikkiPeliarviot.indexOf(arvio))+1]
+    let arvio = peliarviot.find(p => p.url === arvioTitle)
+    console.log("Peliarviot loader: Projecttitle:", arvioTitle)
+    if (!arvio) {
+            throw new Response("", {
+                status: 404,
+                statusText: "Project seeked not found"
+        })
+    }
+
+    const next = peliarviot[(peliarviot.indexOf(arvio))-1]
+    const last = peliarviot[(peliarviot.indexOf(arvio))+1]
 
     /*console.log("NEXT:",next)
     console.log("LAST:", last)*/

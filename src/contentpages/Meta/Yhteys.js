@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import "./meta.css";
 
 
 function Yhteys() {
@@ -18,15 +19,20 @@ function Yhteys() {
                 </NavLink>*/}
             </div>   
 
+                <br/>
+                <div className="yhteys">
+                    <div><img className="YhteysIcon" alt="" src={process.env.PUBLIC_URL+"/img/icon/posti.png"}></img></div>
+                    <div><p>Kyselyt, palaute-ehdotukset, risut, ruusut ja vihapostit voi lähettää sähköpostiosoitteeseen
+                    <br/><b>henkonenvideo (ÄT) gmail (PISTE) com</b>.</p></div>
+                </div>
 
-            <div className="Prose">
-                Kyselyt, palaute-ehdotukset, risut, ruusut ja vihapostit voi lähettää sähköpostiosoitteeseen
-                <br/><b>henkonenvideo (ÄT) gmail (PISTE) com</b>.
-                <p>Muualta internetistä minut löytää alapalkin linkeistä.</p><br/>
+                <div className="yhteys">
+                    <div><img className="YhteysIcon" alt="" src={process.env.PUBLIC_URL+"/img/icon/sormi.png"}></img></div>
+                    <div><p>Muualta internetistä minut löytää alapalkin linkeistä.</p></div>
+                </div>
             </div>
 
             </div>
-        </div>
     )
 }
 

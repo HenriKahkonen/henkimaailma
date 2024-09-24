@@ -1,4 +1,4 @@
-import './CV.css'
+import './meta.css'
 import { NavLink } from 'react-router-dom';
 
 function CV()  {

@@ -2,11 +2,11 @@ import React from "react";
 
 export function HyvatJaHuonotTeatterit() {
     return (
-        <div>
-            <p>Muutamat ovat mollanneet vastikään internetissä noteerattua Käärijä-plagiarismipohdintaani ylipitkäksi ja toivoneet, että päätelmät olisi esitetty suoremmin turhaa paskaa jauhamatta.
+        <>
+            <p> Muutamat ovat mollanneet ulosantiani liikasanaiseksi ja toivoneet, että päätelmät tehtäisiin suoremmin turhaa jauhamatta.
             </p>
             <p>
-                Esitetään nyt sitten tiivistä taidekritiikkiä. Tässä on arvostelut suurimmasta osasta näkemistäni näyttämöteoksista. Päivitän listaa kun muistan.
+                Tässä hengessä kokoan tämän listan, jossa on arvostelut suurimmasta osasta näkemistäni näyttämöteoksista. Päivitän listaa kun muistan.
             </p>
             <div className="DualFlexHoriz">
                 <div>
@@ -59,6 +59,7 @@ export function HyvatJaHuonotTeatterit() {
                         <li>Kuin kotkat jäällä (Turun Ylioppilasteatteri) *</li>
                         <li>Tiikeriooppera (TTT) *</li>
                         <li>Nukebox *</li>
+                        <li>Oopperan Kummitus (Oopperabaletti)</li>
                     </ul>
                 </div>
             </div>
@@ -66,6 +67,6 @@ export function HyvatJaHuonotTeatterit() {
                 * = Tuttavani olivat työryhmässä <br/>
                 ** = Olin itse työryhmässä
             </p>
-        </div>
+        </>
     )
 }

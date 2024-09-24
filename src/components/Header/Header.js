@@ -9,7 +9,7 @@ const Header = () => {
                 <h1>h e n k i m a a i l m a</h1>
                     <nav className="NavBarContainer">
                         <NavButton link="/" imgurl={process.env.PUBLIC_URL+'/img/PNG_Etusivu2.png'}></NavButton> 
-                        <NavButton link="/posts" imgurl={process.env.PUBLIC_URL+'/img/PNG_Syote2.png'}></NavButton>
+                        <NavButton link="/posts" imgurl={process.env.PUBLIC_URL+'/img/PNG_Posts.png'}></NavButton>
                         <NavButton link="/levyraati" imgurl={process.env.PUBLIC_URL+'/img/PNG_Levyraati2.png'}></NavButton>
                         <NavButton link="/meta" imgurl={process.env.PUBLIC_URL+'/img/PNG_Meta2.png'}></NavButton>
                         {/*<NavButton link="/projektit" imgurl={process.env.PUBLIC_URL+'/img/projektit.png'}></NavButton>*/}

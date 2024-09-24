@@ -4,36 +4,15 @@ export function EnsimmainenPsykoosiEP() {
 
             <div className="DualFlexHoriz">
 
-                <div className="Prose">
-                    EP syntyi vähäisellä suunnittelulla, ja osaksi siksi se tuntuu jälkikäteen onnistuneelta. Muuttooni Oulusta Turkuun oli aikaa puoli vuotta, jonka aikana käytettävissäni oli yliopiston musiikkikasvatuksen oppiaineen äänityslaitteet. Rokkaamaan oli päästävä, ja bändikavereiksi valikoitui sen isommin miettimättä kolme ihmistä joista pidän: <b>Joonatan Rajala</b> (kitara), <b>Tatu Palo</b> (basso) ja <b>Janne Alakiuttu</b> (rummut). 
-                    <p>
-                        Piereskelin biisejä kasaan mahdollisimman nopeasti ja  vein ne treeneihin mahdollisimman raakileina. Lauluaihioita syntyi mm. masennuksesta, seksismistä, eroista ja huumeista - siis kaikesta mitä maailmassa ulkopuoliseksi itsensä kokeva nuori mies ympärillään näkee.
-                    </p>
-                    <p>
-                        Minulla on joskus paha tapa ylikirjoittaa ja -sovittaa lauluja. Tätä ongelmaa ei <i>Psykoosin</i> löysäranteisen biisituotannon aikana kohdattu, ja tunkkaisen nauhoitusprosessin läpäisseet kappaleet kuulostavat siksi yhtä lailla soittajiltaan kuin kirjoittajaltaan. 
-                    </p>
-                    <p>
-                        Ihailin (ja ihailen) laulunkirjoituksessani suomalaisyhtye <b>Reginaa</b>, jonka vaikutuksia voi paikoin kuulla myös Psykoosi-biiseissä. EP:n kaikenläpäisemää nihilismiä tasapainottaa elämänvoimainen meno ja rokkailun ilo. Maailma on paskaa, mutta elämä on ihanaa. 
-                    </p>
+                <div>
+                    
+                        EP syntyi vähäisellä suunnittelulla, ja osaksi siksi se tuntuu jälkikäteen onnistuneelta. Muuttooni Oulusta Turkuun oli aikaa puoli vuotta, jonka aikana käytettävissäni oli yliopiston musiikkikasvatuksen oppiaineen äänityslaitteet. Rokkaamaan oli päästävä, ja bändikavereiksi valikoitui sen isommin miettimättä kolme ihmistä joista pidän: <b>Joonatan Rajala</b> (kitara), <b>Tatu Palo</b> (basso) ja <b>Janne Alakiuttu</b> (rummut). 
+                    
                     <p>
                         Kansitaiteen EP:lle loi Joonatan <b>Suomen Kuvalehden</b> kuvituskuvasta, jossa potilasta lääkitään sydämensisäisellä injektiolla.
                     </p>
-                </div>
-
-                <div className="BandCampPlayer">
-                    <iframe 
-                    title="Soundcloud EP"
-                    width = "350px"
-                    height = "470px" 
-                    src="https://bandcamp.com/EmbeddedPlayer/album=3350533764/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" 
-                    seamless>
-                    <a href="https://ensimmainenpsykoosi.bandcamp.com/album/ensimm-inen-psykoosi">Ensimmäinen Psykoosi by Ensimmäinen Psykoosi</a>
-                    </iframe>
-                </div>
-
-            </div>
-
-            <h2>Lyriikat</h2>
+                    <br/>
+                    <h2>Lyriikat</h2>
             <button className="SongLyricHider" onClick={function() {
                 var x= document.getElementById("s1")
                 if (x.style.display !== "block") {
@@ -170,6 +149,23 @@ export function EnsimmainenPsykoosiEP() {
                 Ja sanon kaikille muillekin /<br/>
                 Vain joo, mulla menee hyvin /<br/>
             </div>
+                </div>
+                
+
+                <div className="BandCampPlayer">
+                    <iframe 
+                    title="Soundcloud EP"
+                    width = "350px"
+                    height = "470px" 
+                    src="https://bandcamp.com/EmbeddedPlayer/album=3350533764/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" 
+                    seamless>
+                    <a href="https://ensimmainenpsykoosi.bandcamp.com/album/ensimm-inen-psykoosi">Ensimmäinen Psykoosi by Ensimmäinen Psykoosi</a>
+                    </iframe>
+                </div>
+
+            </div>
+
+
         </div>
     )
 }
