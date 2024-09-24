@@ -49,10 +49,10 @@ export async function postsJsonFetch() {
         videos.push(item)
     })
 
-    YTfetched['SnS'].forEach((item)=>{
+    /*YTfetched['SnS'].forEach((item)=>{
         item['category'] = "SnS"
         videos.push(item)
-    })
+    })*/
 
     YTfetched['euroviisut'].forEach((item)=>{
         item['category'] = "euroviisut"
