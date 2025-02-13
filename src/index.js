@@ -15,7 +15,7 @@ import {
   PostPage, PostLoader, //Posts as Postslist, 
   YouTubePeliarviot, YouTubePeliarviosivu, youTubePeliarvioLoader,
   Levyraati, LevyraatiDocs, LevyraatiTietosuoja,
-  Meta, Yhteys, CV
+  Meta, Yhteys, //CV
 } from "./contentpages"
 /*import { 
   SkriimBuilder //, LevyRaatiLeaderboard
@@ -96,7 +96,7 @@ const renderRouter = (lrData,liveStatus,changelog,postsJSON,SnSData) => {
                 },
               element: <Meta/>},
               { path: "yhteys", element: <Yhteys/>},
-              { path: "cv", element: <CV/>},
+              //{ path: "cv", element: <CV/>},
             ]
           },
 
