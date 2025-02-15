@@ -3,7 +3,7 @@ export function HTMTheSpaceRace() {
         <div>
         <div className="DualFlexHoriz">
         
-            <div className="Prose">
+            <div>
 
             Tämä alun perin <a href="https://www.youtube.com/watch?v=iFO8hB0Cg9w&t">YouTube-videon</a> taustamusiikiksi tuotettu raita alkoi kasvaa käyttötarkoitustaan kunnianhimoisemmaksi, ja kiinnyinkin raidalla tekemiini valintoihini niin, että päätin tavoilleni epätavallisesti tösäyttää  kappaleen myös Soundcloudiini. Tämmöisellä <b>Mitch Murderiin</b> päin kumartelevalla syntikkakellunnalla ei tosin ole juurikaan tekemistä minkään muiden musiikillisten ambitioideni kanssa, ja albumikokonaisuuksia arvostavana ihmisenä irtonaisten kappaleiden julkistaminen tuntuu edelleen hieman kiusalliselta. 
 

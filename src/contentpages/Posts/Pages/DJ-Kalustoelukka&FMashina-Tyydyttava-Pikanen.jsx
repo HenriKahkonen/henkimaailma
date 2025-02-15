@@ -1,7 +1,7 @@
 export function DJKEFMTP() {
     return (
         <div className="DualFlexHoriz">
-            <div className="Prose">
+            <div>
 
             <b>Vilho Talvela</b> on rakas ystäväni ja pitkäaikainen aisaparini erinäisissä musiikki- ja muissa kulttuuritouhuissa. Pitkä kumppanuus esimerkiksi teatterimuusikkoina ja humpansoittajina huomioiden on ironista, että yhteisistä, "taiteellisesti antoisammista" musiikkiprojekteista juuri mitään ei ole jalostettu nauhoituksiin asti. Kuvioihin ovat astuneet milloin taiteelliset erimielisyydet, milloin bändikavereiden isyyslomat.
             <p>
@@ -16,12 +16,12 @@ export function DJKEFMTP() {
                 <iframe 
                     title="DKE&FM Tyydyttävä Pikane"
                     width="50%" 
-                    height="300" 
+                    height="300"
+                    frameborder="no" 
+                    allow="autoplay" 
                     src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/845958271&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
                 </iframe>
             </div>
-
-
         </div>
     )
 }

@@ -4,7 +4,7 @@ export function HTMItalwaysForgets() {
         <div>
             <div className="DualFlexHoriz">
 
-                <div ClassName="Prose">
+                <div>
                     Tämä on toinen kappale, jota lähdin tuottamaan <a href="https://www.youtube.com/watch?v=YQ2q5ePILW0&t=17s"><b>peliarvosteluvideon</b></a> taustamusiikiksi, mutta jonka konsepti oli siinä määrin innostava että päätin julkaista sen myös nk. "irtsana".
 
                 <p>
